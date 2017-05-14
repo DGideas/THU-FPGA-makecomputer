@@ -1,5 +1,4 @@
 
-# PlanAhead Generated physical constraints 
 
 NET "port_led[15]" LOC = D10;
 NET "port_led[14]" LOC = E10;
@@ -55,3 +54,7 @@ NET "port_clk_50" LOC = B9;
 NET "port_mem1_en" LOC = M15;
 NET "port_mem1_oe" LOC = M16;
 NET "port_mem1_we" LOC = M18;
+
+# PlanAhead Generated physical constraints 
+
+NET "port_rst" LOC = U10;

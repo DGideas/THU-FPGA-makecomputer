@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.05 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.05 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> 
 Reading design: cpu_top.prj
@@ -109,18 +109,27 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 Compiling vhdl file "/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/clk.vhd" in Library work.
 Architecture behavioral of Entity clk is up to date.
+Compiling vhdl file "/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/rstkey.vhd" in Library work.
+Architecture behavioral of Entity rstkey is up to date.
+Compiling vhdl file "/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/clkkey.vhd" in Library work.
+Entity <clkkey> compiled.
+Entity <clkkey> (Architecture <Behavioral>) compiled.
 Compiling vhdl file "/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/led.vhd" in Library work.
 Architecture behavioral of Entity led is up to date.
 Compiling vhdl file "/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/cpu_top.vhd" in Library work.
 Entity <cpu_top> compiled.
-Entity <cpu_top> (Architecture <Behavioral>) compiled.
+Entity <cpu_top> (Architecture <behavioral>) compiled.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
 =========================================================================
-Analyzing hierarchy for entity <cpu_top> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <cpu_top> in library <work> (architecture <behavioral>).
 
 Analyzing hierarchy for entity <clk> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <rstkey> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <clkkey> in library <work> (architecture <Behavioral>).
 
 Analyzing hierarchy for entity <led> in library <work> (architecture <behavioral>).
 
@@ -128,11 +137,17 @@ Analyzing hierarchy for entity <led> in library <work> (architecture <behavioral
 =========================================================================
 *                            HDL Analysis                               *
 =========================================================================
-Analyzing Entity <cpu_top> in library <work> (Architecture <Behavioral>).
+Analyzing Entity <cpu_top> in library <work> (Architecture <behavioral>).
 Entity <cpu_top> analyzed. Unit <cpu_top> generated.
 
 Analyzing Entity <clk> in library <work> (Architecture <behavioral>).
 Entity <clk> analyzed. Unit <clk> generated.
+
+Analyzing Entity <rstkey> in library <work> (Architecture <behavioral>).
+Entity <rstkey> analyzed. Unit <rstkey> generated.
+
+Analyzing Entity <clkkey> in library <work> (Architecture <Behavioral>).
+Entity <clkkey> analyzed. Unit <clkkey> generated.
 
 Analyzing Entity <led> in library <work> (Architecture <behavioral>).
 Entity <led> analyzed. Unit <led> generated.
@@ -147,6 +162,16 @@ Performing bidirectional port resolution...
 Synthesizing Unit <clk>.
     Related source file is "/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/clk.vhd".
 Unit <clk> synthesized.
+
+
+Synthesizing Unit <rstkey>.
+    Related source file is "/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/rstkey.vhd".
+Unit <rstkey> synthesized.
+
+
+Synthesizing Unit <clkkey>.
+    Related source file is "/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/clkkey.vhd".
+Unit <clkkey> synthesized.
 
 
 Synthesizing Unit <led>.
@@ -176,10 +201,16 @@ WARNING:Xst:2565 - Inout <port_mem1_data<15>> is never assigned.
 WARNING:Xst:1306 - Output <port_mem1_we> is never assigned.
 WARNING:Xst:1306 - Output <port_mem1_addr> is never assigned.
 WARNING:Xst:2565 - Inout <port_mem1_data<0>> is never assigned.
+WARNING:Xst:646 - Signal <internel_rst> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <internel_clk_singlestep> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <internal_clk> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 Unit <cpu_top> synthesized.
 
 WARNING:Xst:524 - All outputs of the instance <clk1> of the block <clk> are unconnected in block <cpu_top>.
+   This instance will be removed from the design along with all underlying logic
+WARNING:Xst:524 - All outputs of the instance <rst1> of the block <rstkey> are unconnected in block <cpu_top>.
+   This instance will be removed from the design along with all underlying logic
+WARNING:Xst:524 - All outputs of the instance <clkkey1> of the block <clkkey> are unconnected in block <cpu_top>.
    This instance will be removed from the design along with all underlying logic
 
 =========================================================================
@@ -239,7 +270,7 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 54
+# IOs                              : 56
 
 Cell Usage :
 # BELS                             : 1
@@ -254,7 +285,7 @@ Device utilization summary:
 Selected Device : 3s1200efg320-4 
 
  Number of Slices:                        0  out of   8672     0%  
- Number of IOs:                          54
+ Number of IOs:                          56
  Number of bonded IOBs:                  16  out of    250     6%  
 
 ---------------------------
@@ -297,15 +328,15 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 
 
-Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.72 secs
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 4.34 secs
  
 --> 
 
 
-Total memory usage is 517996 kilobytes
+Total memory usage is 518468 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   22 (   0 filtered)
+Number of warnings :   26 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

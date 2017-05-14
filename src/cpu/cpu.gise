@@ -35,6 +35,9 @@
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="cpu_top_summary.html"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="cpu_top_vhdl.prj"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="cpu_top_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="planAhead_run_1"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="planAhead_run_2"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="planAhead_run_3"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
   </files>
@@ -68,7 +71,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1494767235" xil_pn:in_ck="7629214344513983278" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-8084998665907126192" xil_pn:start_ts="1494767226">
+    <transform xil_pn:end_ts="1494768143" xil_pn:in_ck="-7341819535803356045" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-8084998665907126192" xil_pn:start_ts="1494768135">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -89,6 +92,7 @@
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
     </transform>
   </transforms>
 

@@ -1,3 +1,5 @@
+vhdl work "rstkey.vhd"
 vhdl work "led.vhd"
+vhdl work "clkkey.vhd"
 vhdl work "clk.vhd"
 vhdl work "cpu_top.vhd"
