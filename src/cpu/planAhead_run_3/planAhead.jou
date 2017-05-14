@@ -6,3 +6,9 @@
 # Log file: /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/planAhead_run_3/planAhead.log
 # Journal file: /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/planAhead_run_3/planAhead.jou
 #-----------------------------------------------------------
+start_gui
+source /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/pa.fromNetlist.tcl
+startgroup
+set_property package_pin U9 [get_ports port_clk_key]
+endgroup
+save_constraints

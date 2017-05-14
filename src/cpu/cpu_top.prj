@@ -1,4 +1,5 @@
 vhdl work "rstkey.vhd"
+vhdl work "mcmgmt.vhd"
 vhdl work "led.vhd"
 vhdl work "clkkey.vhd"
 vhdl work "clk.vhd"

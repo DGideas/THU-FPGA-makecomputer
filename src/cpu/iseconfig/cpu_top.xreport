@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-05-14T20:55:22</DateModified>
+  <DateModified>2017-05-14T21:35:42</DateModified>
   <ModuleName>cpu_top</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/iseconfig/cpu_top.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/</ImplementationReportsDirectory>
   <DateInitialized>2017-05-14T20:48:25</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

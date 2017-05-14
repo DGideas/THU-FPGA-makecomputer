@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+# Start of session at: Sun May 14 21:31:28 2017
+# Process ID: 14067
+# Log file: /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/planAhead_run_4/planAhead.log
+# Journal file: /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/planAhead_run_4/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/pa.fromNetlist.tcl

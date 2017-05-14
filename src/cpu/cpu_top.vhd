@@ -72,6 +72,8 @@ component mcmgmt is
 		mcmgmt_free: out std_logic
 	);
 end component;
+signal internel_mcmgmt_data: std_logic_vector(15 downto 0);
+signal internel_mcmgmt_free: std_logic;
 
 begin
 
@@ -95,10 +97,11 @@ led1: led port map
 	port_led, "1111111111111111"
 );
 
---mcmgmt1: mcmgmt port map
---(
---	internal_clk, port_mem1_oe, port_mem1_we, port_mem1_en, port_mem1_addr, port_mem1_data, "00000000000000000000", "1010101010101010", '1', '1', '1'
---);
+mcmgmt1: mcmgmt port map
+(
+	internal_clk, port_mem1_oe, port_mem1_we, port_mem1_en, port_mem1_addr, port_mem1_data,
+	"00000000000000000000", internel_mcmgmt_data, '1', '1', '1', internel_mcmgmt_free
+);
 
 end Behavioral;
 

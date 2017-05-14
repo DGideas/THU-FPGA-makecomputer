@@ -55,6 +55,9 @@ NET "port_mem1_en" LOC = M15;
 NET "port_mem1_oe" LOC = M16;
 NET "port_mem1_we" LOC = M18;
 
-# PlanAhead Generated physical constraints 
 
 NET "port_rst" LOC = U10;
+
+# PlanAhead Generated physical constraints 
+
+NET "port_clk_key" LOC = U9;
