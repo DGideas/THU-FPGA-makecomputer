@@ -11,13 +11,22 @@ entity mcmgmt is
 		mcmgmt_port_mem1_we: out std_logic;
 		mcmgmt_port_mem1_en: out std_logic;
 		mcmgmt_port_mem1_addr: out std_logic_vector(17 downto 0);
-		mcmgmt_port_mem1_data: inout std_logic_vector(15 downto 0)
+		mcmgmt_port_mem1_data: inout std_logic_vector(15 downto 0);
+		mcmgmt_addr: in std_logic_vector(19 downto 0);
+		mcmgmt_data: inout std_logic_vector(15 downto 0);
+		mcmgmt_rw: in std_logic;
+		mcmgmt_by_byte: in std_logic;
+		mcmgmt_byte_select: in std_logic;
+		mcmgmt_free: out std_logic
 	);
 end mcmgmt;
 
 architecture Behavioral of mcmgmt is
 
+signal mcmgmt_status: std_logic_vector(4 downto 0) := "00000";
+
 begin
+
 
 
 end Behavioral;

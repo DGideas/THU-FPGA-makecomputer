@@ -1,0 +1,277 @@
+(edif cpu_top
+  (edifVersion 2 0 0)
+  (edifLevel 0)
+  (keywordMap (keywordLevel 0))
+  (status
+    (written
+      (timestamp 2017 5 14 21 8 16)
+      (program "Xilinx ngc2edif" (version "P.20131013"))
+      (author "Xilinx. Inc ")
+      (comment "This EDIF netlist is to be used within supported synthesis tools")
+      (comment "for determining resource/timing estimates of the design component")
+      (comment "represented by this netlist.")
+      (comment "Command line: -mdp2sp -w -secure cpu_top.ngc cpu_top.edif ")))
+  (external UNISIMS
+    (edifLevel 0)
+    (technology (numberDefinition))
+    (cell VCC
+      (cellType GENERIC)
+        (view view_1
+          (viewType NETLIST)
+          (interface
+            (port P
+              (direction OUTPUT)
+            )
+          )
+      )
+    )
+    (cell OBUF
+      (cellType GENERIC)
+        (view view_1
+          (viewType NETLIST)
+          (interface
+            (port I
+              (direction INPUT)
+            )
+            (port O
+              (direction OUTPUT)
+            )
+          )
+      )
+    )
+  )
+
+  (library cpu_top_lib
+    (edifLevel 0)
+    (technology (numberDefinition))
+    (cell cpu_top
+      (cellType GENERIC)
+        (view view_1
+          (viewType NETLIST)
+          (interface
+            (port port_mem1_en
+              (direction OUTPUT)
+            )
+            (port port_clk_50
+              (direction INPUT)
+            )
+            (port port_mem1_oe
+              (direction OUTPUT)
+            )
+            (port port_mem1_we
+              (direction OUTPUT)
+            )
+            (port (array (rename port_mem1_data "port_mem1_data<15:0>") 16)
+              (direction INOUT))
+            (port (array (rename port_led "port_led<15:0>") 16)
+              (direction OUTPUT))
+            (port (array (rename port_mem1_addr "port_mem1_addr<17:0>") 18)
+              (direction OUTPUT))
+            (designator "xc3s1200e-4-fg320")
+            (property TYPE (string "cpu_top") (owner "Xilinx"))
+            (property BUS_INFO (string "16:INOUT:port_mem1_data<15:0>") (owner "Xilinx"))
+            (property BUS_INFO (string "16:OUTPUT:port_led<15:0>") (owner "Xilinx"))
+            (property BUS_INFO (string "18:OUTPUT:port_mem1_addr<17:0>") (owner "Xilinx"))
+            (property NLW_UNIQUE_ID (integer 0) (owner "Xilinx"))
+            (property NLW_MACRO_TAG (integer 0) (owner "Xilinx"))
+            (property NLW_MACRO_ALIAS (string "cpu_top_cpu_top") (owner "Xilinx"))
+          )
+          (contents
+            (instance XST_VCC
+              (viewRef view_1 (cellRef VCC (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance port_led_15_OBUF
+              (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance port_led_14_OBUF
+              (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance port_led_13_OBUF
+              (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance port_led_12_OBUF
+              (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance port_led_11_OBUF
+              (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance port_led_10_OBUF
+              (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance port_led_9_OBUF
+              (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance port_led_8_OBUF
+              (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance port_led_7_OBUF
+              (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance port_led_6_OBUF
+              (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance port_led_5_OBUF
+              (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance port_led_4_OBUF
+              (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance port_led_3_OBUF
+              (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance port_led_2_OBUF
+              (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance port_led_1_OBUF
+              (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance port_led_0_OBUF
+              (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (net N1
+              (joined
+                (portRef P (instanceRef XST_VCC))
+                (portRef I (instanceRef port_led_15_OBUF))
+                (portRef I (instanceRef port_led_14_OBUF))
+                (portRef I (instanceRef port_led_13_OBUF))
+                (portRef I (instanceRef port_led_12_OBUF))
+                (portRef I (instanceRef port_led_11_OBUF))
+                (portRef I (instanceRef port_led_10_OBUF))
+                (portRef I (instanceRef port_led_9_OBUF))
+                (portRef I (instanceRef port_led_8_OBUF))
+                (portRef I (instanceRef port_led_7_OBUF))
+                (portRef I (instanceRef port_led_6_OBUF))
+                (portRef I (instanceRef port_led_5_OBUF))
+                (portRef I (instanceRef port_led_4_OBUF))
+                (portRef I (instanceRef port_led_3_OBUF))
+                (portRef I (instanceRef port_led_2_OBUF))
+                (portRef I (instanceRef port_led_1_OBUF))
+                (portRef I (instanceRef port_led_0_OBUF))
+              )
+            )
+            (net (rename port_led_0_ "port_led<0>")
+              (joined
+                (portRef (member port_led 15))
+                (portRef O (instanceRef port_led_0_OBUF))
+              )
+            )
+            (net (rename port_led_10_ "port_led<10>")
+              (joined
+                (portRef (member port_led 5))
+                (portRef O (instanceRef port_led_10_OBUF))
+              )
+            )
+            (net (rename port_led_11_ "port_led<11>")
+              (joined
+                (portRef (member port_led 4))
+                (portRef O (instanceRef port_led_11_OBUF))
+              )
+            )
+            (net (rename port_led_12_ "port_led<12>")
+              (joined
+                (portRef (member port_led 3))
+                (portRef O (instanceRef port_led_12_OBUF))
+              )
+            )
+            (net (rename port_led_13_ "port_led<13>")
+              (joined
+                (portRef (member port_led 2))
+                (portRef O (instanceRef port_led_13_OBUF))
+              )
+            )
+            (net (rename port_led_14_ "port_led<14>")
+              (joined
+                (portRef (member port_led 1))
+                (portRef O (instanceRef port_led_14_OBUF))
+              )
+            )
+            (net (rename port_led_15_ "port_led<15>")
+              (joined
+                (portRef (member port_led 0))
+                (portRef O (instanceRef port_led_15_OBUF))
+              )
+            )
+            (net (rename port_led_1_ "port_led<1>")
+              (joined
+                (portRef (member port_led 14))
+                (portRef O (instanceRef port_led_1_OBUF))
+              )
+            )
+            (net (rename port_led_2_ "port_led<2>")
+              (joined
+                (portRef (member port_led 13))
+                (portRef O (instanceRef port_led_2_OBUF))
+              )
+            )
+            (net (rename port_led_3_ "port_led<3>")
+              (joined
+                (portRef (member port_led 12))
+                (portRef O (instanceRef port_led_3_OBUF))
+              )
+            )
+            (net (rename port_led_4_ "port_led<4>")
+              (joined
+                (portRef (member port_led 11))
+                (portRef O (instanceRef port_led_4_OBUF))
+              )
+            )
+            (net (rename port_led_5_ "port_led<5>")
+              (joined
+                (portRef (member port_led 10))
+                (portRef O (instanceRef port_led_5_OBUF))
+              )
+            )
+            (net (rename port_led_6_ "port_led<6>")
+              (joined
+                (portRef (member port_led 9))
+                (portRef O (instanceRef port_led_6_OBUF))
+              )
+            )
+            (net (rename port_led_7_ "port_led<7>")
+              (joined
+                (portRef (member port_led 8))
+                (portRef O (instanceRef port_led_7_OBUF))
+              )
+            )
+            (net (rename port_led_8_ "port_led<8>")
+              (joined
+                (portRef (member port_led 7))
+                (portRef O (instanceRef port_led_8_OBUF))
+              )
+            )
+            (net (rename port_led_9_ "port_led<9>")
+              (joined
+                (portRef (member port_led 6))
+                (portRef O (instanceRef port_led_9_OBUF))
+              )
+            )
+          )
+      )
+    )
+  )
+
+  (design cpu_top
+    (cellRef cpu_top
+      (libraryRef cpu_top_lib)
+    )
+    (property PART (string "xc3s1200e-4-fg320") (owner "Xilinx"))
+  )
+)
+

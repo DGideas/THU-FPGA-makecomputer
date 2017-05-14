@@ -11,11 +11,29 @@ entity cpu_top is
 		port_mem1_we: out std_logic;
 		port_mem1_en: out std_logic;
 		port_mem1_addr: out std_logic_vector(17 downto 0);
-		port_mem1_data: inout std_logic_vector(15 downto 0)
+		port_mem1_data: inout std_logic_vector(15 downto 0);
+		port_led: out std_logic_vector(15 downto 0)
 	);
 end cpu_top;
 
 architecture Behavioral of cpu_top is
+
+component clk is
+	Port
+	(
+		clk_port_clk: in std_logic;
+		clk_clk: out std_logic
+	);
+end component;
+signal internal_clk: std_logic;
+
+component led is
+	Port
+	(
+		led_port_led: out std_logic_vector(15 downto 0);
+		led_data: in std_logic_vector(15 downto 0)
+	);
+end component;
 
 component mcmgmt is
 	Port
@@ -25,16 +43,32 @@ component mcmgmt is
 		mcmgmt_port_mem1_we: out std_logic;
 		mcmgmt_port_mem1_en: out std_logic;
 		mcmgmt_port_mem1_addr: out std_logic_vector(17 downto 0);
-		mcmgmt_port_mem1_data: inout std_logic_vector(15 downto 0)
+		mcmgmt_port_mem1_data: inout std_logic_vector(15 downto 0);
+		mcmgmt_addr: in std_logic_vector(19 downto 0);
+		mcmgmt_data: inout std_logic_vector(15 downto 0);
+		mcmgmt_rw: in std_logic;
+		mcmgmt_by_byte: in std_logic;
+		mcmgmt_byte_select: in std_logic;
+		mcmgmt_free: out std_logic
 	);
 end component;
 
 begin
 
-mcmgmt1: mcmgmt port map
+clk1: clk port map
 (
-	port_clk_50, port_mem1_oe, port_mem1_we, port_mem1_en, port_mem1_addr, port_mem1_data
+	port_clk_50, internal_clk
 );
+
+led1: led port map
+(
+	port_led, "1111111111111111"
+);
+
+--mcmgmt1: mcmgmt port map
+--(
+--	internal_clk, port_mem1_oe, port_mem1_we, port_mem1_en, port_mem1_addr, port_mem1_data, "00000000000000000000", "1010101010101010", '1', '1', '1'
+--);
 
 end Behavioral;
 

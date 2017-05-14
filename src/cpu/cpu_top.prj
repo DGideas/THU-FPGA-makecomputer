@@ -1,0 +1,3 @@
+vhdl work "led.vhd"
+vhdl work "clk.vhd"
+vhdl work "cpu_top.vhd"
