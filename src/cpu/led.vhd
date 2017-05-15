@@ -4,7 +4,7 @@ use ieee.std_logic_arith.all;
 use ieee.std_logic_unsigned.all;
 
 entity led is
-	Port
+	port
 	(
 		led_port_led: out std_logic_vector(15 downto 0);
 		led_data: in std_logic_vector(15 downto 0)

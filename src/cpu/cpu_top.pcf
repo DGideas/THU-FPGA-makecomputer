@@ -1,0 +1,26 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Mon May 15 09:08:29 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "port_rst" LOCATE = SITE "U10" LEVEL 1;
+COMP "port_led<10>" LOCATE = SITE "D11" LEVEL 1;
+COMP "port_led<11>" LOCATE = SITE "C11" LEVEL 1;
+COMP "port_led<12>" LOCATE = SITE "B11" LEVEL 1;
+COMP "port_led<13>" LOCATE = SITE "A11" LEVEL 1;
+COMP "port_led<14>" LOCATE = SITE "E10" LEVEL 1;
+COMP "port_led<15>" LOCATE = SITE "D10" LEVEL 1;
+COMP "port_led<0>" LOCATE = SITE "A14" LEVEL 1;
+COMP "port_led<1>" LOCATE = SITE "E13" LEVEL 1;
+COMP "port_led<2>" LOCATE = SITE "D13" LEVEL 1;
+COMP "port_led<3>" LOCATE = SITE "B13" LEVEL 1;
+COMP "port_led<4>" LOCATE = SITE "A13" LEVEL 1;
+COMP "port_led<5>" LOCATE = SITE "F12" LEVEL 1;
+COMP "port_led<6>" LOCATE = SITE "E12" LEVEL 1;
+COMP "port_led<7>" LOCATE = SITE "A12" LEVEL 1;
+COMP "port_clk_key" LOCATE = SITE "U9" LEVEL 1;
+COMP "port_clk_50" LOCATE = SITE "B9" LEVEL 1;
+COMP "port_led<8>" LOCATE = SITE "F11" LEVEL 1;
+COMP "port_led<9>" LOCATE = SITE "E11" LEVEL 1;
+SCHEMATIC END;
+

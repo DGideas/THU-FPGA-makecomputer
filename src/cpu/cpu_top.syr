@@ -134,13 +134,14 @@ Analyzing hierarchy for entity <clkkey> in library <work> (architecture <behavio
 
 Analyzing hierarchy for entity <led> in library <work> (architecture <behavioral>).
 
+Analyzing hierarchy for entity <mcmgmt> in library <work> (architecture <behavioral>).
+
 
 =========================================================================
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <cpu_top> in library <work> (Architecture <behavioral>).
-WARNING:Xst:754 - "/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/cpu_top.vhd" line 100: Unconnected inout port 'mcmgmt_data' of component 'mcmgmt'.
-WARNING:Xst:2211 - "/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/cpu_top.vhd" line 100: Instantiating black box module <mcmgmt>.
+WARNING:Xst:753 - "/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/cpu_top.vhd" line 101: Unconnected output port 'mcmgmt_odata' of component 'mcmgmt'.
 Entity <cpu_top> analyzed. Unit <cpu_top> generated.
 
 Analyzing Entity <clk> in library <work> (Architecture <behavioral>).
@@ -154,6 +155,9 @@ Entity <clkkey> analyzed. Unit <clkkey> generated.
 
 Analyzing Entity <led> in library <work> (Architecture <behavioral>).
 Entity <led> analyzed. Unit <led> generated.
+
+Analyzing Entity <mcmgmt> in library <work> (Architecture <behavioral>).
+Entity <mcmgmt> analyzed. Unit <mcmgmt> generated.
 
 
 =========================================================================
@@ -182,6 +186,58 @@ Synthesizing Unit <led>.
 Unit <led> synthesized.
 
 
+Synthesizing Unit <mcmgmt>.
+    Related source file is "/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/mcmgmt.vhd".
+WARNING:Xst:1305 - Output <mcmgmt_port_mem1_en> is never assigned. Tied to value 0.
+WARNING:Xst:647 - Input <mcmgmt_addr> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1305 - Output <mcmgmt_free> is never assigned. Tied to value 0.
+WARNING:Xst:1305 - Output <mcmgmt_port_mem1_addr> is never assigned. Tied to value 000000000000000000.
+WARNING:Xst:647 - Input <mcmgmt_idata> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <mcmgmt_byte_select> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1305 - Output <mcmgmt_port_mem1_oe> is never assigned. Tied to value 0.
+WARNING:Xst:647 - Input <mcmgmt_rw> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:2563 - Inout <mcmgmt_port_mem1_data<10>> is never assigned. Tied to value Z.
+WARNING:Xst:1305 - Output <mcmgmt_port_mem1_we> is never assigned. Tied to value 0.
+WARNING:Xst:2563 - Inout <mcmgmt_port_mem1_data<11>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <mcmgmt_port_mem1_data<12>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <mcmgmt_port_mem1_data<13>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <mcmgmt_port_mem1_data<14>> is never assigned. Tied to value Z.
+WARNING:Xst:647 - Input <mcmgmt_port_clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:2563 - Inout <mcmgmt_port_mem1_data<15>> is never assigned. Tied to value Z.
+WARNING:Xst:1305 - Output <mcmgmt_odata> is never assigned. Tied to value 0000000000000000.
+WARNING:Xst:2563 - Inout <mcmgmt_port_mem1_data<0>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <mcmgmt_port_mem1_data<1>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <mcmgmt_port_mem1_data<2>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <mcmgmt_port_mem1_data<3>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <mcmgmt_port_mem1_data<4>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <mcmgmt_port_mem1_data<5>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <mcmgmt_port_mem1_data<6>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <mcmgmt_port_mem1_data<7>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <mcmgmt_port_mem1_data<8>> is never assigned. Tied to value Z.
+WARNING:Xst:647 - Input <mcmgmt_by_byte> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:2563 - Inout <mcmgmt_port_mem1_data<9>> is never assigned. Tied to value Z.
+WARNING:Xst:646 - Signal <mcmgmt_status> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit tristate buffer for signal <mcmgmt_port_mem1_data<15>>.
+    Found 1-bit tristate buffer for signal <mcmgmt_port_mem1_data<14>>.
+    Found 1-bit tristate buffer for signal <mcmgmt_port_mem1_data<13>>.
+    Found 1-bit tristate buffer for signal <mcmgmt_port_mem1_data<12>>.
+    Found 1-bit tristate buffer for signal <mcmgmt_port_mem1_data<11>>.
+    Found 1-bit tristate buffer for signal <mcmgmt_port_mem1_data<10>>.
+    Found 1-bit tristate buffer for signal <mcmgmt_port_mem1_data<9>>.
+    Found 1-bit tristate buffer for signal <mcmgmt_port_mem1_data<8>>.
+    Found 1-bit tristate buffer for signal <mcmgmt_port_mem1_data<7>>.
+    Found 1-bit tristate buffer for signal <mcmgmt_port_mem1_data<6>>.
+    Found 1-bit tristate buffer for signal <mcmgmt_port_mem1_data<5>>.
+    Found 1-bit tristate buffer for signal <mcmgmt_port_mem1_data<4>>.
+    Found 1-bit tristate buffer for signal <mcmgmt_port_mem1_data<3>>.
+    Found 1-bit tristate buffer for signal <mcmgmt_port_mem1_data<2>>.
+    Found 1-bit tristate buffer for signal <mcmgmt_port_mem1_data<1>>.
+    Found 1-bit tristate buffer for signal <mcmgmt_port_mem1_data<0>>.
+    Summary:
+	inferred  16 Tristate(s).
+Unit <mcmgmt> synthesized.
+
+
 Synthesizing Unit <cpu_top>.
     Related source file is "/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/cpu_top.vhd".
 WARNING:Xst:646 - Signal <internel_rst> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
@@ -198,13 +254,18 @@ WARNING:Xst:524 - All outputs of the instance <clkkey1> of the block <clkkey> ar
 =========================================================================
 HDL Synthesis Report
 
-Found no macro
+Macro Statistics
+# Tristates                                            : 16
+ 1-bit tristate buffer                                 : 16
+
 =========================================================================
 
 =========================================================================
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
+WARNING:Xst:1290 - Hierarchical block <clk1> is unconnected in block <cpu_top>.
+   It will be removed from the design.
 
 =========================================================================
 Advanced HDL Synthesis Report
@@ -219,43 +280,6 @@ Found no macro
 Optimizing unit <cpu_top> ...
 
 Mapping all equations...
-WARNING:Xst:2036 - Inserting OBUF on port <port_mem1_data<15>> driven by black box <mcmgmt>. Possible simulation mismatch.
-WARNING:Xst:2036 - Inserting OBUF on port <port_mem1_data<14>> driven by black box <mcmgmt>. Possible simulation mismatch.
-WARNING:Xst:2036 - Inserting OBUF on port <port_mem1_data<13>> driven by black box <mcmgmt>. Possible simulation mismatch.
-WARNING:Xst:2036 - Inserting OBUF on port <port_mem1_data<12>> driven by black box <mcmgmt>. Possible simulation mismatch.
-WARNING:Xst:2036 - Inserting OBUF on port <port_mem1_data<11>> driven by black box <mcmgmt>. Possible simulation mismatch.
-WARNING:Xst:2036 - Inserting OBUF on port <port_mem1_data<10>> driven by black box <mcmgmt>. Possible simulation mismatch.
-WARNING:Xst:2036 - Inserting OBUF on port <port_mem1_data<9>> driven by black box <mcmgmt>. Possible simulation mismatch.
-WARNING:Xst:2036 - Inserting OBUF on port <port_mem1_data<8>> driven by black box <mcmgmt>. Possible simulation mismatch.
-WARNING:Xst:2036 - Inserting OBUF on port <port_mem1_data<7>> driven by black box <mcmgmt>. Possible simulation mismatch.
-WARNING:Xst:2036 - Inserting OBUF on port <port_mem1_data<6>> driven by black box <mcmgmt>. Possible simulation mismatch.
-WARNING:Xst:2036 - Inserting OBUF on port <port_mem1_data<5>> driven by black box <mcmgmt>. Possible simulation mismatch.
-WARNING:Xst:2036 - Inserting OBUF on port <port_mem1_data<4>> driven by black box <mcmgmt>. Possible simulation mismatch.
-WARNING:Xst:2036 - Inserting OBUF on port <port_mem1_data<3>> driven by black box <mcmgmt>. Possible simulation mismatch.
-WARNING:Xst:2036 - Inserting OBUF on port <port_mem1_data<2>> driven by black box <mcmgmt>. Possible simulation mismatch.
-WARNING:Xst:2036 - Inserting OBUF on port <port_mem1_data<1>> driven by black box <mcmgmt>. Possible simulation mismatch.
-WARNING:Xst:2036 - Inserting OBUF on port <port_mem1_data<0>> driven by black box <mcmgmt>. Possible simulation mismatch.
-WARNING:Xst:2036 - Inserting OBUF on port <port_mem1_en> driven by black box <mcmgmt>. Possible simulation mismatch.
-WARNING:Xst:2036 - Inserting OBUF on port <port_mem1_oe> driven by black box <mcmgmt>. Possible simulation mismatch.
-WARNING:Xst:2036 - Inserting OBUF on port <port_mem1_we> driven by black box <mcmgmt>. Possible simulation mismatch.
-WARNING:Xst:2036 - Inserting OBUF on port <port_mem1_addr<17>> driven by black box <mcmgmt>. Possible simulation mismatch.
-WARNING:Xst:2036 - Inserting OBUF on port <port_mem1_addr<16>> driven by black box <mcmgmt>. Possible simulation mismatch.
-WARNING:Xst:2036 - Inserting OBUF on port <port_mem1_addr<15>> driven by black box <mcmgmt>. Possible simulation mismatch.
-WARNING:Xst:2036 - Inserting OBUF on port <port_mem1_addr<14>> driven by black box <mcmgmt>. Possible simulation mismatch.
-WARNING:Xst:2036 - Inserting OBUF on port <port_mem1_addr<13>> driven by black box <mcmgmt>. Possible simulation mismatch.
-WARNING:Xst:2036 - Inserting OBUF on port <port_mem1_addr<12>> driven by black box <mcmgmt>. Possible simulation mismatch.
-WARNING:Xst:2036 - Inserting OBUF on port <port_mem1_addr<11>> driven by black box <mcmgmt>. Possible simulation mismatch.
-WARNING:Xst:2036 - Inserting OBUF on port <port_mem1_addr<10>> driven by black box <mcmgmt>. Possible simulation mismatch.
-WARNING:Xst:2036 - Inserting OBUF on port <port_mem1_addr<9>> driven by black box <mcmgmt>. Possible simulation mismatch.
-WARNING:Xst:2036 - Inserting OBUF on port <port_mem1_addr<8>> driven by black box <mcmgmt>. Possible simulation mismatch.
-WARNING:Xst:2036 - Inserting OBUF on port <port_mem1_addr<7>> driven by black box <mcmgmt>. Possible simulation mismatch.
-WARNING:Xst:2036 - Inserting OBUF on port <port_mem1_addr<6>> driven by black box <mcmgmt>. Possible simulation mismatch.
-WARNING:Xst:2036 - Inserting OBUF on port <port_mem1_addr<5>> driven by black box <mcmgmt>. Possible simulation mismatch.
-WARNING:Xst:2036 - Inserting OBUF on port <port_mem1_addr<4>> driven by black box <mcmgmt>. Possible simulation mismatch.
-WARNING:Xst:2036 - Inserting OBUF on port <port_mem1_addr<3>> driven by black box <mcmgmt>. Possible simulation mismatch.
-WARNING:Xst:2036 - Inserting OBUF on port <port_mem1_addr<2>> driven by black box <mcmgmt>. Possible simulation mismatch.
-WARNING:Xst:2036 - Inserting OBUF on port <port_mem1_addr<1>> driven by black box <mcmgmt>. Possible simulation mismatch.
-WARNING:Xst:2036 - Inserting OBUF on port <port_mem1_addr<0>> driven by black box <mcmgmt>. Possible simulation mismatch.
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block cpu_top, actual ratio is 0.
 
@@ -295,11 +319,9 @@ Cell Usage :
 # BELS                             : 2
 #      GND                         : 1
 #      VCC                         : 1
-# IO Buffers                       : 54
-#      IBUF                        : 1
-#      OBUF                        : 53
-# Others                           : 1
-#      mcmgmt                      : 1
+# IO Buffers                       : 53
+#      OBUF                        : 37
+#      OBUFT                       : 16
 =========================================================================
 
 Device utilization summary:
@@ -309,7 +331,7 @@ Selected Device : 3s1200efg320-4
 
  Number of Slices:                        0  out of   8672     0%  
  Number of IOs:                          56
- Number of bonded IOBs:                  54  out of    250    21%  
+ Number of bonded IOBs:                  53  out of    250    21%  
 
 ---------------------------
 Partition Resource Summary:
@@ -342,42 +364,24 @@ Speed Grade: -4
    Minimum period: No path found
    Minimum input arrival time before clock: No path found
    Maximum output required time after clock: No path found
-   Maximum combinational path delay: 3.692ns
+   Maximum combinational path delay: No path found
 
 Timing Detail:
 --------------
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default path analysis
-  Total number of paths / destination ports: 38 / 38
--------------------------------------------------------------------------
-Delay:               3.692ns (Levels of Logic = 1)
-  Source:            mcmgmt1:mcmgmt_port_mem1_en (PAD)
-  Destination:       port_mem1_en (PAD)
-
-  Data Path: mcmgmt1:mcmgmt_port_mem1_en to port_mem1_en
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-    mcmgmt:mcmgmt_port_mem1_en    1   0.000   0.420  mcmgmt1 (port_mem1_en_OBUF)
-     OBUF:I->O                 3.272          port_mem1_en_OBUF (port_mem1_en)
-    ----------------------------------------
-    Total                      3.692ns (3.272ns logic, 0.420ns route)
-                                       (88.6% logic, 11.4% route)
-
-=========================================================================
 
 
 Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.38 secs
+Total CPU time to Xst completion: 4.74 secs
  
 --> 
 
 
-Total memory usage is 518948 kilobytes
+Total memory usage is 526400 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   45 (   0 filtered)
+Number of warnings :   37 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 
