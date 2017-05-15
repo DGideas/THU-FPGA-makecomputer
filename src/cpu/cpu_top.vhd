@@ -36,7 +36,7 @@ component rstkey is
 		rstkey_rst: out std_logic
 	);
 end component;
-signal internel_rst: std_logic;
+signal internal_rst: std_logic;
 
 component clkkey is
 	port
@@ -45,7 +45,7 @@ component clkkey is
 		clkkey_clk: out std_logic
 	);
 end component;
-signal internel_clk_singlestep: std_logic;
+signal internal_clk_singlestep: std_logic;
 
 component led is
 	port
@@ -73,8 +73,8 @@ component mcmgmt is
 		mcmgmt_free: out std_logic
 	);
 end component;
-signal internel_mcmgmt_data: std_logic_vector(15 downto 0);
-signal internel_mcmgmt_free: std_logic;
+signal internal_mcmgmt_data: std_logic_vector(15 downto 0);
+signal internal_mcmgmt_free: std_logic;
 
 begin
 
@@ -85,12 +85,12 @@ clk1: clk port map
 
 rst1: rstkey port map
 (
-	port_rst, internel_rst
+	port_rst, internal_rst
 );
 
 clkkey1: clkkey port map
 (
-	port_clk_key, internel_clk_singlestep
+	port_clk_key, internal_clk_singlestep
 );
 
 led1: led port map
@@ -101,7 +101,7 @@ led1: led port map
 mcmgmt1: mcmgmt port map
 (
 	internal_clk, port_mem1_oe, port_mem1_we, port_mem1_en, port_mem1_addr, port_mem1_data,
-	"00000000000000000000", "1111111111111111",  open, '1', '1', '1', internel_mcmgmt_free
+	"00000000000000000000", "1111111111111111",  open, '1', '1', '1', internal_mcmgmt_free
 );
 
 end Behavioral;

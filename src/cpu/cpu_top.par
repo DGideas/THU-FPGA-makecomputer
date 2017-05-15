@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-dgideas-NUC::  Mon May 15 09:08:32 2017
+dgideas-NUC::  Mon May 15 09:10:14 2017
 
 par -w -intstyle ise -ol high -t 1 cpu_top_map.ncd cpu_top.ncd cpu_top.pcf 
 
@@ -30,7 +30,7 @@ Device speed data version:  "PRODUCTION 1.27 2013-10-13".
 
 Design Summary Report:
 
- Number of External IOBs                          19 out of 250     7%
+ Number of External IOBs                          40 out of 250    16%
 
    Number of External Input IOBs                  3
 
@@ -38,10 +38,10 @@ Design Summary Report:
         Number of LOCed External Input IBUFs      3 out of 3     100%
 
 
-   Number of External Output IOBs                16
+   Number of External Output IOBs                37
 
-      Number of External Output IOBs             16
-        Number of LOCed External Output IOBs     16 out of 16    100%
+      Number of External Output IOBs             37
+        Number of LOCed External Output IOBs     37 out of 37    100%
 
 
    Number of External Bidir IOBs                  0
@@ -66,34 +66,34 @@ Total REAL time at the beginning of Placer: 1 secs
 Total CPU  time at the beginning of Placer: 1 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:f10a3fc4) REAL time: 2 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:7825d39e) REAL time: 1 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:f10a3fc4) REAL time: 2 secs 
+Phase 2.7  Design Feasibility Check (Checksum:7825d39e) REAL time: 2 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:f10a3fc4) REAL time: 2 secs 
+Phase 3.31  Local Placement Optimization (Checksum:7825d39e) REAL time: 2 secs 
 
 Phase 4.2  Initial Clock and IO Placement
-Phase 4.2  Initial Clock and IO Placement (Checksum:f10a3fc4) REAL time: 2 secs 
+Phase 4.2  Initial Clock and IO Placement (Checksum:7825d39e) REAL time: 2 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:f10a3fc4) REAL time: 2 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:7825d39e) REAL time: 2 secs 
 
 Phase 6.36  Local Placement Optimization
-Phase 6.36  Local Placement Optimization (Checksum:f10a3fc4) REAL time: 2 secs 
+Phase 6.36  Local Placement Optimization (Checksum:7825d39e) REAL time: 2 secs 
 
 Phase 7.8  Global Placement
-Phase 7.8  Global Placement (Checksum:f10a3fc4) REAL time: 2 secs 
+Phase 7.8  Global Placement (Checksum:7825d39e) REAL time: 2 secs 
 
 Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:f10a3fc4) REAL time: 2 secs 
+Phase 8.5  Local Placement Optimization (Checksum:7825d39e) REAL time: 2 secs 
 
 Phase 9.18  Placement Optimization
-Phase 9.18  Placement Optimization (Checksum:f10a3fc4) REAL time: 2 secs 
+Phase 9.18  Placement Optimization (Checksum:7825d39e) REAL time: 2 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:f10a3fc4) REAL time: 2 secs 
+Phase 10.5  Local Placement Optimization (Checksum:7825d39e) REAL time: 2 secs 
 
 Total REAL time to Placer completion: 2 secs 
 Total CPU  time to Placer completion: 2 secs 
@@ -104,15 +104,15 @@ Writing design to file cpu_top.ncd
 Starting Router
 
 
-Phase  1  : 16 unrouted;      REAL time: 8 secs 
+Phase  1  : 37 unrouted;      REAL time: 8 secs 
 
-Phase  2  : 0 unrouted;      REAL time: 8 secs 
+Phase  2  : 21 unrouted;      REAL time: 8 secs 
 
 Phase  3  : 0 unrouted;      REAL time: 8 secs 
 
-Phase  4  : 0 unrouted; (Par is working to improve performance)     REAL time: 8 secs 
+Phase  4  : 0 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
 
-Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 8 secs 
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
 
 Updating file: cpu_top.ncd with current fully routed design.
 
@@ -125,7 +125,7 @@ Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 9
 Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
 
 Total REAL time to Router completion: 9 secs 
-Total CPU time to Router completion: 8 secs 
+Total CPU time to Router completion: 9 secs 
 
 Partition Implementation Status
 -------------------------------

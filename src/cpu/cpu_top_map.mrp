@@ -9,18 +9,18 @@ Target Device  : xc3s1200e
 Target Package : fg320
 Target Speed   : -4
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Mon May 15 09:08:27 2017
+Mapped Date    : Mon May 15 09:10:09 2017
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:    3
+Number of warnings:   19
 Logic Utilization:
 Logic Distribution:
     Number of Slices containing only related logic:       0 out of       0   0%
     Number of Slices containing unrelated logic:          0 out of       0   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Number of bonded IOBs:                 19 out of     250    7%
+  Number of bonded IOBs:                 40 out of     250   16%
 
 Average Fanout of Non-Clock Nets:                0.00
 
@@ -70,6 +70,38 @@ Section 2 - Warnings
 WARNING:Security:42 - Your software subscription period has lapsed. Your current
 version of Xilinx tools will continue to function, but you no longer qualify for
 Xilinx software updates or new releases.
+WARNING:MapLib:701 - Signal port_mem1_data<15> connected to top level port
+   port_mem1_data<15> has been removed.
+WARNING:MapLib:701 - Signal port_mem1_data<14> connected to top level port
+   port_mem1_data<14> has been removed.
+WARNING:MapLib:701 - Signal port_mem1_data<13> connected to top level port
+   port_mem1_data<13> has been removed.
+WARNING:MapLib:701 - Signal port_mem1_data<12> connected to top level port
+   port_mem1_data<12> has been removed.
+WARNING:MapLib:701 - Signal port_mem1_data<11> connected to top level port
+   port_mem1_data<11> has been removed.
+WARNING:MapLib:701 - Signal port_mem1_data<10> connected to top level port
+   port_mem1_data<10> has been removed.
+WARNING:MapLib:701 - Signal port_mem1_data<9> connected to top level port
+   port_mem1_data<9> has been removed.
+WARNING:MapLib:701 - Signal port_mem1_data<8> connected to top level port
+   port_mem1_data<8> has been removed.
+WARNING:MapLib:701 - Signal port_mem1_data<7> connected to top level port
+   port_mem1_data<7> has been removed.
+WARNING:MapLib:701 - Signal port_mem1_data<6> connected to top level port
+   port_mem1_data<6> has been removed.
+WARNING:MapLib:701 - Signal port_mem1_data<5> connected to top level port
+   port_mem1_data<5> has been removed.
+WARNING:MapLib:701 - Signal port_mem1_data<4> connected to top level port
+   port_mem1_data<4> has been removed.
+WARNING:MapLib:701 - Signal port_mem1_data<3> connected to top level port
+   port_mem1_data<3> has been removed.
+WARNING:MapLib:701 - Signal port_mem1_data<2> connected to top level port
+   port_mem1_data<2> has been removed.
+WARNING:MapLib:701 - Signal port_mem1_data<1> connected to top level port
+   port_mem1_data<1> has been removed.
+WARNING:MapLib:701 - Signal port_mem1_data<0> connected to top level port
+   port_mem1_data<0> has been removed.
 WARNING:PhysDesignRules:367 - The signal <port_rst_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <port_clk_key_IBUF> is incomplete. The
@@ -93,13 +125,70 @@ INFO:LIT:244 - All of the single ended outputs in this design are using slew
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-   1 block(s) optimized away
+  32 block(s) removed
+   2 block(s) optimized away
+  16 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
 
+The trimmed logic reported below is either:
+   1. part of a cycle
+   2. part of disabled logic
+   3. a side-effect of other trimmed logic
+
+The signal "port_mem1_data<0>" is unused and has been removed.
+ Unused block "port_mem1_data_0_OBUFT" (TRI) removed.
+The signal "port_mem1_data<10>" is unused and has been removed.
+ Unused block "port_mem1_data_10_OBUFT" (TRI) removed.
+The signal "port_mem1_data<11>" is unused and has been removed.
+ Unused block "port_mem1_data_11_OBUFT" (TRI) removed.
+The signal "port_mem1_data<12>" is unused and has been removed.
+ Unused block "port_mem1_data_12_OBUFT" (TRI) removed.
+The signal "port_mem1_data<13>" is unused and has been removed.
+ Unused block "port_mem1_data_13_OBUFT" (TRI) removed.
+The signal "port_mem1_data<14>" is unused and has been removed.
+ Unused block "port_mem1_data_14_OBUFT" (TRI) removed.
+The signal "port_mem1_data<15>" is unused and has been removed.
+ Unused block "port_mem1_data_15_OBUFT" (TRI) removed.
+The signal "port_mem1_data<1>" is unused and has been removed.
+ Unused block "port_mem1_data_1_OBUFT" (TRI) removed.
+The signal "port_mem1_data<2>" is unused and has been removed.
+ Unused block "port_mem1_data_2_OBUFT" (TRI) removed.
+The signal "port_mem1_data<3>" is unused and has been removed.
+ Unused block "port_mem1_data_3_OBUFT" (TRI) removed.
+The signal "port_mem1_data<4>" is unused and has been removed.
+ Unused block "port_mem1_data_4_OBUFT" (TRI) removed.
+The signal "port_mem1_data<5>" is unused and has been removed.
+ Unused block "port_mem1_data_5_OBUFT" (TRI) removed.
+The signal "port_mem1_data<6>" is unused and has been removed.
+ Unused block "port_mem1_data_6_OBUFT" (TRI) removed.
+The signal "port_mem1_data<7>" is unused and has been removed.
+ Unused block "port_mem1_data_7_OBUFT" (TRI) removed.
+The signal "port_mem1_data<8>" is unused and has been removed.
+ Unused block "port_mem1_data_8_OBUFT" (TRI) removed.
+The signal "port_mem1_data<9>" is unused and has been removed.
+ Unused block "port_mem1_data_9_OBUFT" (TRI) removed.
+Unused block "port_mem1_data<0>" (PAD) removed.
+Unused block "port_mem1_data<10>" (PAD) removed.
+Unused block "port_mem1_data<11>" (PAD) removed.
+Unused block "port_mem1_data<12>" (PAD) removed.
+Unused block "port_mem1_data<13>" (PAD) removed.
+Unused block "port_mem1_data<14>" (PAD) removed.
+Unused block "port_mem1_data<15>" (PAD) removed.
+Unused block "port_mem1_data<1>" (PAD) removed.
+Unused block "port_mem1_data<2>" (PAD) removed.
+Unused block "port_mem1_data<3>" (PAD) removed.
+Unused block "port_mem1_data<4>" (PAD) removed.
+Unused block "port_mem1_data<5>" (PAD) removed.
+Unused block "port_mem1_data<6>" (PAD) removed.
+Unused block "port_mem1_data<7>" (PAD) removed.
+Unused block "port_mem1_data<8>" (PAD) removed.
+Unused block "port_mem1_data<9>" (PAD) removed.
+
 Optimized Block(s):
 TYPE 		BLOCK
+GND 		XST_GND
 VCC 		XST_VCC
 
 Section 6 - IOB Properties
@@ -127,6 +216,27 @@ Section 6 - IOB Properties
 | port_led<13>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
 | port_led<14>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
 | port_led<15>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| port_mem1_addr<0>                  | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| port_mem1_addr<1>                  | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| port_mem1_addr<2>                  | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| port_mem1_addr<3>                  | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| port_mem1_addr<4>                  | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| port_mem1_addr<5>                  | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| port_mem1_addr<6>                  | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| port_mem1_addr<7>                  | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| port_mem1_addr<8>                  | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| port_mem1_addr<9>                  | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| port_mem1_addr<10>                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| port_mem1_addr<11>                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| port_mem1_addr<12>                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| port_mem1_addr<13>                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| port_mem1_addr<14>                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| port_mem1_addr<15>                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| port_mem1_addr<16>                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| port_mem1_addr<17>                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| port_mem1_en                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| port_mem1_oe                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| port_mem1_we                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
 | port_rst                           | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 
