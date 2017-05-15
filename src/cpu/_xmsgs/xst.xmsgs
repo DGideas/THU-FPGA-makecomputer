@@ -5,13 +5,19 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="warning" file="Xst" num="754" delta="old" >&quot;<arg fmt="%s" index="1">/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/cpu_top.vhd</arg>&quot; line <arg fmt="%d" index="2">100</arg>: Unconnected inout port &apos;<arg fmt="%s" index="3">mcmgmt_data</arg>&apos; of component &apos;<arg fmt="%s" index="4">mcmgmt</arg>&apos;.
+</msg>
+
 <msg type="warning" file="Xst" num="2211" delta="old" >&quot;<arg fmt="%s" index="1">/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/cpu_top.vhd</arg>&quot; line <arg fmt="%d" index="2">100</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">mcmgmt</arg>&gt;.
 </msg>
 
 <msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">internel_rst</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">internel_mcmgmt_free</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">internel_mcmgmt_free</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="old" >Signal &lt;<arg fmt="%s" index="1">internel_mcmgmt_data</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">internel_clk_singlestep</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.

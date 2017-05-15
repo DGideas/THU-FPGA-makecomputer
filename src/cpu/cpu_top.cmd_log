@@ -15,3 +15,14 @@ xst -intstyle ise -ifn "/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/cpu_top
 ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cpu_top.ucf -p xc3s1200e-fg320-4 cpu_top.ngc cpu_top.ngd  
 xst -intstyle ise -ifn "/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/cpu_top.xst" -ofn "/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/cpu_top.syr" 
 ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cpu_top.ucf -p xc3s1200e-fg320-4 cpu_top.ngc cpu_top.ngd  
+xst -intstyle ise -ifn "/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/cpu_top.xst" -ofn "/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/cpu_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cpu_top.ucf -p xc3s1200e-fg320-4 cpu_top.ngc cpu_top.ngd  
+xst -intstyle ise -ifn "/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/cpu_top.xst" -ofn "/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/cpu_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cpu_top.ucf -p xc3s1200e-fg320-4 cpu_top.ngc cpu_top.ngd  
+xst -intstyle ise -ifn "/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/cpu_top.xst" -ofn "/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/cpu_top.syr" 
+xst -intstyle ise -ifn "/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/cpu_top.xst" -ofn "/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/cpu_top.syr" 
+xst -intstyle ise -ifn "/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/cpu_top.xst" -ofn "/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/cpu_top.syr" 
+xst -intstyle ise -ifn "/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/cpu_top.xst" -ofn "/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/cpu_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cpu_top.ucf -p xc3s1200e-fg320-4 cpu_top.ngc cpu_top.ngd  
+xst -intstyle ise -ifn "/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/cpu_top.xst" -ofn "/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/cpu_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cpu_top.ucf -p xc3s1200e-fg320-4 cpu_top.ngc cpu_top.ngd  

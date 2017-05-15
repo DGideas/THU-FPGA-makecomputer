@@ -77,7 +77,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1494768964" xil_pn:in_ck="-7341819535803356045" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-8084998665907126192" xil_pn:start_ts="1494768955">
+    <transform xil_pn:end_ts="1494770442" xil_pn:in_ck="-7341819535803356045" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-8084998665907126192" xil_pn:start_ts="1494770434">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -97,7 +97,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1494768970" xil_pn:in_ck="8351591658901036486" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-6382601562386802688" xil_pn:start_ts="1494768964">
+    <transform xil_pn:end_ts="1494770448" xil_pn:in_ck="8351591658901036486" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-6382601562386802688" xil_pn:start_ts="1494770442">
       <status xil_pn:value="FailedRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_ngo"/>

@@ -100,7 +100,7 @@ led1: led port map
 mcmgmt1: mcmgmt port map
 (
 	internal_clk, port_mem1_oe, port_mem1_we, port_mem1_en, port_mem1_addr, port_mem1_data,
-	"00000000000000000000", internel_mcmgmt_data, '1', '1', '1', internel_mcmgmt_free
+	"00000000000000000000", open, '1', '1', '1', internel_mcmgmt_free
 );
 
 end Behavioral;
