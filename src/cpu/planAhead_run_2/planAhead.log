@@ -1,14 +1,14 @@
 #-----------------------------------------------------------
 # PlanAhead v14.7 (64-bit)
 # Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
-# Start of session at: Sun May 14 21:17:31 2017
-# Process ID: 13574
+# Start of session at: Mon May 15 09:40:33 2017
+# Process ID: 7279
 # Log file: /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/planAhead_run_2/planAhead.log
 # Journal file: /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/planAhead_run_2/planAhead.jou
 #-----------------------------------------------------------
 INFO: [Common 17-78] Attempting to get a license: PlanAhead
 INFO: [Common 17-290] Got license for PlanAhead
-INFO: [Common 17-86] Your PlanAhead license expires in -134 day(s)
+INFO: [Common 17-86] Your PlanAhead license expires in -135 day(s)
 INFO: [Device 21-36] Loading parts and site information from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
 Parsing RTL primitives file [/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
 Finished parsing RTL primitives file [/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
@@ -39,7 +39,7 @@ Processing design ...
    Preping design's macros ...
   finished :Prep
 Writing EDIF netlist file cpu_top.edif ...
-ngc2edif: Total memory usage is 103660 kilobytes
+ngc2edif: Total memory usage is 103708 kilobytes
 
 Parsing EDIF File [./planAhead_run_2/cpu.data/cache/cpu_top_ngc_f162ebd3.edif]
 Finished Parsing EDIF File [./planAhead_run_2/cpu.data/cache/cpu_top_ngc_f162ebd3.edif]
@@ -59,19 +59,15 @@ Finished Parsing UCF File [/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/cpu_
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Phase 0 | Netlist Checksum: 27deb44a
-link_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 2822.371 ; gain = 111.512
-startgroup
-set_property package_pin U10 [get_ports port_rst]
-endgroup
-save_constraints
+Phase 0 | Netlist Checksum: 6a65d1ff
+link_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:07 . Memory (MB): peak = 2825.941 ; gain = 141.594
 exit
 ERROR: [#UNDEF] *** Exception: ui.h.b: Found deleted key in HTclEventBroker. Verify if the classes listed here call cleanup()
+HTclEvent: DEBUG_CORE_CONFIG_CHANGE   Classes: ui.views.aR 
 HTclEvent: SIGNAL_MODIFY   Classes: ui.views.aR 
 HTclEvent: SIGNAL_BUS_MODIFY   Classes: ui.views.aR 
-HTclEvent: DEBUG_CORE_CONFIG_CHANGE   Classes: ui.views.aR 
 HTclEvent: DEBUG_PORT_CONFIG_CHANGE   Classes: ui.views.aR 
- (See /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/planAhead_pid13574.debug)
+ (See /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/planAhead_pid7279.debug)
 ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
-INFO: [Common 17-206] Exiting PlanAhead at Sun May 14 21:18:14 2017...
+INFO: [Common 17-206] Exiting PlanAhead at Mon May 15 09:41:03 2017...
 INFO: [Common 17-83] Releasing license: PlanAhead

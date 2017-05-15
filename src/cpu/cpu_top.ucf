@@ -56,3 +56,22 @@ NET "port_mem1_oe" LOC = M16;
 NET "port_mem1_we" LOC = M18;
 NET "port_rst" LOC = U10;
 NET "port_clk_key" LOC = U9;
+
+# PlanAhead Generated physical constraints 
+
+NET "port_switch[15]" LOC = J6;
+NET "port_switch[14]" LOC = J7;
+NET "port_switch[13]" LOC = K2;
+NET "port_switch[12]" LOC = K7;
+NET "port_switch[11]" LOC = M1;
+NET "port_switch[10]" LOC = N1;
+NET "port_switch[9]" LOC = N2;
+NET "port_switch[8]" LOC = R1;
+NET "port_switch[7]" LOC = R4;
+NET "port_switch[6]" LOC = U1;
+NET "port_switch[5]" LOC = V2;
+NET "port_switch[4]" LOC = V3;
+NET "port_switch[3]" LOC = V4;
+NET "port_switch[2]" LOC = U8;
+NET "port_switch[1]" LOC = R7;
+NET "port_switch[0]" LOC = T7;

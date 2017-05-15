@@ -4,7 +4,7 @@
   (keywordMap (keywordLevel 0))
   (status
     (written
-      (timestamp 2017 5 14 21 17 45)
+      (timestamp 2017 5 15 9 40 46)
       (program "Xilinx ngc2edif" (version "P.20131013"))
       (author "Xilinx. Inc ")
       (comment "This EDIF netlist is to be used within supported synthesis tools")
@@ -14,12 +14,40 @@
   (external UNISIMS
     (edifLevel 0)
     (technology (numberDefinition))
+    (cell GND
+      (cellType GENERIC)
+        (view view_1
+          (viewType NETLIST)
+          (interface
+            (port G
+              (direction OUTPUT)
+            )
+          )
+      )
+    )
     (cell VCC
       (cellType GENERIC)
         (view view_1
           (viewType NETLIST)
           (interface
             (port P
+              (direction OUTPUT)
+            )
+          )
+      )
+    )
+    (cell OBUFT
+      (cellType GENERIC)
+        (view view_1
+          (viewType NETLIST)
+          (interface
+            (port I
+              (direction INPUT)
+            )
+            (port T
+              (direction INPUT)
+            )
+            (port O
               (direction OUTPUT)
             )
           )
@@ -64,24 +92,110 @@
             (port port_rst
               (direction INPUT)
             )
+            (port port_clk_key
+              (direction INPUT)
+            )
             (port (array (rename port_mem1_data "port_mem1_data<15:0>") 16)
               (direction INOUT))
             (port (array (rename port_led "port_led<15:0>") 16)
               (direction OUTPUT))
             (port (array (rename port_mem1_addr "port_mem1_addr<17:0>") 18)
               (direction OUTPUT))
+            (port (array (rename port_switch "port_switch<15:0>") 16)
+              (direction INPUT))
             (designator "xc3s1200e-4-fg320")
             (property TYPE (string "cpu_top") (owner "Xilinx"))
             (property BUS_INFO (string "16:INOUT:port_mem1_data<15:0>") (owner "Xilinx"))
             (property BUS_INFO (string "16:OUTPUT:port_led<15:0>") (owner "Xilinx"))
             (property BUS_INFO (string "18:OUTPUT:port_mem1_addr<17:0>") (owner "Xilinx"))
+            (property BUS_INFO (string "16:INPUT:port_switch<15:0>") (owner "Xilinx"))
             (property NLW_UNIQUE_ID (integer 0) (owner "Xilinx"))
             (property NLW_MACRO_TAG (integer 0) (owner "Xilinx"))
             (property NLW_MACRO_ALIAS (string "cpu_top_cpu_top") (owner "Xilinx"))
           )
           (contents
+            (instance XST_GND
+              (viewRef view_1 (cellRef GND (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
             (instance XST_VCC
               (viewRef view_1 (cellRef VCC (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance port_mem1_data_15_OBUFT
+              (viewRef view_1 (cellRef OBUFT (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance port_mem1_data_14_OBUFT
+              (viewRef view_1 (cellRef OBUFT (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance port_mem1_data_13_OBUFT
+              (viewRef view_1 (cellRef OBUFT (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance port_mem1_data_12_OBUFT
+              (viewRef view_1 (cellRef OBUFT (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance port_mem1_data_11_OBUFT
+              (viewRef view_1 (cellRef OBUFT (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance port_mem1_data_10_OBUFT
+              (viewRef view_1 (cellRef OBUFT (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance port_mem1_data_9_OBUFT
+              (viewRef view_1 (cellRef OBUFT (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance port_mem1_data_8_OBUFT
+              (viewRef view_1 (cellRef OBUFT (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance port_mem1_data_7_OBUFT
+              (viewRef view_1 (cellRef OBUFT (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance port_mem1_data_6_OBUFT
+              (viewRef view_1 (cellRef OBUFT (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance port_mem1_data_5_OBUFT
+              (viewRef view_1 (cellRef OBUFT (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance port_mem1_data_4_OBUFT
+              (viewRef view_1 (cellRef OBUFT (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance port_mem1_data_3_OBUFT
+              (viewRef view_1 (cellRef OBUFT (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance port_mem1_data_2_OBUFT
+              (viewRef view_1 (cellRef OBUFT (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance port_mem1_data_1_OBUFT
+              (viewRef view_1 (cellRef OBUFT (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance port_mem1_data_0_OBUFT
+              (viewRef view_1 (cellRef OBUFT (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance port_mem1_en_OBUF
+              (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance port_mem1_oe_OBUF
+              (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance port_mem1_we_OBUF
+              (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
               (property XSTLIB (boolean (true)) (owner "Xilinx"))
             )
             (instance port_led_15_OBUF
@@ -148,25 +262,155 @@
               (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
               (property XSTLIB (boolean (true)) (owner "Xilinx"))
             )
+            (instance port_mem1_addr_17_OBUF
+              (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance port_mem1_addr_16_OBUF
+              (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance port_mem1_addr_15_OBUF
+              (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance port_mem1_addr_14_OBUF
+              (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance port_mem1_addr_13_OBUF
+              (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance port_mem1_addr_12_OBUF
+              (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance port_mem1_addr_11_OBUF
+              (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance port_mem1_addr_10_OBUF
+              (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance port_mem1_addr_9_OBUF
+              (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance port_mem1_addr_8_OBUF
+              (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance port_mem1_addr_7_OBUF
+              (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance port_mem1_addr_6_OBUF
+              (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance port_mem1_addr_5_OBUF
+              (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance port_mem1_addr_4_OBUF
+              (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance port_mem1_addr_3_OBUF
+              (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance port_mem1_addr_2_OBUF
+              (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance port_mem1_addr_1_OBUF
+              (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (instance port_mem1_addr_0_OBUF
+              (viewRef view_1 (cellRef OBUF (libraryRef UNISIMS)))
+              (property XSTLIB (boolean (true)) (owner "Xilinx"))
+            )
+            (net N0
+              (joined
+                (portRef G (instanceRef XST_GND))
+                (portRef I (instanceRef port_mem1_data_15_OBUFT))
+                (portRef I (instanceRef port_mem1_data_14_OBUFT))
+                (portRef I (instanceRef port_mem1_data_13_OBUFT))
+                (portRef I (instanceRef port_mem1_data_12_OBUFT))
+                (portRef I (instanceRef port_mem1_data_11_OBUFT))
+                (portRef I (instanceRef port_mem1_data_10_OBUFT))
+                (portRef I (instanceRef port_mem1_data_9_OBUFT))
+                (portRef I (instanceRef port_mem1_data_8_OBUFT))
+                (portRef I (instanceRef port_mem1_data_7_OBUFT))
+                (portRef I (instanceRef port_mem1_data_6_OBUFT))
+                (portRef I (instanceRef port_mem1_data_5_OBUFT))
+                (portRef I (instanceRef port_mem1_data_4_OBUFT))
+                (portRef I (instanceRef port_mem1_data_3_OBUFT))
+                (portRef I (instanceRef port_mem1_data_2_OBUFT))
+                (portRef I (instanceRef port_mem1_data_1_OBUFT))
+                (portRef I (instanceRef port_mem1_data_0_OBUFT))
+                (portRef I (instanceRef port_mem1_en_OBUF))
+                (portRef I (instanceRef port_mem1_oe_OBUF))
+                (portRef I (instanceRef port_mem1_we_OBUF))
+                (portRef I (instanceRef port_led_13_OBUF))
+                (portRef I (instanceRef port_led_11_OBUF))
+                (portRef I (instanceRef port_led_9_OBUF))
+                (portRef I (instanceRef port_led_7_OBUF))
+                (portRef I (instanceRef port_led_5_OBUF))
+                (portRef I (instanceRef port_led_3_OBUF))
+                (portRef I (instanceRef port_led_1_OBUF))
+                (portRef I (instanceRef port_led_0_OBUF))
+                (portRef I (instanceRef port_mem1_addr_17_OBUF))
+                (portRef I (instanceRef port_mem1_addr_16_OBUF))
+                (portRef I (instanceRef port_mem1_addr_15_OBUF))
+                (portRef I (instanceRef port_mem1_addr_14_OBUF))
+                (portRef I (instanceRef port_mem1_addr_13_OBUF))
+                (portRef I (instanceRef port_mem1_addr_12_OBUF))
+                (portRef I (instanceRef port_mem1_addr_11_OBUF))
+                (portRef I (instanceRef port_mem1_addr_10_OBUF))
+                (portRef I (instanceRef port_mem1_addr_9_OBUF))
+                (portRef I (instanceRef port_mem1_addr_8_OBUF))
+                (portRef I (instanceRef port_mem1_addr_7_OBUF))
+                (portRef I (instanceRef port_mem1_addr_6_OBUF))
+                (portRef I (instanceRef port_mem1_addr_5_OBUF))
+                (portRef I (instanceRef port_mem1_addr_4_OBUF))
+                (portRef I (instanceRef port_mem1_addr_3_OBUF))
+                (portRef I (instanceRef port_mem1_addr_2_OBUF))
+                (portRef I (instanceRef port_mem1_addr_1_OBUF))
+                (portRef I (instanceRef port_mem1_addr_0_OBUF))
+              )
+            )
             (net N1
               (joined
                 (portRef P (instanceRef XST_VCC))
+                (portRef T (instanceRef port_mem1_data_15_OBUFT))
+                (portRef T (instanceRef port_mem1_data_14_OBUFT))
+                (portRef T (instanceRef port_mem1_data_13_OBUFT))
+                (portRef T (instanceRef port_mem1_data_12_OBUFT))
+                (portRef T (instanceRef port_mem1_data_11_OBUFT))
+                (portRef T (instanceRef port_mem1_data_10_OBUFT))
+                (portRef T (instanceRef port_mem1_data_9_OBUFT))
+                (portRef T (instanceRef port_mem1_data_8_OBUFT))
+                (portRef T (instanceRef port_mem1_data_7_OBUFT))
+                (portRef T (instanceRef port_mem1_data_6_OBUFT))
+                (portRef T (instanceRef port_mem1_data_5_OBUFT))
+                (portRef T (instanceRef port_mem1_data_4_OBUFT))
+                (portRef T (instanceRef port_mem1_data_3_OBUFT))
+                (portRef T (instanceRef port_mem1_data_2_OBUFT))
+                (portRef T (instanceRef port_mem1_data_1_OBUFT))
+                (portRef T (instanceRef port_mem1_data_0_OBUFT))
                 (portRef I (instanceRef port_led_15_OBUF))
                 (portRef I (instanceRef port_led_14_OBUF))
-                (portRef I (instanceRef port_led_13_OBUF))
                 (portRef I (instanceRef port_led_12_OBUF))
-                (portRef I (instanceRef port_led_11_OBUF))
                 (portRef I (instanceRef port_led_10_OBUF))
-                (portRef I (instanceRef port_led_9_OBUF))
                 (portRef I (instanceRef port_led_8_OBUF))
-                (portRef I (instanceRef port_led_7_OBUF))
                 (portRef I (instanceRef port_led_6_OBUF))
-                (portRef I (instanceRef port_led_5_OBUF))
                 (portRef I (instanceRef port_led_4_OBUF))
-                (portRef I (instanceRef port_led_3_OBUF))
                 (portRef I (instanceRef port_led_2_OBUF))
-                (portRef I (instanceRef port_led_1_OBUF))
-                (portRef I (instanceRef port_led_0_OBUF))
               )
             )
             (net (rename port_led_0_ "port_led<0>")
@@ -263,6 +507,228 @@
               (joined
                 (portRef (member port_led 6))
                 (portRef O (instanceRef port_led_9_OBUF))
+              )
+            )
+            (net (rename port_mem1_addr_0_ "port_mem1_addr<0>")
+              (joined
+                (portRef (member port_mem1_addr 17))
+                (portRef O (instanceRef port_mem1_addr_0_OBUF))
+              )
+            )
+            (net (rename port_mem1_addr_10_ "port_mem1_addr<10>")
+              (joined
+                (portRef (member port_mem1_addr 7))
+                (portRef O (instanceRef port_mem1_addr_10_OBUF))
+              )
+            )
+            (net (rename port_mem1_addr_11_ "port_mem1_addr<11>")
+              (joined
+                (portRef (member port_mem1_addr 6))
+                (portRef O (instanceRef port_mem1_addr_11_OBUF))
+              )
+            )
+            (net (rename port_mem1_addr_12_ "port_mem1_addr<12>")
+              (joined
+                (portRef (member port_mem1_addr 5))
+                (portRef O (instanceRef port_mem1_addr_12_OBUF))
+              )
+            )
+            (net (rename port_mem1_addr_13_ "port_mem1_addr<13>")
+              (joined
+                (portRef (member port_mem1_addr 4))
+                (portRef O (instanceRef port_mem1_addr_13_OBUF))
+              )
+            )
+            (net (rename port_mem1_addr_14_ "port_mem1_addr<14>")
+              (joined
+                (portRef (member port_mem1_addr 3))
+                (portRef O (instanceRef port_mem1_addr_14_OBUF))
+              )
+            )
+            (net (rename port_mem1_addr_15_ "port_mem1_addr<15>")
+              (joined
+                (portRef (member port_mem1_addr 2))
+                (portRef O (instanceRef port_mem1_addr_15_OBUF))
+              )
+            )
+            (net (rename port_mem1_addr_16_ "port_mem1_addr<16>")
+              (joined
+                (portRef (member port_mem1_addr 1))
+                (portRef O (instanceRef port_mem1_addr_16_OBUF))
+              )
+            )
+            (net (rename port_mem1_addr_17_ "port_mem1_addr<17>")
+              (joined
+                (portRef (member port_mem1_addr 0))
+                (portRef O (instanceRef port_mem1_addr_17_OBUF))
+              )
+            )
+            (net (rename port_mem1_addr_1_ "port_mem1_addr<1>")
+              (joined
+                (portRef (member port_mem1_addr 16))
+                (portRef O (instanceRef port_mem1_addr_1_OBUF))
+              )
+            )
+            (net (rename port_mem1_addr_2_ "port_mem1_addr<2>")
+              (joined
+                (portRef (member port_mem1_addr 15))
+                (portRef O (instanceRef port_mem1_addr_2_OBUF))
+              )
+            )
+            (net (rename port_mem1_addr_3_ "port_mem1_addr<3>")
+              (joined
+                (portRef (member port_mem1_addr 14))
+                (portRef O (instanceRef port_mem1_addr_3_OBUF))
+              )
+            )
+            (net (rename port_mem1_addr_4_ "port_mem1_addr<4>")
+              (joined
+                (portRef (member port_mem1_addr 13))
+                (portRef O (instanceRef port_mem1_addr_4_OBUF))
+              )
+            )
+            (net (rename port_mem1_addr_5_ "port_mem1_addr<5>")
+              (joined
+                (portRef (member port_mem1_addr 12))
+                (portRef O (instanceRef port_mem1_addr_5_OBUF))
+              )
+            )
+            (net (rename port_mem1_addr_6_ "port_mem1_addr<6>")
+              (joined
+                (portRef (member port_mem1_addr 11))
+                (portRef O (instanceRef port_mem1_addr_6_OBUF))
+              )
+            )
+            (net (rename port_mem1_addr_7_ "port_mem1_addr<7>")
+              (joined
+                (portRef (member port_mem1_addr 10))
+                (portRef O (instanceRef port_mem1_addr_7_OBUF))
+              )
+            )
+            (net (rename port_mem1_addr_8_ "port_mem1_addr<8>")
+              (joined
+                (portRef (member port_mem1_addr 9))
+                (portRef O (instanceRef port_mem1_addr_8_OBUF))
+              )
+            )
+            (net (rename port_mem1_addr_9_ "port_mem1_addr<9>")
+              (joined
+                (portRef (member port_mem1_addr 8))
+                (portRef O (instanceRef port_mem1_addr_9_OBUF))
+              )
+            )
+            (net (rename port_mem1_data_0_ "port_mem1_data<0>")
+              (joined
+                (portRef (member port_mem1_data 15))
+                (portRef O (instanceRef port_mem1_data_0_OBUFT))
+              )
+            )
+            (net (rename port_mem1_data_10_ "port_mem1_data<10>")
+              (joined
+                (portRef (member port_mem1_data 5))
+                (portRef O (instanceRef port_mem1_data_10_OBUFT))
+              )
+            )
+            (net (rename port_mem1_data_11_ "port_mem1_data<11>")
+              (joined
+                (portRef (member port_mem1_data 4))
+                (portRef O (instanceRef port_mem1_data_11_OBUFT))
+              )
+            )
+            (net (rename port_mem1_data_12_ "port_mem1_data<12>")
+              (joined
+                (portRef (member port_mem1_data 3))
+                (portRef O (instanceRef port_mem1_data_12_OBUFT))
+              )
+            )
+            (net (rename port_mem1_data_13_ "port_mem1_data<13>")
+              (joined
+                (portRef (member port_mem1_data 2))
+                (portRef O (instanceRef port_mem1_data_13_OBUFT))
+              )
+            )
+            (net (rename port_mem1_data_14_ "port_mem1_data<14>")
+              (joined
+                (portRef (member port_mem1_data 1))
+                (portRef O (instanceRef port_mem1_data_14_OBUFT))
+              )
+            )
+            (net (rename port_mem1_data_15_ "port_mem1_data<15>")
+              (joined
+                (portRef (member port_mem1_data 0))
+                (portRef O (instanceRef port_mem1_data_15_OBUFT))
+              )
+            )
+            (net (rename port_mem1_data_1_ "port_mem1_data<1>")
+              (joined
+                (portRef (member port_mem1_data 14))
+                (portRef O (instanceRef port_mem1_data_1_OBUFT))
+              )
+            )
+            (net (rename port_mem1_data_2_ "port_mem1_data<2>")
+              (joined
+                (portRef (member port_mem1_data 13))
+                (portRef O (instanceRef port_mem1_data_2_OBUFT))
+              )
+            )
+            (net (rename port_mem1_data_3_ "port_mem1_data<3>")
+              (joined
+                (portRef (member port_mem1_data 12))
+                (portRef O (instanceRef port_mem1_data_3_OBUFT))
+              )
+            )
+            (net (rename port_mem1_data_4_ "port_mem1_data<4>")
+              (joined
+                (portRef (member port_mem1_data 11))
+                (portRef O (instanceRef port_mem1_data_4_OBUFT))
+              )
+            )
+            (net (rename port_mem1_data_5_ "port_mem1_data<5>")
+              (joined
+                (portRef (member port_mem1_data 10))
+                (portRef O (instanceRef port_mem1_data_5_OBUFT))
+              )
+            )
+            (net (rename port_mem1_data_6_ "port_mem1_data<6>")
+              (joined
+                (portRef (member port_mem1_data 9))
+                (portRef O (instanceRef port_mem1_data_6_OBUFT))
+              )
+            )
+            (net (rename port_mem1_data_7_ "port_mem1_data<7>")
+              (joined
+                (portRef (member port_mem1_data 8))
+                (portRef O (instanceRef port_mem1_data_7_OBUFT))
+              )
+            )
+            (net (rename port_mem1_data_8_ "port_mem1_data<8>")
+              (joined
+                (portRef (member port_mem1_data 7))
+                (portRef O (instanceRef port_mem1_data_8_OBUFT))
+              )
+            )
+            (net (rename port_mem1_data_9_ "port_mem1_data<9>")
+              (joined
+                (portRef (member port_mem1_data 6))
+                (portRef O (instanceRef port_mem1_data_9_OBUFT))
+              )
+            )
+            (net port_mem1_en
+              (joined
+                (portRef port_mem1_en)
+                (portRef O (instanceRef port_mem1_en_OBUF))
+              )
+            )
+            (net port_mem1_oe
+              (joined
+                (portRef port_mem1_oe)
+                (portRef O (instanceRef port_mem1_oe_OBUF))
+              )
+            )
+            (net port_mem1_we
+              (joined
+                (portRef port_mem1_we)
+                (portRef O (instanceRef port_mem1_we_OBUF))
               )
             )
           )

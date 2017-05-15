@@ -4,114 +4,113 @@
      changes made to this file may result in unpredictable
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
-<DeviceUsageSummary rev="8">
-<DesignStatistics TimeStamp="Mon May 15 09:10:33 2017"><group name="NetStatistics">
-<item name="NumNets_Active" rev="8">
-<attrib name="value" value="43"/></item>
-<item name="NumNets_Gnd" rev="8">
+<DeviceUsageSummary rev="19">
+<DesignStatistics TimeStamp="Mon May 15 10:25:11 2017"><group name="NetStatistics">
+<item name="NumNets_Active" rev="18">
+<attrib name="value" value="107"/></item>
+<item name="NumNets_Gnd" rev="18">
 <attrib name="value" value="1"/></item>
-<item name="NumNets_Vcc" rev="8">
+<item name="NumNets_Vcc" rev="18">
 <attrib name="value" value="1"/></item>
-<item name="NumNodesOfType_Gnd_INPUT" rev="8">
-<attrib name="value" value="21"/></item>
-<item name="NumNodesOfType_Gnd_OMUX" rev="8">
-<attrib name="value" value="21"/></item>
-<item name="NumNodesOfType_Gnd_OUTPUT" rev="8">
-<attrib name="value" value="11"/></item>
-<item name="NumNodesOfType_Vcc_INPUT" rev="8">
-<attrib name="value" value="16"/></item>
-<item name="NumNodesOfType_Vcc_VCCOUT" rev="8">
-<attrib name="value" value="11"/></item>
+<item name="NumNodesOfType_Gnd_DOUBLE" rev="18">
+<attrib name="value" value="4"/></item>
+<item name="NumNodesOfType_Gnd_INPUT" rev="18">
+<attrib name="value" value="34"/></item>
+<item name="NumNodesOfType_Gnd_OMUX" rev="18">
+<attrib name="value" value="33"/></item>
+<item name="NumNodesOfType_Gnd_OUTPUT" rev="18">
+<attrib name="value" value="19"/></item>
+<item name="NumNodesOfType_Vcc_INPUT" rev="18">
+<attrib name="value" value="3"/></item>
+<item name="NumNodesOfType_Vcc_VCCOUT" rev="18">
+<attrib name="value" value="3"/></item>
 </group>
 <group name="SiteStatistics">
-<item name="IBUF-DIFFM" rev="8">
-<attrib name="value" value="1"/></item>
-<item name="IBUF-DIFFMI" rev="8">
-<attrib name="value" value="1"/></item>
-<item name="IBUF-DIFFSI" rev="8">
-<attrib name="value" value="1"/></item>
-<item name="IOB-DIFFM" rev="8">
+<item name="IBUF-DIFFM" rev="18">
+<attrib name="value" value="9"/></item>
+<item name="IBUF-DIFFMI" rev="18">
+<attrib name="value" value="4"/></item>
+<item name="IBUF-DIFFS" rev="18">
+<attrib name="value" value="8"/></item>
+<item name="IBUF-DIFFSI" rev="18">
+<attrib name="value" value="3"/></item>
+<item name="IOB-DIFFM" rev="18">
 <attrib name="value" value="15"/></item>
-<item name="IOB-DIFFS" rev="8">
+<item name="IOB-DIFFS" rev="18">
 <attrib name="value" value="17"/></item>
 </group>
 <group name="MiscellaneousStatistics">
-<item name="AGG_BONDED_IO" rev="7">
-<attrib name="value" value="40"/></item>
-<item name="AGG_IO" rev="7">
-<attrib name="value" value="40"/></item>
-<item name="NUM_BONDED_IBUF" rev="7">
-<attrib name="value" value="3"/></item>
-<item name="NUM_BONDED_IOB" rev="7">
-<attrib name="value" value="37"/></item>
+<item name="AGG_BONDED_IO" rev="19">
+<attrib name="value" value="72"/></item>
+<item name="AGG_IO" rev="19">
+<attrib name="value" value="72"/></item>
+<item name="AGG_SLICE" rev="19">
+<attrib name="value" value="7"/></item>
+<item name="NUM_4_INPUT_LUT" rev="19">
+<attrib name="value" value="6"/></item>
+<item name="NUM_BONDED_IBUF" rev="19">
+<attrib name="value" value="19"/></item>
+<item name="NUM_BONDED_IOB" rev="19">
+<attrib name="value" value="53"/></item>
+<item name="NUM_BUFGMUX" rev="19">
+<attrib name="value" value="1"/></item>
+<item name="NUM_SLICEL" rev="19">
+<attrib name="value" value="7"/></item>
+<item name="NUM_SLICE_FF" rev="19">
+<attrib name="value" value="8"/></item>
 </group>
 </DesignStatistics>
-<DeviceUsage TimeStamp="Mon May 15 09:10:33 2017"><group name="SiteSummary">
-<item name="IBUF" rev="8">
-<attrib name="total" value="1000000"/><attrib name="used" value="3"/></item>
-<item name="IBUF_INBUF" rev="8">
-<attrib name="total" value="1000000"/><attrib name="used" value="3"/></item>
-<item name="IBUF_PAD" rev="8">
-<attrib name="total" value="1000000"/><attrib name="used" value="3"/></item>
-<item name="IOB" rev="8">
-<attrib name="total" value="1000000"/><attrib name="used" value="37"/></item>
-<item name="IOB_OUTBUF" rev="8">
-<attrib name="total" value="1000000"/><attrib name="used" value="37"/></item>
-<item name="IOB_PAD" rev="8">
-<attrib name="total" value="1000000"/><attrib name="used" value="37"/></item>
-</group>
-</DeviceUsage>
-<ReportConfigData TimeStamp="Mon May 15 09:10:33 2017"><group name="IBUF_PAD">
-<item name="IOATTRBOX" rev="8">
-<attrib name="LVCMOS25" value="3"/></item>
+<ReportConfigData TimeStamp="Mon May 15 10:24:00 2017"><group name="IBUF_PAD">
+<item name="IOATTRBOX" rev="18">
+<attrib name="LVCMOS25" value="35"/></item>
 </group>
 <group name="IOB_OUTBUF">
-<item name="IN" rev="8">
+<item name="IN" rev="18">
 <attrib name="IN_INV" value="0"/><attrib name="IN" value="37"/></item>
 </group>
 <group name="IOB_PAD">
-<item name="DRIVEATTRBOX" rev="8">
+<item name="DRIVEATTRBOX" rev="18">
 <attrib name="12" value="37"/></item>
-<item name="IOATTRBOX" rev="8">
+<item name="IOATTRBOX" rev="18">
 <attrib name="LVCMOS25" value="37"/></item>
-<item name="SLEW" rev="8">
+<item name="SLEW" rev="18">
 <attrib name="SLOW" value="37"/></item>
 </group>
 <group name="IOB">
-<item name="O1" rev="8">
+<item name="O1" rev="18">
 <attrib name="O1_INV" value="0"/><attrib name="O1" value="37"/></item>
 </group>
 </ReportConfigData>
-<ReportPinData TimeStamp="Mon May 15 09:10:33 2017"><group name="IBUF_PAD">
-<item name="PAD" rev="8">
-<attrib name="value" value="3"/></item>
+<ReportPinData TimeStamp="Mon May 15 10:24:00 2017"><group name="IBUF_PAD">
+<item name="PAD" rev="18">
+<attrib name="value" value="35"/></item>
 </group>
 <group name="IBUF_INBUF">
-<item name="IN" rev="8">
-<attrib name="value" value="3"/></item>
-<item name="OUT" rev="8">
-<attrib name="value" value="3"/></item>
+<item name="IN" rev="18">
+<attrib name="value" value="35"/></item>
+<item name="OUT" rev="18">
+<attrib name="value" value="35"/></item>
 </group>
 <group name="IOB_OUTBUF">
-<item name="IN" rev="8">
+<item name="IN" rev="18">
 <attrib name="value" value="37"/></item>
-<item name="OUT" rev="8">
+<item name="OUT" rev="18">
 <attrib name="value" value="37"/></item>
 </group>
 <group name="IBUF">
-<item name="I" rev="8">
-<attrib name="value" value="3"/></item>
-<item name="PAD" rev="8">
-<attrib name="value" value="3"/></item>
+<item name="I" rev="18">
+<attrib name="value" value="35"/></item>
+<item name="PAD" rev="18">
+<attrib name="value" value="35"/></item>
 </group>
 <group name="IOB_PAD">
-<item name="PAD" rev="8">
+<item name="PAD" rev="18">
 <attrib name="value" value="37"/></item>
 </group>
 <group name="IOB">
-<item name="O1" rev="8">
+<item name="O1" rev="18">
 <attrib name="value" value="37"/></item>
-<item name="PAD" rev="8">
+<item name="PAD" rev="18">
 <attrib name="value" value="37"/></item>
 </group>
 </ReportPinData>

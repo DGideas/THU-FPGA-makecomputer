@@ -6,7 +6,7 @@ use ieee.std_logic_unsigned.all;
 entity led is
 	port
 	(
-		led_port_led: out std_logic_vector(15 downto 0);
+		led_port_led: out std_logic_vector(0 to 15);
 		led_data: in std_logic_vector(15 downto 0)
 	);
 end led;

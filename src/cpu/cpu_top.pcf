@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Mon May 15 09:10:11 2017
+// Written by: Map P.20131013 on Mon May 15 10:25:11 2017
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -10,38 +10,72 @@ COMP "port_mem1_addr<12>" LOCATE = SITE "G15" LEVEL 1;
 COMP "port_rst" LOCATE = SITE "U10" LEVEL 1;
 COMP "port_mem1_addr<13>" LOCATE = SITE "G16" LEVEL 1;
 COMP "port_mem1_addr<14>" LOCATE = SITE "H14" LEVEL 1;
+COMP "port_switch<10>" LOCATE = SITE "N1" LEVEL 1;
 COMP "port_mem1_addr<15>" LOCATE = SITE "H15" LEVEL 1;
 COMP "port_led<10>" LOCATE = SITE "D11" LEVEL 1;
+COMP "port_switch<11>" LOCATE = SITE "M1" LEVEL 1;
 COMP "port_mem1_addr<16>" LOCATE = SITE "H16" LEVEL 1;
 COMP "port_led<11>" LOCATE = SITE "C11" LEVEL 1;
+COMP "port_switch<12>" LOCATE = SITE "K7" LEVEL 1;
 COMP "port_mem1_addr<17>" LOCATE = SITE "H17" LEVEL 1;
 COMP "port_led<12>" LOCATE = SITE "B11" LEVEL 1;
+COMP "port_switch<13>" LOCATE = SITE "K2" LEVEL 1;
 COMP "port_led<13>" LOCATE = SITE "A11" LEVEL 1;
+COMP "port_switch<14>" LOCATE = SITE "J7" LEVEL 1;
 COMP "port_led<14>" LOCATE = SITE "E10" LEVEL 1;
+COMP "port_switch<15>" LOCATE = SITE "J6" LEVEL 1;
 COMP "port_led<15>" LOCATE = SITE "D10" LEVEL 1;
 COMP "port_mem1_addr<0>" LOCATE = SITE "C17" LEVEL 1;
 COMP "port_mem1_addr<1>" LOCATE = SITE "C18" LEVEL 1;
 COMP "port_mem1_addr<2>" LOCATE = SITE "D16" LEVEL 1;
+COMP "port_switch<0>" LOCATE = SITE "T7" LEVEL 1;
 COMP "port_led<0>" LOCATE = SITE "A14" LEVEL 1;
+COMP "port_mem1_data<10>" LOCATE = SITE "L15" LEVEL 1;
 COMP "port_mem1_addr<3>" LOCATE = SITE "D17" LEVEL 1;
+COMP "port_switch<1>" LOCATE = SITE "R7" LEVEL 1;
 COMP "port_led<1>" LOCATE = SITE "E13" LEVEL 1;
+COMP "port_mem1_data<11>" LOCATE = SITE "L16" LEVEL 1;
 COMP "port_mem1_addr<4>" LOCATE = SITE "E15" LEVEL 1;
+COMP "port_switch<2>" LOCATE = SITE "U8" LEVEL 1;
 COMP "port_led<2>" LOCATE = SITE "D13" LEVEL 1;
+COMP "port_mem1_data<12>" LOCATE = SITE "L17" LEVEL 1;
 COMP "port_mem1_addr<5>" LOCATE = SITE "E16" LEVEL 1;
+COMP "port_switch<3>" LOCATE = SITE "V4" LEVEL 1;
 COMP "port_led<3>" LOCATE = SITE "B13" LEVEL 1;
+COMP "port_mem1_data<13>" LOCATE = SITE "L18" LEVEL 1;
 COMP "port_mem1_addr<6>" LOCATE = SITE "F14" LEVEL 1;
+COMP "port_switch<4>" LOCATE = SITE "V3" LEVEL 1;
 COMP "port_led<4>" LOCATE = SITE "A13" LEVEL 1;
+COMP "port_mem1_data<14>" LOCATE = SITE "M13" LEVEL 1;
+COMP "port_mem1_data<0>" LOCATE = SITE "J12" LEVEL 1;
 COMP "port_mem1_addr<7>" LOCATE = SITE "F15" LEVEL 1;
+COMP "port_switch<5>" LOCATE = SITE "V2" LEVEL 1;
 COMP "port_led<5>" LOCATE = SITE "F12" LEVEL 1;
+COMP "port_mem1_data<1>" LOCATE = SITE "J13" LEVEL 1;
+COMP "port_mem1_data<15>" LOCATE = SITE "M14" LEVEL 1;
 COMP "port_mem1_addr<8>" LOCATE = SITE "F17" LEVEL 1;
+COMP "port_switch<6>" LOCATE = SITE "U1" LEVEL 1;
 COMP "port_led<6>" LOCATE = SITE "E12" LEVEL 1;
+COMP "port_mem1_data<2>" LOCATE = SITE "J14" LEVEL 1;
 COMP "port_mem1_addr<9>" LOCATE = SITE "F18" LEVEL 1;
+COMP "port_switch<7>" LOCATE = SITE "R4" LEVEL 1;
 COMP "port_led<7>" LOCATE = SITE "A12" LEVEL 1;
-COMP "port_clk_key" LOCATE = SITE "U9" LEVEL 1;
+COMP "port_mem1_data<3>" LOCATE = SITE "J15" LEVEL 1;
+COMP "port_switch<8>" LOCATE = SITE "R1" LEVEL 1;
 COMP "port_clk_50" LOCATE = SITE "B9" LEVEL 1;
 COMP "port_led<8>" LOCATE = SITE "F11" LEVEL 1;
+COMP "port_clk_key" LOCATE = SITE "U9" LEVEL 1;
+COMP "port_mem1_data<4>" LOCATE = SITE "J16" LEVEL 1;
+COMP "port_switch<9>" LOCATE = SITE "N2" LEVEL 1;
 COMP "port_led<9>" LOCATE = SITE "E11" LEVEL 1;
+COMP "port_mem1_data<5>" LOCATE = SITE "J17" LEVEL 1;
+COMP "port_mem1_data<6>" LOCATE = SITE "K12" LEVEL 1;
+COMP "port_mem1_data<7>" LOCATE = SITE "K13" LEVEL 1;
+COMP "port_mem1_data<8>" LOCATE = SITE "K14" LEVEL 1;
+COMP "port_mem1_data<9>" LOCATE = SITE "K15" LEVEL 1;
 COMP "port_mem1_en" LOCATE = SITE "M15" LEVEL 1;
 COMP "port_mem1_oe" LOCATE = SITE "M16" LEVEL 1;
+NET "port_clk_key_BUFGP/IBUFG" BEL "port_clk_key_BUFGP/BUFG.GCLKMUX"
+        USELOCALCONNECT;
 SCHEMATIC END;
 
