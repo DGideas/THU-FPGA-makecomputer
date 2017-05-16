@@ -121,10 +121,9 @@ led1: led port map
 mcmgmt1: mcmgmt port map
 (
 	internal_debug_clk, internal_rst, port_mem1_oe, port_mem1_we, port_mem1_en, port_mem1_addr, port_mem1_data,
-	"00000000000000000000", "1111111111111111",  open, '1', '1', '1', internal_mcmgmt_free, open, internal_mcmgmt_debug_status
+	"00000000000000000000", "1111111111111111",  internal_debug, '1', '1', '1', internal_mcmgmt_free, open, internal_mcmgmt_debug_status
 );
 
-internal_debug <= "00000000000"&internal_mcmgmt_debug_status;
 
 end Behavioral;
 

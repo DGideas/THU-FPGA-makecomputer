@@ -38,18 +38,89 @@ INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and
 
 Data Sheet report:
 -----------------
-No constraints were found to generate data for the Data Sheet Report section.
-Use the Advanced Analysis (-a) option or generate global constraints for each
-clock, its pad to setup and clock to pad paths, and a pad to pad constraint.
+All values displayed in nanoseconds (ns)
 
-Analysis completed Mon May 15 10:23:54 2017 
+Setup/Hold to clock port_clk_key
+------------------+------------+------------+------------------+--------+
+                  |Max Setup to|Max Hold to |                  | Clock  |
+Source            | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------------+------------+------------+------------------+--------+
+port_mem1_data<0> |    3.104(R)|   -1.117(R)|port_clk_key_BUFGP|   0.000|
+port_mem1_data<1> |    2.951(R)|   -0.995(R)|port_clk_key_BUFGP|   0.000|
+port_mem1_data<2> |    2.221(R)|   -0.416(R)|port_clk_key_BUFGP|   0.000|
+port_mem1_data<3> |    2.954(R)|   -0.995(R)|port_clk_key_BUFGP|   0.000|
+port_mem1_data<4> |    2.910(R)|   -0.965(R)|port_clk_key_BUFGP|   0.000|
+port_mem1_data<5> |    3.097(R)|   -1.114(R)|port_clk_key_BUFGP|   0.000|
+port_mem1_data<6> |    3.022(R)|   -1.059(R)|port_clk_key_BUFGP|   0.000|
+port_mem1_data<7> |    3.023(R)|   -1.060(R)|port_clk_key_BUFGP|   0.000|
+port_mem1_data<8> |    3.215(R)|   -1.218(R)|port_clk_key_BUFGP|   0.000|
+port_mem1_data<9> |    2.641(R)|   -0.757(R)|port_clk_key_BUFGP|   0.000|
+port_mem1_data<10>|    3.306(R)|   -0.185(R)|port_clk_key_BUFGP|   0.000|
+port_mem1_data<11>|    3.306(R)|   -0.185(R)|port_clk_key_BUFGP|   0.000|
+port_mem1_data<12>|    3.302(R)|   -0.179(R)|port_clk_key_BUFGP|   0.000|
+port_mem1_data<13>|    2.592(R)|   -0.715(R)|port_clk_key_BUFGP|   0.000|
+port_mem1_data<14>|    3.194(R)|   -1.172(R)|port_clk_key_BUFGP|   0.000|
+port_mem1_data<15>|    3.169(R)|   -1.166(R)|port_clk_key_BUFGP|   0.000|
+------------------+------------+------------+------------------+--------+
+
+Clock port_clk_key to Pad
+------------------+------------+------------------+--------+
+                  | clk (edge) |                  | Clock  |
+Destination       |   to PAD   |Internal Clock(s) | Phase  |
+------------------+------------+------------------+--------+
+port_led<0>       |    6.278(R)|port_clk_key_BUFGP|   0.000|
+port_led<1>       |    6.323(R)|port_clk_key_BUFGP|   0.000|
+port_led<2>       |    6.246(R)|port_clk_key_BUFGP|   0.000|
+port_led<3>       |    9.750(R)|port_clk_key_BUFGP|   0.000|
+port_led<4>       |   10.049(R)|port_clk_key_BUFGP|   0.000|
+port_led<5>       |   10.228(R)|port_clk_key_BUFGP|   0.000|
+port_led<6>       |    6.236(R)|port_clk_key_BUFGP|   0.000|
+port_led<7>       |    6.232(R)|port_clk_key_BUFGP|   0.000|
+port_led<8>       |    6.245(R)|port_clk_key_BUFGP|   0.000|
+port_led<9>       |    6.245(R)|port_clk_key_BUFGP|   0.000|
+port_led<10>      |    6.260(R)|port_clk_key_BUFGP|   0.000|
+port_led<11>      |    6.260(R)|port_clk_key_BUFGP|   0.000|
+port_led<12>      |    6.272(R)|port_clk_key_BUFGP|   0.000|
+port_led<13>      |    6.253(R)|port_clk_key_BUFGP|   0.000|
+port_led<14>      |    6.269(R)|port_clk_key_BUFGP|   0.000|
+port_led<15>      |    6.269(R)|port_clk_key_BUFGP|   0.000|
+port_mem1_data<0> |    9.998(R)|port_clk_key_BUFGP|   0.000|
+port_mem1_data<1> |   10.044(R)|port_clk_key_BUFGP|   0.000|
+port_mem1_data<2> |   10.300(R)|port_clk_key_BUFGP|   0.000|
+port_mem1_data<3> |    9.747(R)|port_clk_key_BUFGP|   0.000|
+port_mem1_data<4> |   10.546(R)|port_clk_key_BUFGP|   0.000|
+port_mem1_data<5> |    9.490(R)|port_clk_key_BUFGP|   0.000|
+port_mem1_data<6> |    8.965(R)|port_clk_key_BUFGP|   0.000|
+port_mem1_data<7> |    8.638(R)|port_clk_key_BUFGP|   0.000|
+port_mem1_data<8> |    8.590(R)|port_clk_key_BUFGP|   0.000|
+port_mem1_data<9> |    8.897(R)|port_clk_key_BUFGP|   0.000|
+port_mem1_data<10>|    8.711(R)|port_clk_key_BUFGP|   0.000|
+port_mem1_data<11>|    8.753(R)|port_clk_key_BUFGP|   0.000|
+port_mem1_data<12>|    8.715(R)|port_clk_key_BUFGP|   0.000|
+port_mem1_data<13>|    9.012(R)|port_clk_key_BUFGP|   0.000|
+port_mem1_data<14>|    9.746(R)|port_clk_key_BUFGP|   0.000|
+port_mem1_data<15>|    9.727(R)|port_clk_key_BUFGP|   0.000|
+port_mem1_oe      |    8.981(R)|port_clk_key_BUFGP|   0.000|
+port_mem1_we      |    8.335(R)|port_clk_key_BUFGP|   0.000|
+------------------+------------+------------------+--------+
+
+Clock to Setup on destination clock port_clk_key
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+port_clk_key   |    4.137|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Mon May 15 11:44:59 2017 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 361 MB
+Peak Memory Usage: 363 MB
 
 
 
