@@ -13,6 +13,16 @@ entity mcmgmt is
 		mcmgmt_port_mem1_en: out std_logic;
 		mcmgmt_port_mem1_addr: out std_logic_vector(17 downto 0);
 		mcmgmt_port_mem1_data: inout std_logic_vector(15 downto 0);
+		mcmgmt_port_mem2_oe: out std_logic;
+		mcmgmt_port_mem2_we: out std_logic;
+		mcmgmt_port_mem2_en: out std_logic;
+		mcmgmt_port_mem2_addr: out std_logic_vector(17 downto 0);
+		mcmgmt_port_mem2_data: inout std_logic_vector(15 downto 0);
+		mcmgmt_port_com_data_ready: in std_logic;
+		mcmgmt_port_com_rdn: out std_logic;
+		mcmgmt_port_com_tbre: inout std_logic;
+		mcmgmt_port_com_tsre: inout std_logic;
+		mcmgmt_port_com_wrn: out std_logic;
 		mcmgmt_addr: in std_logic_vector(19 downto 0);
 		mcmgmt_idata: in std_logic_vector(15 downto 0);
 		mcmgmt_odata: out std_logic_vector(15 downto 0);
@@ -56,11 +66,13 @@ begin
 						mcmgmt_port_mem1_we <= '1';
 						mcmgmt_port_mem1_addr <= "000100000000000000";
 						mcmgmt_port_mem1_data <= "1101010101010100";
+						mcmgmt_port_com_rdn <= '1';
 						mcmgmt_status <= "00010";
 					when "00010" =>
 						mcmgmt_port_mem1_oe <= '1';
 						mcmgmt_port_mem1_en <= '1';
 						mcmgmt_port_mem1_we <= '0';
+						mcmgmt_port_com_rdn <= '1';
 						mcmgmt_status <= "00011";
 					when "00011" =>
 						mcmgmt_status <= "00100";

@@ -6,16 +6,26 @@ use ieee.std_logic_unsigned.all;
 entity cpu_top is
 	Port
 	(
-		port_clk_50: in std_logic;
-		port_clk_key: in std_logic;
-		port_switch: in std_logic_vector(15 downto 0);
-		port_rst: in std_logic;
-		port_mem1_oe: out std_logic;
+		port_clk_50: in std_logic; --50MHz clock
+		port_clk_key: in std_logic; --One-Step clk key
+		port_switch: in std_logic_vector(15 downto 0); --On-board switch
+		port_rst: in std_logic; --Reset key
+		port_mem1_oe: out std_logic; --Memory#1 signal
 		port_mem1_we: out std_logic;
 		port_mem1_en: out std_logic;
 		port_mem1_addr: out std_logic_vector(17 downto 0);
 		port_mem1_data: inout std_logic_vector(15 downto 0);
-		port_led: out std_logic_vector(0 to 15)
+		port_mem2_oe: out std_logic; --Memory#1 signal
+		port_mem2_we: out std_logic;
+		port_mem2_en: out std_logic;
+		port_mem2_addr: out std_logic_vector(17 downto 0);
+		port_mem2_data: inout std_logic_vector(15 downto 0);
+		port_com_data_ready: in std_logic; --COM signal
+		port_com_rdn: out std_logic;
+		port_com_tbre: inout std_logic;
+		port_com_tsre: inout std_logic;
+		port_com_wrn: out std_logic;
+		port_led: out std_logic_vector(0 to 15) --On-board LED
 	);
 end cpu_top;
 
@@ -76,6 +86,16 @@ component mcmgmt is
 		mcmgmt_port_mem1_en: out std_logic;
 		mcmgmt_port_mem1_addr: out std_logic_vector(17 downto 0);
 		mcmgmt_port_mem1_data: inout std_logic_vector(15 downto 0);
+		mcmgmt_port_mem2_oe: out std_logic;
+		mcmgmt_port_mem2_we: out std_logic;
+		mcmgmt_port_mem2_en: out std_logic;
+		mcmgmt_port_mem2_addr: out std_logic_vector(17 downto 0);
+		mcmgmt_port_mem2_data: inout std_logic_vector(15 downto 0);
+		mcmgmt_port_com_data_ready: in std_logic;
+		mcmgmt_port_com_rdn: out std_logic;
+		mcmgmt_port_com_tbre: inout std_logic;
+		mcmgmt_port_com_tsre: inout std_logic;
+		mcmgmt_port_com_wrn: out std_logic;
 		mcmgmt_addr: in std_logic_vector(19 downto 0);
 		mcmgmt_idata: in std_logic_vector(15 downto 0);
 		mcmgmt_odata: out std_logic_vector(15 downto 0);
@@ -95,33 +115,62 @@ begin
 
 clk1: clk port map
 (
-	port_clk_50, internal_clk
+	clk_port_clk => port_clk_50,
+	clk_clk => internal_clk
 );
 
 rst1: rstkey port map
 (
-	port_rst, internal_rst
+	rstkey_port_rst => port_rst,
+	rstkey_rst => internal_rst
 );
 
 clkkey1: clkkey port map
 (
-	port_clk_key, internal_debug_clk
+	clkkey_port_clk => port_clk_key,
+	clkkey_clk => internal_debug_clk
 );
 
 switch1: switch port map
 (
-	port_switch, internal_switch
+	switch_port_switch => port_switch,
+	switch_switch => internal_switch
 );
 
 led1: led port map
 (
-	port_led, internal_debug
+	led_port_led => port_led,
+	led_data => internal_debug
 );
 
 mcmgmt1: mcmgmt port map
 (
-	internal_debug_clk, internal_rst, port_mem1_oe, port_mem1_we, port_mem1_en, port_mem1_addr, port_mem1_data,
-	"00000000000000000000", "1111111111111111",  internal_debug, '1', '1', '1', internal_mcmgmt_free, open, internal_mcmgmt_debug_status
+	mcmgmt_clk => internal_debug_clk,
+	mcmgmt_rst => internal_rst,
+	mcmgmt_port_mem1_oe => port_mem1_oe,
+	mcmgmt_port_mem1_we => port_mem1_we,
+	mcmgmt_port_mem1_en => port_mem1_en,
+	mcmgmt_port_mem1_addr => port_mem1_addr,
+	mcmgmt_port_mem1_data => port_mem1_data,
+	mcmgmt_port_mem2_oe => port_mem2_oe,
+	mcmgmt_port_mem2_we => port_mem2_we,
+	mcmgmt_port_mem2_en => port_mem2_en,
+	mcmgmt_port_mem2_addr => port_mem2_addr,
+	mcmgmt_port_mem2_data => port_mem2_data,
+	mcmgmt_port_com_data_ready => port_com_data_ready,
+	mcmgmt_port_com_rdn => port_com_rdn,
+	mcmgmt_port_com_tbre => port_com_tbre,
+	mcmgmt_port_com_tsre => port_com_tsre,
+	mcmgmt_port_com_wrn => port_com_wrn,
+	mcmgmt_addr => "00000000000000000000",
+	mcmgmt_idata => "1111111111111111",
+	mcmgmt_odata => internal_debug,
+	mcmgmt_rw => '1',
+	mcmgmt_by_byte => '1',
+	mcmgmt_byte_select => '1',
+	mcmgmt_free => internal_mcmgmt_free,
+	mcmgmt_int => open,
+	mcmgmt_debug_status => internal_mcmgmt_debug_status
 );
 
 
