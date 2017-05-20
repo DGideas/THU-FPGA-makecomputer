@@ -164,7 +164,7 @@ mcmgmt1: mcmgmt port map
 	mcmgmt_port_com_wrn => port_com_wrn,
 	mcmgmt_addr => "00000000000000000000",
 	mcmgmt_idata => "1111111111111111",
-	mcmgmt_odata => internal_debug,
+	mcmgmt_odata => open,
 	mcmgmt_rw => '1',
 	mcmgmt_by_byte => '1',
 	mcmgmt_byte_select => '1',
@@ -173,6 +173,7 @@ mcmgmt1: mcmgmt port map
 	mcmgmt_debug_status => internal_mcmgmt_debug_status
 );
 
+internal_debug <= internal_mcmgmt_debug_status & "01010101011";
 
 end Behavioral;
 

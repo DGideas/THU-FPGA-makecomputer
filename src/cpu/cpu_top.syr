@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> 
 Reading design: cpu_top.prj
@@ -145,6 +145,7 @@ Analyzing hierarchy for entity <mcmgmt> in library <work> (architecture <behavio
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <cpu_top> in library <work> (Architecture <behavioral>).
+WARNING:Xst:753 - "/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/cpu_top.vhd" line 146: Unconnected output port 'mcmgmt_odata' of component 'mcmgmt'.
 WARNING:Xst:753 - "/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/cpu_top.vhd" line 146: Unconnected output port 'mcmgmt_int' of component 'mcmgmt'.
 Entity <cpu_top> analyzed. Unit <cpu_top> generated.
 
@@ -165,7 +166,7 @@ Entity <led> analyzed. Unit <led> generated.
 
 Analyzing Entity <mcmgmt> in library <work> (Architecture <behavioral>).
 WARNING:Xst:819 - "/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/mcmgmt.vhd" line 47: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
-   <mcmgmt_rst>
+   <mcmgmt_rst>, <mcmgmt_status>
 INFO:Xst:2679 - Register <mcmgmt_free> in unit <mcmgmt> has a constant value of 1 during circuit operation. The register is replaced by logic.
 INFO:Xst:2679 - Register <mcmgmt_int> in unit <mcmgmt> has a constant value of 0 during circuit operation. The register is replaced by logic.
 INFO:Xst:2679 - Register <mcmgmt_port_mem1_en> in unit <mcmgmt> has a constant value of 0 during circuit operation. The register is replaced by logic.
@@ -236,18 +237,21 @@ WARNING:Xst:647 - Input <mcmgmt_port_com_data_ready> is never used. This port wi
 WARNING:Xst:2563 - Inout <mcmgmt_port_mem2_data<9>> is never assigned. Tied to value Z.
 WARNING:Xst:1305 - Output <mcmgmt_port_mem2_oe> is never assigned. Tied to value 0.
 WARNING:Xst:647 - Input <mcmgmt_by_byte> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:1799 - State 00000 is never reached in FSM <mcmgmt_status>.
+INFO:Xst:1799 - State 00100 is never reached in FSM <mcmgmt_status>.
+INFO:Xst:1799 - State 00101 is never reached in FSM <mcmgmt_status>.
+INFO:Xst:1799 - State 00110 is never reached in FSM <mcmgmt_status>.
+INFO:Xst:1799 - State 00111 is never reached in FSM <mcmgmt_status>.
     Found finite state machine <FSM_0> for signal <mcmgmt_status>.
     -----------------------------------------------------------------------
-    | States             | 5                                              |
-    | Transitions        | 5                                              |
+    | States             | 3                                              |
+    | Transitions        | 3                                              |
     | Inputs             | 0                                              |
-    | Outputs            | 7                                              |
+    | Outputs            | 5                                              |
     | Clock              | mcmgmt_clk                (rising_edge)        |
     | Clock enable       | mcmgmt_status$not0000     (positive)           |
     | Reset              | mcmgmt_status$and0000     (positive)           |
     | Reset type         | asynchronous                                   |
-    | Reset State        | 00001                                          |
+    | Reset State        | 00000                                          |
     | Power Up State     | 00001                                          |
     | Encoding           | automatic                                      |
     | Implementation     | LUT                                            |
@@ -274,8 +278,8 @@ INFO:Xst:1799 - State 00000 is never reached in FSM <mcmgmt_status>.
     Found 1-bit tristate buffer for signal <mcmgmt_port_mem2_data<2>>.
     Found 1-bit tristate buffer for signal <mcmgmt_port_mem2_data<1>>.
     Found 1-bit tristate buffer for signal <mcmgmt_port_mem2_data<0>>.
-    Found 16-bit register for signal <Mtridata_mcmgmt_port_mem1_data> created at line 69.
-    Found 1-bit register for signal <Mtrien_mcmgmt_port_mem1_data> created at line 69.
+    Found 16-bit register for signal <Mtridata_mcmgmt_port_mem1_data> created at line 70.
+    Found 1-bit register for signal <Mtrien_mcmgmt_port_mem1_data> created at line 70.
     Summary:
 	inferred   1 Finite State Machine(s).
 	inferred  35 D-type flip-flop(s).
@@ -287,7 +291,6 @@ Synthesizing Unit <cpu_top>.
     Related source file is "/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/cpu_top.vhd".
 WARNING:Xst:646 - Signal <internal_switch> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <internal_mcmgmt_free> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <internal_mcmgmt_debug_status> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <internal_mcmgmt_data> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <internal_debug_clk> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 Unit <cpu_top> synthesized.
@@ -315,16 +318,17 @@ Macro Statistics
 =========================================================================
 
 Analyzing FSM <FSM_0> for best encoding.
-Optimizing FSM <mcmgmt1/mcmgmt_status/FSM> on signal <mcmgmt_status[1:5]> with one-hot encoding.
+Optimizing FSM <mcmgmt1/mcmgmt_status/FSM> on signal <mcmgmt_status[1:3]> with one-hot encoding.
 -------------------
  State | Encoding
 -------------------
- 00001 | 00001
- 00000 | unreached
- 00010 | 00010
- 00011 | 00100
- 00100 | 01000
- 00101 | 10000
+ 00001 | 001
+ 00000 | 010
+ 00010 | 100
+ 00100 | unreached
+ 00101 | unreached
+ 00110 | unreached
+ 00111 | unreached
 -------------------
 WARNING:Xst:1290 - Hierarchical block <rst1> is unconnected in block <cpu_top>.
    It will be removed from the design.
@@ -344,6 +348,8 @@ WARNING:Xst:638 - in unit mcmgmt1 Conflict on KEEP property on signal Mtridata_m
 WARNING:Xst:638 - in unit mcmgmt1 Conflict on KEEP property on signal Mtridata_mcmgmt_port_mem1_data<10> and Mtridata_mcmgmt_port_mem1_data<12> Mtridata_mcmgmt_port_mem1_data<12> signal will be lost.
 WARNING:Xst:638 - in unit mcmgmt1 Conflict on KEEP property on signal Mtridata_mcmgmt_port_mem1_data<10> and Mtridata_mcmgmt_port_mem1_data<14> Mtridata_mcmgmt_port_mem1_data<14> signal will be lost.
 WARNING:Xst:638 - in unit mcmgmt1 Conflict on KEEP property on signal Mtridata_mcmgmt_port_mem1_data<10> and Mtridata_mcmgmt_port_mem1_data<15> Mtridata_mcmgmt_port_mem1_data<15> signal will be lost.
+WARNING:Xst:1426 - The value init of the FF/Latch FFd3 hinder the constant cleaning in the block FSM.
+   You should achieve better results by setting this init to 0.
 WARNING:Xst:1710 - FF/Latch <Mtridata_mcmgmt_port_mem1_data_0> (without init value) has a constant value of 0 in block <mcmgmt1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <Mtridata_mcmgmt_port_mem1_data_2> (without init value) has a constant value of 1 in block <mcmgmt1>. This FF/Latch will be trimmed during the optimization process.
 
@@ -360,22 +366,40 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1710 - FF/Latch <Mtridata_mcmgmt_port_mem1_data_0> (without init value) has a constant value of 0 in block <mcmgmt>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_mcmgmt_port_mem1_data_1> (without init value) has a constant value of 0 in block <mcmgmt>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_mcmgmt_port_mem1_data_2> (without init value) has a constant value of 1 in block <mcmgmt>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_mcmgmt_port_mem1_data_3> (without init value) has a constant value of 0 in block <mcmgmt>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_mcmgmt_port_mem1_data_4> (without init value) has a constant value of 1 in block <mcmgmt>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_mcmgmt_port_mem1_data_5> (without init value) has a constant value of 0 in block <mcmgmt>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_mcmgmt_port_mem1_data_6> (without init value) has a constant value of 1 in block <mcmgmt>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_mcmgmt_port_mem1_data_7> (without init value) has a constant value of 0 in block <mcmgmt>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_mcmgmt_port_mem1_data_8> (without init value) has a constant value of 1 in block <mcmgmt>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_mcmgmt_port_mem1_data_9> (without init value) has a constant value of 0 in block <mcmgmt>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_mcmgmt_port_mem1_data_10> (without init value) has a constant value of 1 in block <mcmgmt>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_mcmgmt_port_mem1_data_11> (without init value) has a constant value of 0 in block <mcmgmt>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_mcmgmt_port_mem1_data_12> (without init value) has a constant value of 1 in block <mcmgmt>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_mcmgmt_port_mem1_data_13> (without init value) has a constant value of 0 in block <mcmgmt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1426 - The value init of the FF/Latch FSM_FFd3 hinder the constant cleaning in the block FSM_0-parent.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:1710 - FF/Latch <Mtridata_mcmgmt_port_mem1_data_15> (without init value) has a constant value of 1 in block <mcmgmt>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_mcmgmt_port_mem1_data_14> (without init value) has a constant value of 1 in block <mcmgmt>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_mcmgmt_port_mem1_data_15> (without init value) has a constant value of 1 in block <mcmgmt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_mcmgmt_port_mem1_data_13> (without init value) has a constant value of 0 in block <mcmgmt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_mcmgmt_port_mem1_data_12> (without init value) has a constant value of 1 in block <mcmgmt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_mcmgmt_port_mem1_data_11> (without init value) has a constant value of 0 in block <mcmgmt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_mcmgmt_port_mem1_data_10> (without init value) has a constant value of 1 in block <mcmgmt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_mcmgmt_port_mem1_data_9> (without init value) has a constant value of 0 in block <mcmgmt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_mcmgmt_port_mem1_data_8> (without init value) has a constant value of 1 in block <mcmgmt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_mcmgmt_port_mem1_data_7> (without init value) has a constant value of 0 in block <mcmgmt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_mcmgmt_port_mem1_data_6> (without init value) has a constant value of 1 in block <mcmgmt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_mcmgmt_port_mem1_data_5> (without init value) has a constant value of 0 in block <mcmgmt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_mcmgmt_port_mem1_data_4> (without init value) has a constant value of 1 in block <mcmgmt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_mcmgmt_port_mem1_data_3> (without init value) has a constant value of 0 in block <mcmgmt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_mcmgmt_port_mem1_data_2> (without init value) has a constant value of 1 in block <mcmgmt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_mcmgmt_port_mem1_data_1> (without init value) has a constant value of 0 in block <mcmgmt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Mtridata_mcmgmt_port_mem1_data_0> (without init value) has a constant value of 0 in block <mcmgmt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mcmgmt_odata_15> (without init value) has a constant value of 0 in block <mcmgmt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mcmgmt_odata_14> (without init value) has a constant value of 0 in block <mcmgmt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mcmgmt_odata_13> (without init value) has a constant value of 0 in block <mcmgmt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mcmgmt_odata_12> (without init value) has a constant value of 0 in block <mcmgmt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mcmgmt_odata_11> (without init value) has a constant value of 0 in block <mcmgmt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mcmgmt_odata_10> (without init value) has a constant value of 0 in block <mcmgmt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mcmgmt_odata_9> (without init value) has a constant value of 0 in block <mcmgmt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mcmgmt_odata_8> (without init value) has a constant value of 0 in block <mcmgmt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mcmgmt_odata_7> (without init value) has a constant value of 0 in block <mcmgmt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mcmgmt_odata_6> (without init value) has a constant value of 0 in block <mcmgmt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mcmgmt_odata_5> (without init value) has a constant value of 0 in block <mcmgmt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mcmgmt_odata_4> (without init value) has a constant value of 0 in block <mcmgmt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mcmgmt_odata_3> (without init value) has a constant value of 0 in block <mcmgmt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mcmgmt_odata_2> (without init value) has a constant value of 0 in block <mcmgmt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mcmgmt_odata_1> (without init value) has a constant value of 0 in block <mcmgmt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <mcmgmt_odata_0> (without init value) has a constant value of 0 in block <mcmgmt>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:638 - in unit mcmgmt Conflict on KEEP property on signal Mtridata_mcmgmt_port_mem1_data<0> and Mtridata_mcmgmt_port_mem1_data<1> Mtridata_mcmgmt_port_mem1_data<1> signal will be lost.
 WARNING:Xst:638 - in unit mcmgmt Conflict on KEEP property on signal Mtridata_mcmgmt_port_mem1_data<0> and Mtridata_mcmgmt_port_mem1_data<3> Mtridata_mcmgmt_port_mem1_data<3> signal will be lost.
 WARNING:Xst:638 - in unit mcmgmt Conflict on KEEP property on signal Mtridata_mcmgmt_port_mem1_data<2> and Mtridata_mcmgmt_port_mem1_data<4> Mtridata_mcmgmt_port_mem1_data<4> signal will be lost.
@@ -392,6 +416,7 @@ WARNING:Xst:638 - in unit mcmgmt Conflict on KEEP property on signal Mtridata_mc
 WARNING:Xst:638 - in unit mcmgmt Conflict on KEEP property on signal Mtridata_mcmgmt_port_mem1_data<10> and Mtridata_mcmgmt_port_mem1_data<15> Mtridata_mcmgmt_port_mem1_data<15> signal will be lost.
 
 Optimizing unit <cpu_top> ...
+WARNING:Xst:1710 - FF/Latch <mcmgmt1/mcmgmt_port_mem1_oe> (without init value) has a constant value of 1 in block <cpu_top>. This FF/Latch will be trimmed during the optimization process.
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -403,8 +428,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 24
- Flip-Flops                                            : 24
+# Registers                                            : 5
+ Flip-Flops                                            : 5
 
 =========================================================================
 
@@ -433,23 +458,21 @@ Design Statistics
 # IOs                              : 114
 
 Cell Usage :
-# BELS                             : 7
+# BELS                             : 6
 #      GND                         : 1
-#      INV                         : 1
+#      INV                         : 2
 #      LUT2                        : 1
-#      LUT2_L                      : 1
-#      LUT4                        : 2
+#      LUT3                        : 1
 #      VCC                         : 1
-# FlipFlops/Latches                : 24
-#      FDCE                        : 20
-#      FDE                         : 3
+# FlipFlops/Latches                : 5
+#      FDCE                        : 2
+#      FDE                         : 2
 #      FDPE                        : 1
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 94
-#      IOBUF                       : 16
 #      OBUF                        : 60
-#      OBUFT                       : 18
+#      OBUFT                       : 34
 =========================================================================
 
 Device utilization summary:
@@ -457,12 +480,11 @@ Device utilization summary:
 
 Selected Device : 3s1200efg320-4 
 
- Number of Slices:                        4  out of   8672     0%  
- Number of Slice Flip Flops:              8  out of  17344     0%  
- Number of 4 input LUTs:                  5  out of  17344     0%  
+ Number of Slices:                        3  out of   8672     0%  
+ Number of Slice Flip Flops:              5  out of  17344     0%  
+ Number of 4 input LUTs:                  4  out of  17344     0%  
  Number of IOs:                         114
  Number of bonded IOBs:                  95  out of    250    38%  
-    IOB Flip Flops:                      16
  Number of GCLKs:                         1  out of     24     4%  
 
 ---------------------------
@@ -486,23 +508,23 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-port_clk_50                        | BUFGP                  | 24    |
+port_clk_50                        | BUFGP                  | 5     |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
 ----------------------------------------
------------------------------------+-----------------------------+-------+
-Control Signal                     | Buffer(FF name)             | Load  |
------------------------------------+-----------------------------+-------+
-N0(XST_GND:G)                      | NONE(mcmgmt1/mcmgmt_odata_0)| 21    |
------------------------------------+-----------------------------+-------+
+-----------------------------------+-------------------------------------+-------+
+Control Signal                     | Buffer(FF name)                     | Load  |
+-----------------------------------+-------------------------------------+-------+
+N0(XST_GND:G)                      | NONE(mcmgmt1/mcmgmt_status_FSM_FFd1)| 3     |
+-----------------------------------+-------------------------------------+-------+
 
 Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 3.123ns (Maximum Frequency: 320.205MHz)
-   Minimum input arrival time before clock: 1.946ns
+   Minimum period: 2.982ns (Maximum Frequency: 335.345MHz)
+   Minimum input arrival time before clock: No path found
    Maximum output required time after clock: 4.897ns
    Maximum combinational path delay: No path found
 
@@ -512,49 +534,29 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'port_clk_50'
-  Clock period: 3.123ns (frequency: 320.205MHz)
-  Total number of paths / destination ports: 33 / 25
+  Clock period: 2.982ns (frequency: 335.345MHz)
+  Total number of paths / destination ports: 12 / 9
 -------------------------------------------------------------------------
-Delay:               3.123ns (Levels of Logic = 2)
-  Source:            mcmgmt1/mcmgmt_status_FSM_FFd5 (FF)
-  Destination:       mcmgmt1/mcmgmt_port_mem1_we (FF)
+Delay:               2.982ns (Levels of Logic = 1)
+  Source:            mcmgmt1/mcmgmt_status_FSM_FFd3 (FF)
+  Destination:       mcmgmt1/Mtrien_mcmgmt_port_mem1_data (FF)
   Source Clock:      port_clk_50 rising
   Destination Clock: port_clk_50 rising
 
-  Data Path: mcmgmt1/mcmgmt_status_FSM_FFd5 to mcmgmt1/mcmgmt_port_mem1_we
+  Data Path: mcmgmt1/mcmgmt_status_FSM_FFd3 to mcmgmt1/Mtrien_mcmgmt_port_mem1_data
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDPE:C->Q             5   0.591   0.712  mcmgmt1/mcmgmt_status_FSM_FFd5 (mcmgmt1/mcmgmt_status_FSM_FFd5)
-     LUT2_L:I1->LO         1   0.704   0.104  mcmgmt1/mcmgmt_port_mem1_we_mux0000_SW0 (N01)
-     LUT4:I3->O            1   0.704   0.000  mcmgmt1/mcmgmt_port_mem1_we_mux0000 (mcmgmt1/mcmgmt_port_mem1_we_mux0000)
-     FDE:D                     0.308          mcmgmt1/mcmgmt_port_mem1_we
+     FDCE:C->Q             5   0.591   0.712  mcmgmt1/mcmgmt_status_FSM_FFd3 (mcmgmt1/mcmgmt_status_FSM_FFd3)
+     LUT2:I1->O            1   0.704   0.420  mcmgmt1/Mtridata_mcmgmt_port_mem1_data_and00001 (mcmgmt1/Mtridata_mcmgmt_port_mem1_data_and0000)
+     FDE:CE                    0.555          mcmgmt1/Mtrien_mcmgmt_port_mem1_data
     ----------------------------------------
-    Total                      3.123ns (2.307ns logic, 0.816ns route)
-                                       (73.9% logic, 26.1% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'port_clk_50'
-  Total number of paths / destination ports: 16 / 16
--------------------------------------------------------------------------
-Offset:              1.946ns (Levels of Logic = 1)
-  Source:            port_mem1_data<15> (PAD)
-  Destination:       mcmgmt1/mcmgmt_odata_15 (FF)
-  Destination Clock: port_clk_50 rising
-
-  Data Path: port_mem1_data<15> to mcmgmt1/mcmgmt_odata_15
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IOBUF:IO->O           1   1.218   0.420  port_mem1_data_15_IOBUF (N2)
-     FDCE:D                    0.308          mcmgmt1/mcmgmt_odata_15
-    ----------------------------------------
-    Total                      1.946ns (1.526ns logic, 0.420ns route)
-                                       (78.4% logic, 21.6% route)
+    Total                      2.982ns (1.850ns logic, 1.132ns route)
+                                       (62.0% logic, 38.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'port_clk_50'
-  Total number of paths / destination ports: 34 / 34
+  Total number of paths / destination ports: 19 / 19
 -------------------------------------------------------------------------
 Offset:              4.897ns (Levels of Logic = 1)
   Source:            mcmgmt1/Mtrien_mcmgmt_port_mem1_data (FF)
@@ -566,7 +568,7 @@ Offset:              4.897ns (Levels of Logic = 1)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDE:C->Q             16   0.591   1.034  mcmgmt1/Mtrien_mcmgmt_port_mem1_data (mcmgmt1/Mtrien_mcmgmt_port_mem1_data)
-     IOBUF:T->IO               3.272          port_mem1_data_15_IOBUF (port_mem1_data<15>)
+     OBUFT:T->O                3.272          port_mem1_data_15_OBUFT (port_mem1_data<15>)
     ----------------------------------------
     Total                      4.897ns (3.863ns logic, 1.034ns route)
                                        (78.9% logic, 21.1% route)
@@ -574,15 +576,15 @@ Offset:              4.897ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 6.24 secs
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.74 secs
  
 --> 
 
 
-Total memory usage is 528712 kilobytes
+Total memory usage is 528512 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   85 (   0 filtered)
-Number of infos    :    8 (   0 filtered)
+Number of warnings :  104 (   0 filtered)
+Number of infos    :   11 (   0 filtered)
 

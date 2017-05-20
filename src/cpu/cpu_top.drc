@@ -1,12 +1,10 @@
 Release 14.7 Drc P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Sat May 20 11:36:39 2017
+Sat May 20 13:14:05 2017
 
 drc -z cpu_top.ncd cpu_top.pcf
 
-WARNING:PhysDesignRules:367 - The signal <port_rst_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <port_switch<10>_IBUF> is incomplete.
    The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <port_switch<11>_IBUF> is incomplete.
@@ -43,5 +41,7 @@ WARNING:PhysDesignRules:367 - The signal <port_clk_key_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <port_switch<9>_IBUF> is incomplete.
    The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <port_rst_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
 DRC detected 0 errors and 19 warnings.  Please see the previously displayed
 individual error or warning messages for more details.

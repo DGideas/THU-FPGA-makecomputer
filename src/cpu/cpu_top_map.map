@@ -9,7 +9,7 @@ Target Device  : xc3s1200e
 Target Package : fg320
 Target Speed   : -4
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Sat May 20 11:35:53 2017
+Mapped Date    : Sat May 20 13:13:42 2017
 
 vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 INFO:Security:54 - 'xc3s1200e' is a WebPack part.
@@ -58,8 +58,6 @@ Running directed packing...
 Running delay-based LUT packing...
 Running related packing...
 Updating timing models...
-WARNING:PhysDesignRules:367 - The signal <port_rst_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <port_switch<10>_IBUF> is incomplete.
    The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <port_switch<11>_IBUF> is incomplete.
@@ -96,6 +94,8 @@ WARNING:PhysDesignRules:367 - The signal <port_clk_key_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <port_switch<9>_IBUF> is incomplete.
    The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <port_rst_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
 
 Design Summary
 --------------
@@ -105,22 +105,21 @@ Number of errors:      0
 Number of warnings:   37
 Logic Utilization:
   Number of Slice Flip Flops:             8 out of  17,344    1%
-  Number of 4 input LUTs:                 4 out of  17,344    1%
+  Number of 4 input LUTs:                 7 out of  17,344    1%
 Logic Distribution:
-  Number of occupied Slices:              6 out of   8,672    1%
-    Number of Slices containing only related logic:       6 out of       6 100%
-    Number of Slices containing unrelated logic:          0 out of       6   0%
+  Number of occupied Slices:              8 out of   8,672    1%
+    Number of Slices containing only related logic:       8 out of       8 100%
+    Number of Slices containing unrelated logic:          0 out of       8   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:           4 out of  17,344    1%
+  Total Number of 4 input LUTs:           7 out of  17,344    1%
   Number of bonded IOBs:                 96 out of     250   38%
-    IOB Flip Flops:                      16
   Number of BUFGMUXs:                     1 out of      24    4%
 
-Average Fanout of Non-Clock Nets:                1.53
+Average Fanout of Non-Clock Nets:                1.47
 
 Peak Memory Usage:  595 MB
-Total REAL time to MAP completion:  3 secs 
-Total CPU time to MAP completion:   3 secs 
+Total REAL time to MAP completion:  2 secs 
+Total CPU time to MAP completion:   2 secs 
 
 NOTES:
 

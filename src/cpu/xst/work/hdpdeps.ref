@@ -1,55 +1,55 @@
 V3 27
 FL /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/clk.vhd 2017/05/17.14:44:06 P.20131013
-EN work/clk 1495251332 \
+EN work/clk 1495322221 \
       FL /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/clk.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/clk/Behavioral 1495251333 \
-      FL /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/clk.vhd EN work/clk 1495251332
+AR work/clk/Behavioral 1495322222 \
+      FL /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/clk.vhd EN work/clk 1495322221
 FL /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/clkkey.vhd 2017/05/17.14:44:06 P.20131013
-EN work/clkkey 1495251336 \
+EN work/clkkey 1495322225 \
       FL /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/clkkey.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/clkkey/Behavioral 1495251337 \
+AR work/clkkey/Behavioral 1495322226 \
       FL /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/clkkey.vhd \
-      EN work/clkkey 1495251336
-FL /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/cpu_top.vhd 2017/05/18.22:34:13 P.20131013
-EN work/cpu_top 1495251344 \
+      EN work/clkkey 1495322225
+FL /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/cpu_top.vhd 2017/05/20.13:13:21 P.20131013
+EN work/cpu_top 1495322233 \
       FL /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/cpu_top.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/cpu_top/Behavioral 1495251345 \
+AR work/cpu_top/Behavioral 1495322234 \
       FL /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/cpu_top.vhd \
-      EN work/cpu_top 1495251344 CP clk CP rstkey CP clkkey CP switch CP led CP mcmgmt
+      EN work/cpu_top 1495322233 CP clk CP rstkey CP clkkey CP switch CP led CP mcmgmt
 FL /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/led.vhd 2017/05/17.14:44:06 P.20131013
-EN work/led 1495251340 \
+EN work/led 1495322229 \
       FL /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/led.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/led/Behavioral 1495251341 \
-      FL /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/led.vhd EN work/led 1495251340
-FL /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/mcmgmt.vhd 2017/05/20.11:35:24 P.20131013
-EN work/mcmgmt 1495251342 \
+AR work/led/Behavioral 1495322230 \
+      FL /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/led.vhd EN work/led 1495322229
+FL /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/mcmgmt.vhd 2017/05/21.07:13:37 P.20131013
+EN work/mcmgmt 1495322231 \
       FL /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/mcmgmt.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/mcmgmt/Behavioral 1495251343 \
+AR work/mcmgmt/Behavioral 1495322232 \
       FL /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/mcmgmt.vhd \
-      EN work/mcmgmt 1495251342
+      EN work/mcmgmt 1495322231
 FL /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/rstkey.vhd 2017/05/17.14:44:06 P.20131013
-EN work/rstkey 1495251334 \
+EN work/rstkey 1495322223 \
       FL /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/rstkey.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/rstkey/Behavioral 1495251335 \
+AR work/rstkey/Behavioral 1495322224 \
       FL /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/rstkey.vhd \
-      EN work/rstkey 1495251334
+      EN work/rstkey 1495322223
 FL /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/switch.vhd 2017/05/17.14:44:06 P.20131013
-EN work/switch 1495251338 \
+EN work/switch 1495322227 \
       FL /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/switch.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/switch/Behavioral 1495251339 \
+AR work/switch/Behavioral 1495322228 \
       FL /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/switch.vhd \
-      EN work/switch 1495251338
+      EN work/switch 1495322227

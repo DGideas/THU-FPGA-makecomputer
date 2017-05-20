@@ -47,18 +47,19 @@ mcmgmt_debug_status <= mcmgmt_status;
 process (mcmgmt_clk)
 begin
 	mcmgmt_rst_cache <= mcmgmt_rst;
+	mcmgmt_debug_status <= mcmgmt_status;
 	if (mcmgmt_rst = '0' and mcmgmt_rst_cache = '1') then
-		--mcmgmt_status <= "00000";
-		mcmgmt_status <= "00001";
+		mcmgmt_status <= "00000";
 		mcmgmt_odata <= "0000000000000000";
 		--mcmgmt_free <= '1';
 		--mcmgmt_int <= '0';
-		--mcmgmt_odata <= "0000000000000000";
+		mcmgmt_odata <= "0000000000000000";
 	else
 		if (rising_edge(mcmgmt_clk)) then
 			if (mcmgmt_status = "00000") then
 				mcmgmt_free <= '1';
 				mcmgmt_int <= '0';
+				mcmgmt_odata <= "0000000000000000";
 			else
 				case mcmgmt_status is
 					when "00001" =>
@@ -68,18 +69,19 @@ begin
 						mcmgmt_port_mem1_addr <= "000100000000000000";
 						mcmgmt_port_mem1_data <= "1101010101010100";
 						mcmgmt_port_com_rdn <= '1';
+						mcmgmt_free <= '1';
 						mcmgmt_status <= "00010";
 					when "00010" =>
 						mcmgmt_port_mem1_oe <= '1';
 						mcmgmt_port_mem1_en <= '0';
 						mcmgmt_port_mem1_we <= '0';
 						mcmgmt_port_com_rdn <= '1';
-						mcmgmt_status <= "00011";
-					when "00011" =>
+						mcmgmt_status <= "00000";
+					when "00101" =>
 						mcmgmt_status <= "00100";
 						mcmgmt_port_mem1_we <= '1';
 						mcmgmt_port_com_rdn <= '1';
-					when "00100" =>
+					when "00110" =>
 						mcmgmt_port_mem1_oe <= '0';
 						mcmgmt_port_mem1_en <= '0';
 						mcmgmt_port_mem1_we <= '1';
@@ -87,8 +89,8 @@ begin
 						mcmgmt_port_mem1_addr <= "000100000000000000";
 						mcmgmt_port_mem1_data <= "ZZZZZZZZZZZZZZZZ";
 						mcmgmt_status <= "00101";
-					when "00101" =>
-						mcmgmt_status <= "00001";
+					when "00111" =>
+						mcmgmt_status <= "00000";
 						mcmgmt_odata <= mcmgmt_port_mem1_data;
 					when others =>
 						null;
