@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> 
 Reading design: cpu_top.prj
@@ -145,7 +145,7 @@ Analyzing hierarchy for entity <mcmgmt> in library <work> (architecture <behavio
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <cpu_top> in library <work> (Architecture <behavioral>).
-WARNING:Xst:753 - "/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/cpu_top.vhd" line 121: Unconnected output port 'mcmgmt_int' of component 'mcmgmt'.
+WARNING:Xst:753 - "/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/cpu_top.vhd" line 146: Unconnected output port 'mcmgmt_int' of component 'mcmgmt'.
 Entity <cpu_top> analyzed. Unit <cpu_top> generated.
 
 Analyzing Entity <clk> in library <work> (Architecture <behavioral>).
@@ -164,12 +164,13 @@ Analyzing Entity <led> in library <work> (Architecture <behavioral>).
 Entity <led> analyzed. Unit <led> generated.
 
 Analyzing Entity <mcmgmt> in library <work> (Architecture <behavioral>).
-WARNING:Xst:819 - "/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/mcmgmt.vhd" line 37: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:819 - "/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/mcmgmt.vhd" line 47: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <mcmgmt_rst>
 INFO:Xst:2679 - Register <mcmgmt_free> in unit <mcmgmt> has a constant value of 1 during circuit operation. The register is replaced by logic.
 INFO:Xst:2679 - Register <mcmgmt_int> in unit <mcmgmt> has a constant value of 0 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <mcmgmt_port_mem1_en> in unit <mcmgmt> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <mcmgmt_port_mem1_en> in unit <mcmgmt> has a constant value of 0 during circuit operation. The register is replaced by logic.
 INFO:Xst:2679 - Register <mcmgmt_port_mem1_addr> in unit <mcmgmt> has a constant value of 000100000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <mcmgmt_port_com_rdn> in unit <mcmgmt> has a constant value of 1 during circuit operation. The register is replaced by logic.
 Entity <mcmgmt> analyzed. Unit <mcmgmt> generated.
 
 
@@ -206,17 +207,42 @@ Unit <led> synthesized.
 
 Synthesizing Unit <mcmgmt>.
     Related source file is "/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/mcmgmt.vhd".
+WARNING:Xst:1305 - Output <mcmgmt_port_mem2_we> is never assigned. Tied to value 0.
 WARNING:Xst:647 - Input <mcmgmt_addr> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <mcmgmt_idata> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <mcmgmt_byte_select> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:2563 - Inout <mcmgmt_port_mem2_data<10>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <mcmgmt_port_mem2_data<11>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <mcmgmt_port_com_tbre> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <mcmgmt_port_mem2_data<12>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <mcmgmt_port_mem2_data<13>> is never assigned. Tied to value Z.
+WARNING:Xst:1305 - Output <mcmgmt_port_mem2_addr> is never assigned. Tied to value 000000000000000000.
 WARNING:Xst:647 - Input <mcmgmt_rw> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:2563 - Inout <mcmgmt_port_mem2_data<14>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <mcmgmt_port_mem2_data<15>> is never assigned. Tied to value Z.
+WARNING:Xst:1305 - Output <mcmgmt_port_com_wrn> is never assigned. Tied to value 0.
+WARNING:Xst:2563 - Inout <mcmgmt_port_com_tsre> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <mcmgmt_port_mem2_data<0>> is never assigned. Tied to value Z.
+WARNING:Xst:1305 - Output <mcmgmt_port_mem2_en> is never assigned. Tied to value 0.
+WARNING:Xst:2563 - Inout <mcmgmt_port_mem2_data<1>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <mcmgmt_port_mem2_data<2>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <mcmgmt_port_mem2_data<3>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <mcmgmt_port_mem2_data<4>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <mcmgmt_port_mem2_data<5>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <mcmgmt_port_mem2_data<6>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <mcmgmt_port_mem2_data<7>> is never assigned. Tied to value Z.
+WARNING:Xst:2563 - Inout <mcmgmt_port_mem2_data<8>> is never assigned. Tied to value Z.
+WARNING:Xst:647 - Input <mcmgmt_port_com_data_ready> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:2563 - Inout <mcmgmt_port_mem2_data<9>> is never assigned. Tied to value Z.
+WARNING:Xst:1305 - Output <mcmgmt_port_mem2_oe> is never assigned. Tied to value 0.
 WARNING:Xst:647 - Input <mcmgmt_by_byte> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:1799 - State 00000 is never reached in FSM <mcmgmt_status>.
     Found finite state machine <FSM_0> for signal <mcmgmt_status>.
     -----------------------------------------------------------------------
-    | States             | 6                                              |
-    | Transitions        | 6                                              |
+    | States             | 5                                              |
+    | Transitions        | 5                                              |
     | Inputs             | 0                                              |
-    | Outputs            | 8                                              |
+    | Outputs            | 7                                              |
     | Clock              | mcmgmt_clk                (rising_edge)        |
     | Clock enable       | mcmgmt_status$not0000     (positive)           |
     | Reset              | mcmgmt_status$and0000     (positive)           |
@@ -228,14 +254,32 @@ WARNING:Xst:647 - Input <mcmgmt_by_byte> is never used. This port will be preser
     -----------------------------------------------------------------------
     Found 16-bit tristate buffer for signal <mcmgmt_port_mem1_data>.
     Found 1-bit register for signal <mcmgmt_port_mem1_oe>.
+    Found 1-bit tristate buffer for signal <mcmgmt_port_com_tbre>.
     Found 1-bit register for signal <mcmgmt_port_mem1_we>.
+    Found 1-bit tristate buffer for signal <mcmgmt_port_com_tsre>.
     Found 16-bit register for signal <mcmgmt_odata>.
-    Found 16-bit register for signal <Mtridata_mcmgmt_port_mem1_data> created at line 58.
-    Found 1-bit register for signal <Mtrien_mcmgmt_port_mem1_data> created at line 58.
+    Found 1-bit tristate buffer for signal <mcmgmt_port_mem2_data<15>>.
+    Found 1-bit tristate buffer for signal <mcmgmt_port_mem2_data<14>>.
+    Found 1-bit tristate buffer for signal <mcmgmt_port_mem2_data<13>>.
+    Found 1-bit tristate buffer for signal <mcmgmt_port_mem2_data<12>>.
+    Found 1-bit tristate buffer for signal <mcmgmt_port_mem2_data<11>>.
+    Found 1-bit tristate buffer for signal <mcmgmt_port_mem2_data<10>>.
+    Found 1-bit tristate buffer for signal <mcmgmt_port_mem2_data<9>>.
+    Found 1-bit tristate buffer for signal <mcmgmt_port_mem2_data<8>>.
+    Found 1-bit tristate buffer for signal <mcmgmt_port_mem2_data<7>>.
+    Found 1-bit tristate buffer for signal <mcmgmt_port_mem2_data<6>>.
+    Found 1-bit tristate buffer for signal <mcmgmt_port_mem2_data<5>>.
+    Found 1-bit tristate buffer for signal <mcmgmt_port_mem2_data<4>>.
+    Found 1-bit tristate buffer for signal <mcmgmt_port_mem2_data<3>>.
+    Found 1-bit tristate buffer for signal <mcmgmt_port_mem2_data<2>>.
+    Found 1-bit tristate buffer for signal <mcmgmt_port_mem2_data<1>>.
+    Found 1-bit tristate buffer for signal <mcmgmt_port_mem2_data<0>>.
+    Found 16-bit register for signal <Mtridata_mcmgmt_port_mem1_data> created at line 69.
+    Found 1-bit register for signal <Mtrien_mcmgmt_port_mem1_data> created at line 69.
     Summary:
 	inferred   1 Finite State Machine(s).
 	inferred  35 D-type flip-flop(s).
-	inferred  16 Tristate(s).
+	inferred  34 Tristate(s).
 Unit <mcmgmt> synthesized.
 
 
@@ -245,10 +289,10 @@ WARNING:Xst:646 - Signal <internal_switch> is assigned but never used. This unco
 WARNING:Xst:646 - Signal <internal_mcmgmt_free> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <internal_mcmgmt_debug_status> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <internal_mcmgmt_data> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <internal_clk> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <internal_debug_clk> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 Unit <cpu_top> synthesized.
 
-WARNING:Xst:524 - All outputs of the instance <clk1> of the block <clk> are unconnected in block <cpu_top>.
+WARNING:Xst:524 - All outputs of the instance <clkkey1> of the block <clkkey> are unconnected in block <cpu_top>.
    This instance will be removed from the design along with all underlying logic
 WARNING:Xst:524 - All outputs of the instance <switch1> of the block <switch> are unconnected in block <cpu_top>.
    This instance will be removed from the design along with all underlying logic
@@ -260,7 +304,8 @@ Macro Statistics
 # Registers                                            : 5
  1-bit register                                        : 3
  16-bit register                                       : 2
-# Tristates                                            : 1
+# Tristates                                            : 19
+ 1-bit tristate buffer                                 : 18
  16-bit tristate buffer                                : 1
 
 =========================================================================
@@ -270,16 +315,16 @@ Macro Statistics
 =========================================================================
 
 Analyzing FSM <FSM_0> for best encoding.
-Optimizing FSM <mcmgmt1/mcmgmt_status/FSM> on signal <mcmgmt_status[1:6]> with one-hot encoding.
+Optimizing FSM <mcmgmt1/mcmgmt_status/FSM> on signal <mcmgmt_status[1:5]> with one-hot encoding.
 -------------------
  State | Encoding
 -------------------
- 00001 | 000001
- 00000 | 000010
- 00010 | 000100
- 00011 | 001000
- 00100 | 010000
- 00101 | 100000
+ 00001 | 00001
+ 00000 | unreached
+ 00010 | 00010
+ 00011 | 00100
+ 00100 | 01000
+ 00101 | 10000
 -------------------
 WARNING:Xst:1290 - Hierarchical block <rst1> is unconnected in block <cpu_top>.
    It will be removed from the design.
@@ -299,8 +344,6 @@ WARNING:Xst:638 - in unit mcmgmt1 Conflict on KEEP property on signal Mtridata_m
 WARNING:Xst:638 - in unit mcmgmt1 Conflict on KEEP property on signal Mtridata_mcmgmt_port_mem1_data<10> and Mtridata_mcmgmt_port_mem1_data<12> Mtridata_mcmgmt_port_mem1_data<12> signal will be lost.
 WARNING:Xst:638 - in unit mcmgmt1 Conflict on KEEP property on signal Mtridata_mcmgmt_port_mem1_data<10> and Mtridata_mcmgmt_port_mem1_data<14> Mtridata_mcmgmt_port_mem1_data<14> signal will be lost.
 WARNING:Xst:638 - in unit mcmgmt1 Conflict on KEEP property on signal Mtridata_mcmgmt_port_mem1_data<10> and Mtridata_mcmgmt_port_mem1_data<15> Mtridata_mcmgmt_port_mem1_data<15> signal will be lost.
-WARNING:Xst:1426 - The value init of the FF/Latch FFd6 hinder the constant cleaning in the block FSM.
-   You should achieve better results by setting this init to 0.
 WARNING:Xst:1710 - FF/Latch <Mtridata_mcmgmt_port_mem1_data_0> (without init value) has a constant value of 0 in block <mcmgmt1>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <Mtridata_mcmgmt_port_mem1_data_2> (without init value) has a constant value of 1 in block <mcmgmt1>. This FF/Latch will be trimmed during the optimization process.
 
@@ -347,8 +390,6 @@ WARNING:Xst:638 - in unit mcmgmt Conflict on KEEP property on signal Mtridata_mc
 WARNING:Xst:638 - in unit mcmgmt Conflict on KEEP property on signal Mtridata_mcmgmt_port_mem1_data<0> and Mtridata_mcmgmt_port_mem1_data<13> Mtridata_mcmgmt_port_mem1_data<13> signal will be lost.
 WARNING:Xst:638 - in unit mcmgmt Conflict on KEEP property on signal Mtridata_mcmgmt_port_mem1_data<10> and Mtridata_mcmgmt_port_mem1_data<14> Mtridata_mcmgmt_port_mem1_data<14> signal will be lost.
 WARNING:Xst:638 - in unit mcmgmt Conflict on KEEP property on signal Mtridata_mcmgmt_port_mem1_data<10> and Mtridata_mcmgmt_port_mem1_data<15> Mtridata_mcmgmt_port_mem1_data<15> signal will be lost.
-WARNING:Xst:1426 - The value init of the FF/Latch FSM_FFd6 hinder the constant cleaning in the block FSM_0-parent.
-   You should achieve better results by setting this init to 0.
 
 Optimizing unit <cpu_top> ...
 
@@ -362,8 +403,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 25
- Flip-Flops                                            : 25
+# Registers                                            : 24
+ Flip-Flops                                            : 24
 
 =========================================================================
 
@@ -389,26 +430,26 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 72
+# IOs                              : 114
 
 Cell Usage :
-# BELS                             : 9
+# BELS                             : 7
 #      GND                         : 1
-#      INV                         : 2
+#      INV                         : 1
 #      LUT2                        : 1
 #      LUT2_L                      : 1
-#      LUT3                        : 1
 #      LUT4                        : 2
 #      VCC                         : 1
-# FlipFlops/Latches                : 25
-#      FDCE                        : 5
-#      FDE                         : 19
+# FlipFlops/Latches                : 24
+#      FDCE                        : 20
+#      FDE                         : 3
 #      FDPE                        : 1
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 53
+# IO Buffers                       : 94
 #      IOBUF                       : 16
-#      OBUF                        : 37
+#      OBUF                        : 60
+#      OBUFT                       : 18
 =========================================================================
 
 Device utilization summary:
@@ -416,11 +457,11 @@ Device utilization summary:
 
 Selected Device : 3s1200efg320-4 
 
- Number of Slices:                        6  out of   8672     0%  
- Number of Slice Flip Flops:              9  out of  17344     0%  
- Number of 4 input LUTs:                  7  out of  17344     0%  
- Number of IOs:                          72
- Number of bonded IOBs:                  54  out of    250    21%  
+ Number of Slices:                        4  out of   8672     0%  
+ Number of Slice Flip Flops:              8  out of  17344     0%  
+ Number of 4 input LUTs:                  5  out of  17344     0%  
+ Number of IOs:                         114
+ Number of bonded IOBs:                  95  out of    250    38%  
     IOB Flip Flops:                      16
  Number of GCLKs:                         1  out of     24     4%  
 
@@ -445,22 +486,22 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-port_clk_key                       | BUFGP                  | 25    |
+port_clk_50                        | BUFGP                  | 24    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
 ----------------------------------------
------------------------------------+-------------------------------------+-------+
-Control Signal                     | Buffer(FF name)                     | Load  |
------------------------------------+-------------------------------------+-------+
-N0(XST_GND:G)                      | NONE(mcmgmt1/mcmgmt_status_FSM_FFd1)| 6     |
------------------------------------+-------------------------------------+-------+
+-----------------------------------+-----------------------------+-------+
+Control Signal                     | Buffer(FF name)             | Load  |
+-----------------------------------+-----------------------------+-------+
+N0(XST_GND:G)                      | NONE(mcmgmt1/mcmgmt_odata_0)| 21    |
+-----------------------------------+-----------------------------+-------+
 
 Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 3.138ns (Maximum Frequency: 318.674MHz)
+   Minimum period: 3.123ns (Maximum Frequency: 320.205MHz)
    Minimum input arrival time before clock: 1.946ns
    Maximum output required time after clock: 4.897ns
    Maximum combinational path delay: No path found
@@ -470,54 +511,55 @@ Timing Detail:
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'port_clk_key'
-  Clock period: 3.138ns (frequency: 318.674MHz)
-  Total number of paths / destination ports: 43 / 33
+Timing constraint: Default period analysis for Clock 'port_clk_50'
+  Clock period: 3.123ns (frequency: 320.205MHz)
+  Total number of paths / destination ports: 33 / 25
 -------------------------------------------------------------------------
-Delay:               3.138ns (Levels of Logic = 1)
+Delay:               3.123ns (Levels of Logic = 2)
   Source:            mcmgmt1/mcmgmt_status_FSM_FFd5 (FF)
-  Destination:       mcmgmt1/mcmgmt_status_FSM_FFd1 (FF)
-  Source Clock:      port_clk_key rising
-  Destination Clock: port_clk_key rising
+  Destination:       mcmgmt1/mcmgmt_port_mem1_we (FF)
+  Source Clock:      port_clk_50 rising
+  Destination Clock: port_clk_50 rising
 
-  Data Path: mcmgmt1/mcmgmt_status_FSM_FFd5 to mcmgmt1/mcmgmt_status_FSM_FFd1
+  Data Path: mcmgmt1/mcmgmt_status_FSM_FFd5 to mcmgmt1/mcmgmt_port_mem1_we
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q             3   0.591   0.531  mcmgmt1/mcmgmt_status_FSM_FFd5 (mcmgmt1/mcmgmt_status_FSM_FFd5)
-     INV:I->O              8   0.704   0.757  mcmgmt1/mcmgmt_port_mem1_oe_and00001_INV_0 (mcmgmt1/mcmgmt_port_mem1_oe_and0000)
-     FDE:CE                    0.555          mcmgmt1/mcmgmt_port_mem1_oe
+     FDPE:C->Q             5   0.591   0.712  mcmgmt1/mcmgmt_status_FSM_FFd5 (mcmgmt1/mcmgmt_status_FSM_FFd5)
+     LUT2_L:I1->LO         1   0.704   0.104  mcmgmt1/mcmgmt_port_mem1_we_mux0000_SW0 (N01)
+     LUT4:I3->O            1   0.704   0.000  mcmgmt1/mcmgmt_port_mem1_we_mux0000 (mcmgmt1/mcmgmt_port_mem1_we_mux0000)
+     FDE:D                     0.308          mcmgmt1/mcmgmt_port_mem1_we
     ----------------------------------------
-    Total                      3.138ns (1.850ns logic, 1.288ns route)
-                                       (59.0% logic, 41.0% route)
+    Total                      3.123ns (2.307ns logic, 0.816ns route)
+                                       (73.9% logic, 26.1% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'port_clk_key'
+Timing constraint: Default OFFSET IN BEFORE for Clock 'port_clk_50'
   Total number of paths / destination ports: 16 / 16
 -------------------------------------------------------------------------
 Offset:              1.946ns (Levels of Logic = 1)
   Source:            port_mem1_data<15> (PAD)
   Destination:       mcmgmt1/mcmgmt_odata_15 (FF)
-  Destination Clock: port_clk_key rising
+  Destination Clock: port_clk_50 rising
 
   Data Path: port_mem1_data<15> to mcmgmt1/mcmgmt_odata_15
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IOBUF:IO->O           1   1.218   0.420  port_mem1_data_15_IOBUF (N3)
-     FDE:D                     0.308          mcmgmt1/mcmgmt_odata_15
+     IOBUF:IO->O           1   1.218   0.420  port_mem1_data_15_IOBUF (N2)
+     FDCE:D                    0.308          mcmgmt1/mcmgmt_odata_15
     ----------------------------------------
     Total                      1.946ns (1.526ns logic, 0.420ns route)
                                        (78.4% logic, 21.6% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'port_clk_key'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'port_clk_50'
   Total number of paths / destination ports: 34 / 34
 -------------------------------------------------------------------------
 Offset:              4.897ns (Levels of Logic = 1)
   Source:            mcmgmt1/Mtrien_mcmgmt_port_mem1_data (FF)
   Destination:       port_mem1_data<15> (PAD)
-  Source Clock:      port_clk_key rising
+  Source Clock:      port_clk_50 rising
 
   Data Path: mcmgmt1/Mtrien_mcmgmt_port_mem1_data to port_mem1_data<15>
                                 Gate     Net
@@ -532,15 +574,15 @@ Offset:              4.897ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.36 secs
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.24 secs
  
 --> 
 
 
-Total memory usage is 528376 kilobytes
+Total memory usage is 528712 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   63 (   0 filtered)
-Number of infos    :    6 (   0 filtered)
+Number of warnings :   85 (   0 filtered)
+Number of infos    :    8 (   0 filtered)
 

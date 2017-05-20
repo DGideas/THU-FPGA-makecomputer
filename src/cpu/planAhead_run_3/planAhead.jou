@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+# Start of session at: Sat May 20 08:34:08 2017
+# Process ID: 18780
+# Log file: /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/planAhead_run_3/planAhead.log
+# Journal file: /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/planAhead_run_3/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/pa.fromNetlist.tcl
+startgroup
+set_property package_pin A16 [get_ports port_com_data_ready]
+endgroup
+startgroup
+set_property package_pin C14 [get_ports port_com_rdn]
+endgroup
+startgroup
+set_property package_pin D14 [get_ports port_com_tbre]
+endgroup
+startgroup
+set_property package_pin N9 [get_ports port_com_tsre]
+endgroup
+startgroup
+set_property package_pin U5 [get_ports port_com_wrn]
+endgroup
+save_constraints

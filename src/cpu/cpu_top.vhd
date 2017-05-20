@@ -145,7 +145,7 @@ led1: led port map
 
 mcmgmt1: mcmgmt port map
 (
-	mcmgmt_clk => internal_debug_clk,
+	mcmgmt_clk => internal_clk,
 	mcmgmt_rst => internal_rst,
 	mcmgmt_port_mem1_oe => port_mem1_oe,
 	mcmgmt_port_mem1_we => port_mem1_we,

@@ -109,3 +109,11 @@ NET "port_switch[3]" LOC = V4;
 NET "port_switch[2]" LOC = U8;
 NET "port_switch[1]" LOC = R7;
 NET "port_switch[0]" LOC = T7;
+
+# PlanAhead Generated physical constraints 
+
+NET "port_com_data_ready" LOC = A16;
+NET "port_com_rdn" LOC = C14;
+NET "port_com_tbre" LOC = D14;
+NET "port_com_tsre" LOC = N9;
+NET "port_com_wrn" LOC = U5;

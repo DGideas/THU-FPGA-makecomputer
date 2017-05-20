@@ -50,6 +50,7 @@ begin
 	if (mcmgmt_rst = '0' and mcmgmt_rst_cache = '1') then
 		--mcmgmt_status <= "00000";
 		mcmgmt_status <= "00001";
+		mcmgmt_odata <= "0000000000000000";
 		--mcmgmt_free <= '1';
 		--mcmgmt_int <= '0';
 		--mcmgmt_odata <= "0000000000000000";
@@ -61,7 +62,7 @@ begin
 			else
 				case mcmgmt_status is
 					when "00001" =>
-						mcmgmt_port_mem1_en <= '1';
+						mcmgmt_port_mem1_en <= '0';
 						mcmgmt_port_mem1_oe <= '1';
 						mcmgmt_port_mem1_we <= '1';
 						mcmgmt_port_mem1_addr <= "000100000000000000";
@@ -70,22 +71,24 @@ begin
 						mcmgmt_status <= "00010";
 					when "00010" =>
 						mcmgmt_port_mem1_oe <= '1';
-						mcmgmt_port_mem1_en <= '1';
+						mcmgmt_port_mem1_en <= '0';
 						mcmgmt_port_mem1_we <= '0';
 						mcmgmt_port_com_rdn <= '1';
 						mcmgmt_status <= "00011";
 					when "00011" =>
 						mcmgmt_status <= "00100";
 						mcmgmt_port_mem1_we <= '1';
+						mcmgmt_port_com_rdn <= '1';
 					when "00100" =>
 						mcmgmt_port_mem1_oe <= '0';
-						mcmgmt_port_mem1_en <= '1';
+						mcmgmt_port_mem1_en <= '0';
 						mcmgmt_port_mem1_we <= '1';
+						mcmgmt_port_com_rdn <= '1';
 						mcmgmt_port_mem1_addr <= "000100000000000000";
 						mcmgmt_port_mem1_data <= "ZZZZZZZZZZZZZZZZ";
 						mcmgmt_status <= "00101";
 					when "00101" =>
-						mcmgmt_status <= "00000";
+						mcmgmt_status <= "00001";
 						mcmgmt_odata <= mcmgmt_port_mem1_data;
 					when others =>
 						null;

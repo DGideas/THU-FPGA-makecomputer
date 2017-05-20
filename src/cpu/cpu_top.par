@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-dgideas-NUC::  Mon May 15 11:44:35 2017
+dgideas-NUC::  Sat May 20 11:36:03 2017
 
 par -w -intstyle ise -ol high -t 1 cpu_top_map.ncd cpu_top.ncd cpu_top.pcf 
 
@@ -30,18 +30,18 @@ Device speed data version:  "PRODUCTION 1.27 2013-10-13".
 
 Design Summary Report:
 
- Number of External IOBs                          72 out of 250    28%
+ Number of External IOBs                          96 out of 250    38%
 
-   Number of External Input IOBs                 19
+   Number of External Input IOBs                 20
 
-      Number of External Input IBUFs             19
-        Number of LOCed External Input IBUFs     19 out of 19    100%
+      Number of External Input IBUFs             20
+        Number of LOCed External Input IBUFs     20 out of 20    100%
 
 
-   Number of External Output IOBs                37
+   Number of External Output IOBs                60
 
-      Number of External Output IOBs             37
-        Number of LOCed External Output IOBs     37 out of 37    100%
+      Number of External Output IOBs             60
+        Number of LOCed External Output IOBs     60 out of 60    100%
 
 
    Number of External Bidir IOBs                 16
@@ -61,8 +61,8 @@ Placer effort level (-pl):    High
 Placer cost table entry (-t): 1
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 1 secs 
-Finished initial Timing Analysis.  REAL time: 1 secs 
+Starting initial Timing Analysis.  REAL time: 3 secs 
+Finished initial Timing Analysis.  REAL time: 3 secs 
 
 WARNING:Par:288 - The signal port_rst_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal port_switch<10>_IBUF has no load.  PAR will not attempt to route this signal.
@@ -73,6 +73,7 @@ WARNING:Par:288 - The signal port_switch<14>_IBUF has no load.  PAR will not att
 WARNING:Par:288 - The signal port_switch<15>_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal port_switch<0>_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal port_switch<1>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal port_com_data_ready_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal port_switch<2>_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal port_switch<3>_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal port_switch<4>_IBUF has no load.  PAR will not attempt to route this signal.
@@ -80,47 +81,47 @@ WARNING:Par:288 - The signal port_switch<5>_IBUF has no load.  PAR will not atte
 WARNING:Par:288 - The signal port_switch<6>_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal port_switch<7>_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal port_switch<8>_IBUF has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal port_clk_50_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal port_clk_key_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal port_switch<9>_IBUF has no load.  PAR will not attempt to route this signal.
 
 Starting Placer
-Total REAL time at the beginning of Placer: 1 secs 
-Total CPU  time at the beginning of Placer: 1 secs 
+Total REAL time at the beginning of Placer: 3 secs 
+Total CPU  time at the beginning of Placer: 3 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:cef34d33) REAL time: 1 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:f8be933b) REAL time: 4 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:cef34d33) REAL time: 1 secs 
+Phase 2.7  Design Feasibility Check (Checksum:f8be933b) REAL time: 4 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:cef34d33) REAL time: 1 secs 
+Phase 3.31  Local Placement Optimization (Checksum:f8be933b) REAL time: 4 secs 
 
 Phase 4.2  Initial Clock and IO Placement
 
-Phase 4.2  Initial Clock and IO Placement (Checksum:b6a9e56b) REAL time: 4 secs 
+Phase 4.2  Initial Clock and IO Placement (Checksum:2df2a13b) REAL time: 4 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:b6a9e56b) REAL time: 4 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:2df2a13b) REAL time: 4 secs 
 
 Phase 6.36  Local Placement Optimization
-Phase 6.36  Local Placement Optimization (Checksum:b6a9e56b) REAL time: 4 secs 
+Phase 6.36  Local Placement Optimization (Checksum:2df2a13b) REAL time: 4 secs 
 
 Phase 7.8  Global Placement
 ..
-Phase 7.8  Global Placement (Checksum:d5605fd8) REAL time: 4 secs 
+Phase 7.8  Global Placement (Checksum:1e5e5df4) REAL time: 8 secs 
 
 Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:d5605fd8) REAL time: 4 secs 
+Phase 8.5  Local Placement Optimization (Checksum:1e5e5df4) REAL time: 8 secs 
 
 Phase 9.18  Placement Optimization
-Phase 9.18  Placement Optimization (Checksum:b5aa4b81) REAL time: 4 secs 
+Phase 9.18  Placement Optimization (Checksum:a892b60b) REAL time: 8 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:b5aa4b81) REAL time: 4 secs 
+Phase 10.5  Local Placement Optimization (Checksum:a892b60b) REAL time: 8 secs 
 
-Total REAL time to Placer completion: 4 secs 
-Total CPU  time to Placer completion: 4 secs 
+Total REAL time to Placer completion: 8 secs 
+Total CPU  time to Placer completion: 8 secs 
 Writing design to file cpu_top.ncd
 
 
@@ -128,36 +129,30 @@ Writing design to file cpu_top.ncd
 Starting Router
 
 
-Phase  1  : 136 unrouted;      REAL time: 9 secs 
+Phase  1  : 151 unrouted;      REAL time: 18 secs 
 
-Phase  2  : 101 unrouted;      REAL time: 9 secs 
+Phase  2  : 117 unrouted;      REAL time: 18 secs 
 
-Phase  3  : 6 unrouted;      REAL time: 9 secs 
+Phase  3  : 5 unrouted;      REAL time: 18 secs 
 
-Phase  4  : 8 unrouted; (Par is working to improve performance)     REAL time: 11 secs 
+Phase  4  : 6 unrouted; (Par is working to improve performance)     REAL time: 20 secs 
 
-Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 11 secs 
-
-Updating file: cpu_top.ncd with current fully routed design.
-
-Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 11 secs 
-
-Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 19 secs 
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 20 secs 
 
 Updating file: cpu_top.ncd with current fully routed design.
 
-Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 19 secs 
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 20 secs 
 
-Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 19 secs 
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 24 secs 
 
-Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 19 secs 
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 24 secs 
 
-Phase 11  : 0 unrouted; (Par is working to improve performance)     REAL time: 19 secs 
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 24 secs 
 
-Phase 12  : 0 unrouted; (Par is working to improve performance)     REAL time: 19 secs 
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 24 secs 
 
-Total REAL time to Router completion: 19 secs 
-Total CPU time to Router completion: 19 secs 
+Total REAL time to Router completion: 24 secs 
+Total CPU time to Router completion: 24 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -175,7 +170,7 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|  port_clk_key_BUFGP |  BUFGMUX_X1Y1| No   |   22 |  0.120     |  0.344      |
+|   port_clk_50_BUFGP | BUFGMUX_X2Y10| No   |   22 |  0.102     |  0.344      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -195,8 +190,8 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net por | SETUP       |         N/A|     4.137ns|     N/A|           0
-  t_clk_key_BUFGP                           | HOLD        |     1.117ns|            |       0|           0
+  Autotimespec constraint for clock net por | SETUP       |         N/A|     3.902ns|     N/A|           0
+  t_clk_50_BUFGP                            | HOLD        |     1.018ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -212,18 +207,18 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-WARNING:Par:283 - There are 18 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
+WARNING:Par:283 - There are 19 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
 
-Total REAL time to PAR completion: 20 secs 
-Total CPU time to PAR completion: 19 secs 
+Total REAL time to PAR completion: 25 secs 
+Total CPU time to PAR completion: 24 secs 
 
-Peak Memory Usage:  591 MB
+Peak Memory Usage:  587 MB
 
 Placement: Completed - No errors found.
 Routing: Completed - No errors found.
 
 Number of error messages: 0
-Number of warning messages: 20
+Number of warning messages: 21
 Number of info messages: 1
 
 Writing design to file cpu_top.ncd

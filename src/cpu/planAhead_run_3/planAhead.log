@@ -1,0 +1,89 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+# Start of session at: Sat May 20 08:34:08 2017
+# Process ID: 18780
+# Log file: /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/planAhead_run_3/planAhead.log
+# Journal file: /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/planAhead_run_3/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Common 17-86] Your PlanAhead license expires in -140 day(s)
+INFO: [Device 21-36] Loading parts and site information from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/pa.fromNetlist.tcl
+# create_project -name cpu -dir "/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/planAhead_run_3" -part xc3s1200efg320-4
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/cpu_top.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu} }
+# set_param project.pinAheadLayout  yes
+# set_property target_constrs_file "cpu_top.ucf" [current_fileset -constrset]
+Adding file '/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/cpu_top.ucf' to fileset 'constrs_1'
+# add_files [list {cpu_top.ucf}] -fileset [get_property constrset [current_run]]
+# link_design
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+Design is defaulting to project part: xc3s1200efg320-4
+WARNING: zh_CN:zh is not supported as a language.  Using usenglish.
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design cpu_top.ngc ...
+WARNING:NetListWriters:298 - No output is written to cpu_top.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file cpu_top.edif ...
+ngc2edif: Total memory usage is 103836 kilobytes
+
+Parsing EDIF File [./planAhead_run_3/cpu.data/cache/cpu_top_ngc_f162ebd3.edif]
+Finished Parsing EDIF File [./planAhead_run_3/cpu.data/cache/cpu_top_ngc_f162ebd3.edif]
+INFO: [Designutils 20-910] Reading macro library /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn
+Parsing EDIF File [/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn]
+Finished Parsing EDIF File [/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn]
+Loading clock regions from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan3e/spartan3e/xc3s1200e/ClockRegion.xml
+Loading clock buffers from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan3e/spartan3e/xc3s1200e/ClockBuffers.xml
+Loading package from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan3e/spartan3e/xc3s1200e/fg320/Package.xml
+Loading io standards from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/spartan3e/IOStandards.xml
+INFO: [Device 21-19] Loading pkg sso from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan3e/spartan3e/xc3s1200e/fg320/SSORules.xml
+Loading list of drcs for the architecture : /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/spartan3e/spartan3e/drc.xml
+INFO: [Timing 38-77] Reading timing library /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan3e/spartan3e/spartan3e-4.lib.
+INFO: [Timing 38-34] Done reading timing library /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan3e/spartan3e/spartan3e-4.lib.
+Parsing UCF File [/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/cpu_top.ucf]
+Finished Parsing UCF File [/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/cpu_top.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Phase 0 | Netlist Checksum: 51c79aa4
+link_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:10 . Memory (MB): peak = 2826.656 ; gain = 121.891
+startgroup
+set_property package_pin A16 [get_ports port_com_data_ready]
+endgroup
+startgroup
+set_property package_pin C14 [get_ports port_com_rdn]
+endgroup
+startgroup
+set_property package_pin D14 [get_ports port_com_tbre]
+endgroup
+startgroup
+set_property package_pin N9 [get_ports port_com_tsre]
+endgroup
+startgroup
+set_property package_pin U5 [get_ports port_com_wrn]
+endgroup
+save_constraints
+exit
+ERROR: [#UNDEF] *** Exception: ui.h.b: Found deleted key in HTclEventBroker. Verify if the classes listed here call cleanup()
+HTclEvent: SIGNAL_BUS_MODIFY   Classes: ui.views.aR 
+HTclEvent: DEBUG_CORE_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: DEBUG_PORT_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: SIGNAL_MODIFY   Classes: ui.views.aR 
+ (See /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/planAhead_pid18780.debug)
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Sat May 20 08:36:35 2017...
+INFO: [Common 17-83] Releasing license: PlanAhead
