@@ -45,27 +45,25 @@ Clock port_clk_50 to Pad
                   | clk (edge) |                  | Clock  |
 Destination       |   to PAD   |Internal Clock(s) | Phase  |
 ------------------+------------+------------------+--------+
-port_led<2>       |   11.391(R)|port_clk_50_BUFGP |   0.000|
-port_led<3>       |   10.210(R)|port_clk_50_BUFGP |   0.000|
-port_led<4>       |   10.572(R)|port_clk_50_BUFGP |   0.000|
-port_mem1_data<0> |    8.927(R)|port_clk_50_BUFGP |   0.000|
-port_mem1_data<1> |    9.463(R)|port_clk_50_BUFGP |   0.000|
-port_mem1_data<2> |    9.725(R)|port_clk_50_BUFGP |   0.000|
-port_mem1_data<3> |    9.471(R)|port_clk_50_BUFGP |   0.000|
-port_mem1_data<4> |    9.978(R)|port_clk_50_BUFGP |   0.000|
-port_mem1_data<5> |    9.732(R)|port_clk_50_BUFGP |   0.000|
-port_mem1_data<6> |    9.614(R)|port_clk_50_BUFGP |   0.000|
-port_mem1_data<7> |    9.926(R)|port_clk_50_BUFGP |   0.000|
-port_mem1_data<8> |    9.862(R)|port_clk_50_BUFGP |   0.000|
-port_mem1_data<9> |   10.174(R)|port_clk_50_BUFGP |   0.000|
-port_mem1_data<10>|    9.361(R)|port_clk_50_BUFGP |   0.000|
-port_mem1_data<11>|    9.404(R)|port_clk_50_BUFGP |   0.000|
-port_mem1_data<12>|    9.361(R)|port_clk_50_BUFGP |   0.000|
-port_mem1_data<13>|    9.670(R)|port_clk_50_BUFGP |   0.000|
-port_mem1_data<14>|   10.396(R)|port_clk_50_BUFGP |   0.000|
-port_mem1_data<15>|   10.378(R)|port_clk_50_BUFGP |   0.000|
-port_mem1_oe      |    9.696(R)|port_clk_50_BUFGP |   0.000|
-port_mem1_we      |   10.152(R)|port_clk_50_BUFGP |   0.000|
+port_led<3>       |    8.717(R)|port_clk_50_BUFGP |   0.000|
+port_led<4>       |    9.235(R)|port_clk_50_BUFGP |   0.000|
+port_mem1_data<0> |    9.220(R)|port_clk_50_BUFGP |   0.000|
+port_mem1_data<1> |    8.912(R)|port_clk_50_BUFGP |   0.000|
+port_mem1_data<2> |    8.923(R)|port_clk_50_BUFGP |   0.000|
+port_mem1_data<3> |    8.961(R)|port_clk_50_BUFGP |   0.000|
+port_mem1_data<4> |    9.182(R)|port_clk_50_BUFGP |   0.000|
+port_mem1_data<5> |    9.177(R)|port_clk_50_BUFGP |   0.000|
+port_mem1_data<6> |    9.302(R)|port_clk_50_BUFGP |   0.000|
+port_mem1_data<7> |    9.325(R)|port_clk_50_BUFGP |   0.000|
+port_mem1_data<8> |    9.300(R)|port_clk_50_BUFGP |   0.000|
+port_mem1_data<9> |    9.437(R)|port_clk_50_BUFGP |   0.000|
+port_mem1_data<10>|    9.605(R)|port_clk_50_BUFGP |   0.000|
+port_mem1_data<11>|    9.648(R)|port_clk_50_BUFGP |   0.000|
+port_mem1_data<12>|    9.599(R)|port_clk_50_BUFGP |   0.000|
+port_mem1_data<13>|    9.906(R)|port_clk_50_BUFGP |   0.000|
+port_mem1_data<14>|   10.640(R)|port_clk_50_BUFGP |   0.000|
+port_mem1_data<15>|   10.621(R)|port_clk_50_BUFGP |   0.000|
+port_mem1_we      |    9.908(R)|port_clk_50_BUFGP |   0.000|
 ------------------+------------+------------------+--------+
 
 Clock to Setup on destination clock port_clk_50
@@ -73,18 +71,18 @@ Clock to Setup on destination clock port_clk_50
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-port_clk_50    |    3.114|         |         |         |
+port_clk_50    |    3.021|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Sat May 20 13:14:02 2017 
+Analysis completed Sun May 21 07:54:42 2017 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 364 MB
+Peak Memory Usage: 363 MB
 
 
 

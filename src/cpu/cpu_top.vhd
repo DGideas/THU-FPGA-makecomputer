@@ -111,6 +111,16 @@ signal internal_mcmgmt_data: std_logic_vector(15 downto 0);
 signal internal_mcmgmt_free: std_logic;
 signal internal_mcmgmt_debug_status: std_logic_vector(4 downto 0);
 
+component alu is
+	port
+	(
+		alu_input1: in std_logic_vector(15 downto 0);
+		alu_input2: in std_logic_vector(15 downto 0);
+		alu_output: out std_logic_vector(15 downto 0);
+		alu_operator: in std_logic_vector(2 downto 0)
+	);
+end component;
+
 begin
 
 clk1: clk port map

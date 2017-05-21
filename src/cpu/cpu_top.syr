@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Reading design: cpu_top.prj
@@ -118,8 +118,7 @@ Architecture behavioral of Entity switch is up to date.
 Compiling vhdl file "/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/led.vhd" in Library work.
 Architecture behavioral of Entity led is up to date.
 Compiling vhdl file "/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/mcmgmt.vhd" in Library work.
-Entity <mcmgmt> compiled.
-Entity <mcmgmt> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity mcmgmt is up to date.
 Compiling vhdl file "/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/cpu_top.vhd" in Library work.
 Architecture behavioral of Entity cpu_top is up to date.
 
@@ -145,8 +144,8 @@ Analyzing hierarchy for entity <mcmgmt> in library <work> (architecture <behavio
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <cpu_top> in library <work> (Architecture <behavioral>).
-WARNING:Xst:753 - "/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/cpu_top.vhd" line 146: Unconnected output port 'mcmgmt_odata' of component 'mcmgmt'.
-WARNING:Xst:753 - "/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/cpu_top.vhd" line 146: Unconnected output port 'mcmgmt_int' of component 'mcmgmt'.
+WARNING:Xst:753 - "/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/cpu_top.vhd" line 156: Unconnected output port 'mcmgmt_odata' of component 'mcmgmt'.
+WARNING:Xst:753 - "/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/cpu_top.vhd" line 156: Unconnected output port 'mcmgmt_int' of component 'mcmgmt'.
 Entity <cpu_top> analyzed. Unit <cpu_top> generated.
 
 Analyzing Entity <clk> in library <work> (Architecture <behavioral>).
@@ -577,12 +576,12 @@ Offset:              4.897ns (Levels of Logic = 1)
 
 
 Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.74 secs
+Total CPU time to Xst completion: 4.54 secs
  
 --> 
 
 
-Total memory usage is 528512 kilobytes
+Total memory usage is 528584 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  104 (   0 filtered)

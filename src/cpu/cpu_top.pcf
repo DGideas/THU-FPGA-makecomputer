@@ -1,18 +1,8 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Sat May 20 13:13:44 2017
+// Written by: Map P.20131013 on Sun May 21 08:18:41 2017
 //! **************************************************************************
 
 SCHEMATIC START;
-COMP "port_mem2_addr<10>" LOCATE = SITE "T18" LEVEL 1;
-COMP "port_mem1_addr<14>" LOCATE = SITE "H14" LEVEL 1;
-COMP "port_mem2_addr<11>" LOCATE = SITE "U18" LEVEL 1;
-COMP "port_switch<10>" LOCATE = SITE "N1" LEVEL 1;
-COMP "port_mem1_addr<15>" LOCATE = SITE "H15" LEVEL 1;
-COMP "port_led<10>" LOCATE = SITE "D11" LEVEL 1;
-COMP "port_mem2_addr<12>" LOCATE = SITE "V15" LEVEL 1;
-COMP "port_switch<11>" LOCATE = SITE "M1" LEVEL 1;
-COMP "port_mem1_addr<16>" LOCATE = SITE "H16" LEVEL 1;
-COMP "port_led<11>" LOCATE = SITE "C11" LEVEL 1;
 COMP "port_mem2_addr<13>" LOCATE = SITE "V13" LEVEL 1;
 COMP "port_switch<12>" LOCATE = SITE "K7" LEVEL 1;
 COMP "port_mem1_addr<17>" LOCATE = SITE "H17" LEVEL 1;
@@ -101,5 +91,15 @@ COMP "port_mem1_addr<11>" LOCATE = SITE "G14" LEVEL 1;
 COMP "port_mem1_addr<12>" LOCATE = SITE "G15" LEVEL 1;
 COMP "port_rst" LOCATE = SITE "U10" LEVEL 1;
 COMP "port_mem1_addr<13>" LOCATE = SITE "G16" LEVEL 1;
+COMP "port_mem2_addr<10>" LOCATE = SITE "T18" LEVEL 1;
+COMP "port_mem1_addr<14>" LOCATE = SITE "H14" LEVEL 1;
+COMP "port_mem2_addr<11>" LOCATE = SITE "U18" LEVEL 1;
+COMP "port_switch<10>" LOCATE = SITE "N1" LEVEL 1;
+COMP "port_mem1_addr<15>" LOCATE = SITE "H15" LEVEL 1;
+COMP "port_led<10>" LOCATE = SITE "D11" LEVEL 1;
+COMP "port_mem2_addr<12>" LOCATE = SITE "V15" LEVEL 1;
+COMP "port_switch<11>" LOCATE = SITE "M1" LEVEL 1;
+COMP "port_mem1_addr<16>" LOCATE = SITE "H16" LEVEL 1;
+COMP "port_led<11>" LOCATE = SITE "C11" LEVEL 1;
 SCHEMATIC END;
 

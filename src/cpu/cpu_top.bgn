@@ -5,7 +5,7 @@ Loading device for application Rf_Device from file '3s1200e.nph' in environment
    "cpu_top" is an NCD, version 3.2, device xc3s1200e, package fg320, speed -4
 Opened constraints file cpu_top.pcf.
 
-Sat May 20 13:14:05 2017
+Sun May 21 08:18:59 2017
 
 /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/bitgen -intstyle ise -w -g DebugBitstream:No -g Binary:no -g CRC:Enable -g ConfigRate:1 -g ProgPin:PullUp -g DonePin:PullUp -g TckPin:PullUp -g TdiPin:PullUp -g TdoPin:PullUp -g TmsPin:PullUp -g UnusedPin:PullDown -g UserID:0xFFFFFFFF -g DCMShutdown:Disable -g StartUpClk:CClk -g DONE_cycle:4 -g GTS_cycle:5 -g GWE_cycle:6 -g LCK_cycle:NoWait -g Security:None -g DonePipe:Yes -g DriveDone:No cpu_top.ncd 
 
@@ -90,10 +90,6 @@ There were 0 CONFIG constraint(s) processed from cpu_top.pcf.
 
 
 Running DRC.
-WARNING:PhysDesignRules:367 - The signal <port_switch<10>_IBUF> is incomplete.
-   The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <port_switch<11>_IBUF> is incomplete.
-   The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <port_switch<12>_IBUF> is incomplete.
    The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <port_switch<13>_IBUF> is incomplete.
@@ -128,6 +124,10 @@ WARNING:PhysDesignRules:367 - The signal <port_switch<9>_IBUF> is incomplete.
    The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <port_rst_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <port_switch<10>_IBUF> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <port_switch<11>_IBUF> is incomplete.
+   The signal does not drive any load pins in the design.
 DRC detected 0 errors and 19 warnings.  Please see the previously displayed
 individual error or warning messages for more details.
 INFO:Security:54 - 'xc3s1200e' is a WebPack part.

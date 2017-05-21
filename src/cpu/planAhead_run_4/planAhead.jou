@@ -7,3 +7,4 @@
 # Journal file: /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/planAhead_run_4/planAhead.jou
 #-----------------------------------------------------------
 start_gui
+source /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/pa.fromNetlist.tcl

@@ -4,11 +4,12 @@ use ieee.std_logic_arith.all;
 use ieee.std_logic_unsigned.all;
 
 entity alu is
-	Port(
-		Input1 : in  STD_LOGIC_VECTOR (15 downto 0);
-		Input2 : in  STD_LOGIC_VECTOR (15 downto 0);
-		Output : out  STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
-		ALUop : in  STD_LOGIC_VECTOR (2 downto 0)
+	port
+	(
+		alu_input1: in std_logic_vector(15 downto 0);
+		alu_input2: in std_logic_vector(15 downto 0);
+		alu_output: out std_logic_vector(15 downto 0);
+		alu_operator: in std_logic_vector(2 downto 0)
 	);
 end alu;
 
@@ -16,19 +17,27 @@ architecture Behavioral of alu is
 
 begin
 
-	process(ALUop, Input1, Input2)
-	begin
-		case ALUop is
-			when "000" =>output <= input1 + input2;
-			when "001" =>output <= input1 - input2;
-			when "010" =>output <= input1 and input2;
-			when "011" =>output <= input1 or input2;
-                        when "100" =>output <= input1 xor input2;
-			when "101" =>output <= TO_STDLOGICVECTOR(TO_BITVECTOR(input1) sll CONV_INTEGER(input2));
-			when "110" =>output <= TO_STDLOGICVECTOR(TO_BITVECTOR(input1) sra CONV_INTEGER(input2));
-			when others =>output<="0000000000000000";
-		end case;
-	end process;
+process(alu_operator, alu_input1, alu_input2)
+begin
+	case alu_operator is
+		when "000" =>
+			alu_output <= alu_input1 + alu_input2;
+		when "001" =>
+			alu_output <= alu_input1 - alu_input2;
+		when "010" =>
+			alu_output <= alu_input1 and alu_input2;
+		when "011" =>
+			alu_output <= alu_input1 or alu_input2;
+		when "100" =>
+			alu_output <= alu_input1 xor alu_input2;
+		when "101" =>
+			alu_output <= to_stdlogicvector(to_bitvector(alu_input1) sll conv_integer(alu_input2));
+		when "110" =>
+			alu_output <= to_stdlogicvector(to_bitvector(alu_input1) sra conv_integer(alu_input2));
+		when others =>
+			alu_output <= "0000000000000000";
+	end case;
+end process;
 
 end Behavioral;
 

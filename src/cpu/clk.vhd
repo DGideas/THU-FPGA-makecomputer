@@ -4,7 +4,7 @@ use ieee.std_logic_arith.all;
 use ieee.std_logic_unsigned.all;
 
 entity clk is
-	Port
+	port
 	(
 		clk_port_clk: in std_logic;
 		clk_clk: out std_logic
