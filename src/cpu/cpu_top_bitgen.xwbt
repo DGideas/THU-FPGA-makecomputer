@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/cpu_top.ncd
-OUTFILE=/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/cpu_top.bit
+INFILE=F:\THU-FPGA-makecomputer\src\cpu1\cpu_top.ncd
+OUTFILE=F:\THU-FPGA-makecomputer\src\cpu1\cpu_top.bit
 FAMILY=Spartan3E
 PART=xc3s1200e-4fg320
-WORKINGDIR=/home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu
+WORKINGDIR=F:\THU-FPGA-makecomputer\src\cpu1
 LICENSE=ISE
 USER_INFO=135256_15690819_173552794_661

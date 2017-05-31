@@ -10,14 +10,16 @@ entity ex_mem_segment_regfile is
 		ex_mem_segment_regfile_write_in: in std_logic;
 		ex_mem_segment_regfile_alu_result_in: in std_logic_vector(15 downto 0);
 		ex_mem_segment_regfile_alu_result_out: out std_logic_vector(15 downto 0);
-		ex_mem_segment_regfile_mem_we_in: in std_logic_vector(1 downto 0);
-		ex_mem_segment_regfile_memwe_out: out std_logic_vector(1 downto 0);
+		ex_mem_segment_regfile_mem_we_in: in std_logic;
+		ex_mem_segment_regfile_mem_we_out: out std_logic;
 		ex_mem_segment_regfile_reg_ry_in: in std_logic_vector(15 downto 0);
 		ex_mem_segment_regfile_reg_ry_out: out std_logic_vector(15 downto 0);
 		ex_mem_segment_regfile_src_result_in: in std_logic_vector(1 downto 0);
 		ex_mem_segment_regfile_src_result_out: out std_logic_vector(1 downto 0);
 		ex_mem_segment_regfile_reg_we_in: in std_logic;
 		ex_mem_segment_regfile_reg_we_out: out std_logic;
+		ex_mem_segment_regfile_we_result_in:  in std_logic_vector (1 downto 0);
+   	ex_mem_segment_regfile_we_result_out: out  std_logic_vector (1 downto 0);
 		ex_mem_segment_regfile_imm_in: in std_logic_vector(15 downto 0);
 		ex_mem_segment_regfile_imm_out: out std_logic_vector(15 downto 0)
 	);

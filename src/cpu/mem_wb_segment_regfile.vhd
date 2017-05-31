@@ -12,6 +12,8 @@ entity mem_we_segment_regfile is
 		mem_we_segment_regfile_result_out: out std_logic_vector(15 downto 0);
 		mem_we_segment_regfile_reg_we_in: in std_logic;
 		mem_we_segment_regfile_reg_we_out: out std_logic;
+		mem_we_segment_regfile_we_result_in:  in std_logic_vector (1 downto 0);
+   	mem_we_segment_regfile_we_result_out: out  std_logic_vector (1 downto 0);
 		mem_we_segment_regfile_imm_in: in std_logic_vector(15 downto 0);
 		mem_we_segment_regfile_imm_out: out std_logic_vector(15 downto 0)
 	);
@@ -28,6 +30,7 @@ begin
 		mem_we_segment_regfile_reg_we_out <= mem_we_segment_regfile_reg_we_in;
 		mem_we_segment_regfile_imm_out <= mem_we_segment_regfile_imm_in;
 	end if;
+
 end process;
 
 end Behavioral;

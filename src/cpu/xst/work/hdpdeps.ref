@@ -1,55 +1,161 @@
-V3 27
-FL /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/clk.vhd 2017/05/21.07:18:19 P.20131013
-EN work/clk 1495325907 \
-      FL /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/clk.vhd \
+V3 107
+FL /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/clk.vhd 2017/05/21.07:18:19 P.68d
+FL /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/clkkey.vhd 2017/05/17.14:44:06 P.68d
+FL /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/cpu_top.vhd 2017/05/21.07:22:14 P.68d
+FL /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/led.vhd 2017/05/17.14:44:06 P.68d
+FL /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/mcmgmt.vhd 2017/05/21.07:13:37 P.68d
+FL /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/rstkey.vhd 2017/05/17.14:44:06 P.68d
+FL /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/switch.vhd 2017/05/17.14:44:06 P.68d
+FL F:/THU-FPGA-makecomputer/src/cpu/add_pc.vhd 2017/05/21.16:57:16 P.68d
+FL F:/THU-FPGA-makecomputer/src/cpu/alu.vhd 2017/05/21.07:21:56 P.68d
+FL F:/THU-FPGA-makecomputer/src/cpu/clk.vhd 2017/05/21.07:18:20 P.68d
+FL F:/THU-FPGA-makecomputer/src/cpu/clkkey.vhd 2017/05/17.14:44:06 P.68d
+FL F:/THU-FPGA-makecomputer/src/cpu/cpu_top.vhd 2017/05/22.13:26:40 P.68d
+FL F:/THU-FPGA-makecomputer/src/cpu/decoder.vhd 2017/05/21.17:22:05 P.68d
+FL F:/THU-FPGA-makecomputer/src/cpu/ex_mem_segment_regfile.vhd 2017/05/21.17:28:03 P.68d
+FL F:/THU-FPGA-makecomputer/src/cpu/id_ex_segment_regfile.vhd 2017/05/22.12:52:40 P.68d
+FL F:/THU-FPGA-makecomputer/src/cpu/if_id_segment_regfile.vhd 2017/05/21.07:45:48 P.68d
+FL F:/THU-FPGA-makecomputer/src/cpu/led.vhd 2017/05/17.14:44:06 P.68d
+FL F:/THU-FPGA-makecomputer/src/cpu/mcmgmt.vhd 2017/05/21.07:13:38 P.68d
+EN work/mcmgmt 1495430912 FL F:/THU-FPGA-makecomputer/src/cpu/mcmgmt.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/clk/Behavioral 1495325908 \
-      FL /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/clk.vhd EN work/clk 1495325907
-FL /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/clkkey.vhd 2017/05/17.14:44:06 P.20131013
-EN work/clkkey 1495325911 \
-      FL /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/clkkey.vhd \
+AR work/mcmgmt/Behavioral 1495430913 \
+      FL F:/THU-FPGA-makecomputer/src/cpu/mcmgmt.vhd EN work/mcmgmt 1495430912
+FL F:/THU-FPGA-makecomputer/src/cpu/mem_wb_segment_regfile.vhd 2017/05/21.17:28:03 P.68d
+FL F:/THU-FPGA-makecomputer/src/cpu/mux_pc.vhd 2017/05/21.16:58:04 P.68d
+FL F:/THU-FPGA-makecomputer/src/cpu/mux_reg1.vhd 2017/05/21.16:52:47 P.68d
+FL F:/THU-FPGA-makecomputer/src/cpu/mux_reg2.vhd 2017/05/21.16:52:46 P.68d
+FL F:/THU-FPGA-makecomputer/src/cpu/mux_result.vhd 2017/05/21.15:50:37 P.68d
+FL F:/THU-FPGA-makecomputer/src/cpu/mux_wb.vhd 2017/05/21.16:59:18 P.68d
+FL F:/THU-FPGA-makecomputer/src/cpu/pc.vhd 2017/05/21.16:04:28 P.68d
+FL F:/THU-FPGA-makecomputer/src/cpu/regfile.vhd 2017/05/21.17:11:24 P.68d
+FL F:/THU-FPGA-makecomputer/src/cpu/rstkey.vhd 2017/05/17.14:44:06 P.68d
+FL F:/THU-FPGA-makecomputer/src/cpu/switch.vhd 2017/05/17.14:44:06 P.68d
+FL F:/THU-FPGA-makecomputer/src/cpu1/add_pc.vhd 2017/05/22.15:25:56 P.68d
+EN work/add_pc 1495442300 FL F:/THU-FPGA-makecomputer/src/cpu1/add_pc.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1370735611 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179 PB ieee/std_logic_arith 1381692177
+AR work/add_pc/Behavioral 1495442301 \
+      FL F:/THU-FPGA-makecomputer/src/cpu1/add_pc.vhd EN work/add_pc 1495442300
+FL F:/THU-FPGA-makecomputer/src/cpu1/alu.vhd 2017/05/22.15:59:23 P.68d
+EN work/alu 1495442298 FL F:/THU-FPGA-makecomputer/src/cpu1/alu.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/clkkey/Behavioral 1495325912 \
-      FL /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/clkkey.vhd \
-      EN work/clkkey 1495325911
-FL /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/cpu_top.vhd 2017/05/21.07:22:14 P.20131013
-EN work/cpu_top 1495325919 \
-      FL /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/cpu_top.vhd \
+AR work/alu/Behavioral 1495442299 \
+      FL F:/THU-FPGA-makecomputer/src/cpu1/alu.vhd EN work/alu 1495442298
+FL F:/THU-FPGA-makecomputer/src/cpu1/clk.vhd 2017/05/21.07:18:20 P.68d
+EN work/clk 1495436147 FL F:/THU-FPGA-makecomputer/src/cpu1/clk.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/cpu_top/Behavioral 1495325920 \
-      FL /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/cpu_top.vhd \
-      EN work/cpu_top 1495325919 CP clk CP rstkey CP clkkey CP switch CP led CP mcmgmt
-FL /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/led.vhd 2017/05/17.14:44:06 P.20131013
-EN work/led 1495325915 \
-      FL /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/led.vhd \
+AR work/clk/Behavioral 1495436148 \
+      FL F:/THU-FPGA-makecomputer/src/cpu1/clk.vhd EN work/clk 1495436147
+FL F:/THU-FPGA-makecomputer/src/cpu1/clkkey.vhd 2017/05/17.14:44:06 P.68d
+EN work/clkkey 1495442294 FL F:/THU-FPGA-makecomputer/src/cpu1/clkkey.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/led/Behavioral 1495325916 \
-      FL /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/led.vhd EN work/led 1495325915
-FL /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/mcmgmt.vhd 2017/05/21.07:13:37 P.20131013
-EN work/mcmgmt 1495325917 \
-      FL /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/mcmgmt.vhd \
+AR work/clkkey/Behavioral 1495442295 \
+      FL F:/THU-FPGA-makecomputer/src/cpu1/clkkey.vhd EN work/clkkey 1495442294
+FL F:/THU-FPGA-makecomputer/src/cpu1/cpu_top.vhd 2017/05/22.16:38:12 P.68d
+EN work/cpu_top 1495442326 FL F:/THU-FPGA-makecomputer/src/cpu1/cpu_top.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/mcmgmt/Behavioral 1495325918 \
-      FL /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/mcmgmt.vhd \
-      EN work/mcmgmt 1495325917
-FL /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/rstkey.vhd 2017/05/17.14:44:06 P.20131013
-EN work/rstkey 1495325909 \
-      FL /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/rstkey.vhd \
+AR work/cpu_top/Behavioral 1495442327 \
+      FL F:/THU-FPGA-makecomputer/src/cpu1/cpu_top.vhd EN work/cpu_top 1495442326 \
+      CP clkkey CP switch CP alu CP add_pc CP pc CP mux_pc CP mux_wb CP mcmgmt \
+      CP regfile CP Mux_reg1 CP Mux_reg2 CP mux_result CP decoder \
+      CP if_id_segment_regfile CP id_ex_segment_regfile CP ex_mem_segment_regfile \
+      CP mem_we_segment_regfile
+FL F:/THU-FPGA-makecomputer/src/cpu1/decoder.vhd 2017/05/22.16:12:48 P.68d
+EN work/decoder 1495442316 FL F:/THU-FPGA-makecomputer/src/cpu1/decoder.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/rstkey/Behavioral 1495325910 \
-      FL /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/rstkey.vhd \
-      EN work/rstkey 1495325909
-FL /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/switch.vhd 2017/05/17.14:44:06 P.20131013
-EN work/switch 1495325913 \
-      FL /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/switch.vhd \
+AR work/decoder/Behavioral 1495442317 \
+      FL F:/THU-FPGA-makecomputer/src/cpu1/decoder.vhd EN work/decoder 1495442316
+FL F:/THU-FPGA-makecomputer/src/cpu1/ex_mem_segment_regfile.vhd 2017/05/22.14:05:47 P.68d
+EN work/ex_mem_segment_regfile 1495442322 \
+      FL F:/THU-FPGA-makecomputer/src/cpu1/ex_mem_segment_regfile.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/switch/Behavioral 1495325914 \
-      FL /home/dgideas/VHDL/THU-FPGA-makecomputer/src/cpu/switch.vhd \
-      EN work/switch 1495325913
+AR work/ex_mem_segment_regfile/Behavioral 1495442323 \
+      FL F:/THU-FPGA-makecomputer/src/cpu1/ex_mem_segment_regfile.vhd \
+      EN work/ex_mem_segment_regfile 1495442322
+FL F:/THU-FPGA-makecomputer/src/cpu1/id_ex_segment_regfile.vhd 2017/05/22.14:05:47 P.68d
+EN work/id_ex_segment_regfile 1495442320 \
+      FL F:/THU-FPGA-makecomputer/src/cpu1/id_ex_segment_regfile.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/id_ex_segment_regfile/Behavioral 1495442321 \
+      FL F:/THU-FPGA-makecomputer/src/cpu1/id_ex_segment_regfile.vhd \
+      EN work/id_ex_segment_regfile 1495442320
+FL F:/THU-FPGA-makecomputer/src/cpu1/if_id_segment_regfile.vhd 2017/05/22.14:05:47 P.68d
+EN work/if_id_segment_regfile 1495442318 \
+      FL F:/THU-FPGA-makecomputer/src/cpu1/if_id_segment_regfile.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/if_id_segment_regfile/Behavioral 1495442319 \
+      FL F:/THU-FPGA-makecomputer/src/cpu1/if_id_segment_regfile.vhd \
+      EN work/if_id_segment_regfile 1495442318
+FL F:/THU-FPGA-makecomputer/src/cpu1/led.vhd 2017/05/17.14:44:06 P.68d
+EN work/led 1495434244 FL F:/THU-FPGA-makecomputer/src/cpu1/led.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/led/Behavioral 1495434245 \
+      FL F:/THU-FPGA-makecomputer/src/cpu1/led.vhd EN work/led 1495434244
+FL F:/THU-FPGA-makecomputer/src/cpu1/mem_wb_segment_regfile.vhd 2017/05/22.14:05:48 P.68d
+EN work/mem_we_segment_regfile 1495442324 \
+      FL F:/THU-FPGA-makecomputer/src/cpu1/mem_wb_segment_regfile.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/mem_we_segment_regfile/Behavioral 1495442325 \
+      FL F:/THU-FPGA-makecomputer/src/cpu1/mem_wb_segment_regfile.vhd \
+      EN work/mem_we_segment_regfile 1495442324
+FL F:/THU-FPGA-makecomputer/src/cpu1/mux_pc.vhd 2017/05/21.16:58:04 P.68d
+EN work/mux_pc 1495442304 FL F:/THU-FPGA-makecomputer/src/cpu1/mux_pc.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/mux_pc/Behavioral 1495442305 \
+      FL F:/THU-FPGA-makecomputer/src/cpu1/mux_pc.vhd EN work/mux_pc 1495442304
+FL F:/THU-FPGA-makecomputer/src/cpu1/mux_reg1.vhd 2017/05/21.16:52:47 P.68d
+EN work/mux_reg1 1495442310 FL F:/THU-FPGA-makecomputer/src/cpu1/mux_reg1.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/Mux_reg1/Behavioral 1495442311 \
+      FL F:/THU-FPGA-makecomputer/src/cpu1/mux_reg1.vhd EN work/mux_reg1 1495442310
+FL F:/THU-FPGA-makecomputer/src/cpu1/mux_reg2.vhd 2017/05/21.16:52:46 P.68d
+EN work/mux_reg2 1495442312 FL F:/THU-FPGA-makecomputer/src/cpu1/mux_reg2.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/Mux_reg2/Behavioral 1495442313 \
+      FL F:/THU-FPGA-makecomputer/src/cpu1/mux_reg2.vhd EN work/mux_reg2 1495442312
+FL F:/THU-FPGA-makecomputer/src/cpu1/mux_result.vhd 2017/05/21.15:50:37 P.68d
+EN work/mux_result 1495442314 FL F:/THU-FPGA-makecomputer/src/cpu1/mux_result.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/mux_result/Behavioral 1495442315 \
+      FL F:/THU-FPGA-makecomputer/src/cpu1/mux_result.vhd EN work/mux_result 1495442314
+FL F:/THU-FPGA-makecomputer/src/cpu1/mux_wb.vhd 2017/05/21.16:59:18 P.68d
+EN work/mux_wb 1495442306 FL F:/THU-FPGA-makecomputer/src/cpu1/mux_wb.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/mux_wb/Behavioral 1495442307 \
+      FL F:/THU-FPGA-makecomputer/src/cpu1/mux_wb.vhd EN work/mux_wb 1495442306
+FL F:/THU-FPGA-makecomputer/src/cpu1/pc.vhd 2017/05/22.14:40:46 P.68d
+EN work/pc 1495442302 FL F:/THU-FPGA-makecomputer/src/cpu1/pc.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/pc/Behavioral 1495442303 \
+      FL F:/THU-FPGA-makecomputer/src/cpu1/pc.vhd EN work/pc 1495442302
+FL F:/THU-FPGA-makecomputer/src/cpu1/regfile.vhd 2017/05/22.16:33:43 P.68d
+EN work/regfile 1495442308 FL F:/THU-FPGA-makecomputer/src/cpu1/regfile.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/regfile/Behavioral 1495442309 \
+      FL F:/THU-FPGA-makecomputer/src/cpu1/regfile.vhd EN work/regfile 1495442308
+FL F:/THU-FPGA-makecomputer/src/cpu1/rstkey.vhd 2017/05/17.14:44:06 P.68d
+EN work/rstkey 1495436149 FL F:/THU-FPGA-makecomputer/src/cpu1/rstkey.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/rstkey/Behavioral 1495436150 \
+      FL F:/THU-FPGA-makecomputer/src/cpu1/rstkey.vhd EN work/rstkey 1495436149
+FL F:/THU-FPGA-makecomputer/src/cpu1/switch.vhd 2017/05/17.14:44:06 P.68d
+EN work/switch 1495442296 FL F:/THU-FPGA-makecomputer/src/cpu1/switch.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/switch/Behavioral 1495442297 \
+      FL F:/THU-FPGA-makecomputer/src/cpu1/switch.vhd EN work/switch 1495442296

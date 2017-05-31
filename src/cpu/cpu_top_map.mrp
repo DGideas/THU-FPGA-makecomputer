@@ -1,4 +1,4 @@
-Release 14.7 Map P.20131013 (lin64)
+Release 14.6 Map P.68d (nt64)
 Xilinx Mapping Report File for Design 'cpu_top'
 
 Design Information
@@ -9,29 +9,37 @@ Target Device  : xc3s1200e
 Target Package : fg320
 Target Speed   : -4
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Sun May 21 08:18:39 2017
+Mapped Date    : Mon May 22 16:38:29 2017
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:   37
+Number of warnings:   31
 Logic Utilization:
-  Number of Slice Flip Flops:             5 out of  17,344    1%
-  Number of 4 input LUTs:                 2 out of  17,344    1%
+  Total Number Slice Registers:          79 out of  17,344    1%
+    Number used as Flip Flops:           31
+    Number used as Latches:              48
+  Number of 4 input LUTs:               467 out of  17,344    2%
 Logic Distribution:
-  Number of occupied Slices:              5 out of   8,672    1%
-    Number of Slices containing only related logic:       5 out of       5 100%
-    Number of Slices containing unrelated logic:          0 out of       5   0%
+  Number of occupied Slices:            268 out of   8,672    3%
+    Number of Slices containing only related logic:     268 out of     268 100%
+    Number of Slices containing unrelated logic:          0 out of     268   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:           2 out of  17,344    1%
+  Total Number of 4 input LUTs:         483 out of  17,344    2%
+    Number used as logic:               467
+    Number used as a route-thru:         16
+
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
   Number of bonded IOBs:                 96 out of     250   38%
   Number of BUFGMUXs:                     1 out of      24    4%
 
-Average Fanout of Non-Clock Nets:                1.28
+Average Fanout of Non-Clock Nets:                4.05
 
-Peak Memory Usage:  595 MB
-Total REAL time to MAP completion:  2 secs 
-Total CPU time to MAP completion:   2 secs 
+Peak Memory Usage:  332 MB
+Total REAL time to MAP completion:  4 secs 
+Total CPU time to MAP completion:   3 secs 
 
 NOTES:
 
@@ -111,56 +119,52 @@ WARNING:MapLib:701 - Signal port_mem2_data<1> connected to top level port
    port_mem2_data<1> has been removed.
 WARNING:MapLib:701 - Signal port_mem2_data<0> connected to top level port
    port_mem2_data<0> has been removed.
-WARNING:PhysDesignRules:367 - The signal <port_switch<12>_IBUF> is incomplete.
-   The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <port_switch<13>_IBUF> is incomplete.
-   The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <port_switch<14>_IBUF> is incomplete.
-   The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <port_switch<15>_IBUF> is incomplete.
-   The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <port_switch<0>_IBUF> is incomplete.
-   The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <port_switch<1>_IBUF> is incomplete.
-   The signal does not drive any load pins in the design.
+WARNING:Pack:266 - The function generator decoder1/muxop1_not00012107 failed to
+   merge with F5 multiplexer decoder1/reg1_not000162_f5.  There is a conflict
+   for the FXMUX.  The design will exhibit suboptimal timing.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net decoder1/imm_not0001 is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net decoder1/reg1_not0001 is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net mux_pc1/output_or0000 is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net decoder1/muxop1_not0001 is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net decoder1/aluop_not0001 is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   regfile1/regfile_rdata1_not0001 is sourced by a combinatorial pin. This is
+   not good design practice. Use the CE pin to control the loading of data into
+   the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net decoder1/muxpc_not0001 is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net decoder1/reg2_not0001 is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net decoder1/reg3_not0001 is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net decoder1/muxop2_not0001 is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:367 - The signal <port_com_data_ready_IBUF> is
    incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <port_switch<2>_IBUF> is incomplete.
-   The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <port_switch<3>_IBUF> is incomplete.
-   The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <port_switch<4>_IBUF> is incomplete.
-   The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <port_switch<5>_IBUF> is incomplete.
-   The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <port_switch<6>_IBUF> is incomplete.
-   The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <port_switch<7>_IBUF> is incomplete.
-   The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <port_switch<8>_IBUF> is incomplete.
-   The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <port_clk_key_IBUF> is incomplete. The
+WARNING:PhysDesignRules:367 - The signal <port_clk_50_IBUF> is incomplete. The
    signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <port_switch<9>_IBUF> is incomplete.
-   The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <port_rst_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <port_switch<10>_IBUF> is incomplete.
-   The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <port_switch<11>_IBUF> is incomplete.
-   The signal does not drive any load pins in the design.
 
 Section 3 - Informational
 -------------------------
 INFO:Security:54 - 'xc3s1200e' is a WebPack part.
-INFO:LIT:243 - Logical network port_com_data_ready_IBUF has no load.
-INFO:LIT:395 - The above info message is repeated 18 more times for the
-   following (max. 5 shown):
-   port_rst_IBUF,
-   port_clk_key_IBUF,
-   port_switch<15>_IBUF,
-   port_switch<14>_IBUF,
-   port_switch<13>_IBUF
+INFO:LIT:243 - Logical network port_clk_50_IBUF has no load.
+INFO:LIT:395 - The above info message is repeated 1 more times for the following
+   (max. 5 shown):
+   port_com_data_ready_IBUF
    To see the details of these info messages, please use the -detail switch.
 INFO:MapLib:562 - No environment variables are currently set.
 INFO:LIT:244 - All of the single ended outputs in this design are using slew

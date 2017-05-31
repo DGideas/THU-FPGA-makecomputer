@@ -19,7 +19,9 @@ entity regfile is
 end regfile;
 
 architecture Behavioral of regfile is
-signal r0, r1, r2, r3, r4, r5, r6, r7, r8, r9, r10: std_logic_vector(15 downto 0) := "0000000000000000";
+signal r0, r2, r3, r4, r5, r6, r7, r8, r9: std_logic_vector(15 downto 0) := "0000000000000001";
+signal r1: std_logic_vector(15 downto 0) := "0000000000000010";
+signal r10: std_logic_vector(15 downto 0);
 begin
 
 process(regfile_clk, regfile_rst, regfile_we)
@@ -28,8 +30,6 @@ begin
 		regfile_rdata1 <= "0000000000000000";
 		regfile_rdata2 <= "0000000000000000";
 	else
-		case regfile_we is
-			when '1' =>
 				case regfile_raddr1 is
 					when "0000" =>
 						regfile_rdata1 <= r0;
@@ -56,63 +56,62 @@ begin
 					when others =>
 						null;
 				end case;
-				case raddr2 is
+				case regfile_raddr2 is
 					when "0000" =>
-						rdata2 <= r0;
+						regfile_rdata2 <= r0;
 					when "0001" =>
-						rdata2 <= r1;
+						regfile_rdata2 <= r1;
 					when "0010" =>
-						rdata2 <= r2;
+						regfile_rdata2 <= r2;
 					when "0011" =>
-						rdata2 <= r3;
+						regfile_rdata2 <= r3;
 					when "0100" =>
-						rdata2 <= r4;
+						regfile_rdata2 <= r4;
 					when "0101" =>
-						rdata2 <= r5;
+						regfile_rdata2 <= r5;
 					when "0110" =>
-						rdata2 <= r6;
+						regfile_rdata2 <= r6;
 					when "0111" =>
-						rdata2 <= r7;
+						regfile_rdata2 <= r7;
 					when "1000" =>
-						rdata2 <= r8;--sp
+						regfile_rdata2 <= r8;--sp
 					when "1001" =>
-						rdata2 <= r9;--ih
+						regfile_rdata2 <= r9;--ih
 					when "1010" =>
-						rdata2 <= r10;--t
+						regfile_rdata2 <= r10;--t
 					when others =>
 						null;
 				end case;
-			when '0' =>
+			if(regfile_we='1')then
 				if (regfile_clk'event and regfile_clk='0') then
 					case regfile_waddr is
 						when "0000" =>
-							r0 <= wdata;
+							r0 <= regfile_wdata;
 						when "0001" =>
-							r1 <= wdata;
+							r1 <= regfile_wdata;
 						when "0010" =>
-							r2 <= wdata;
+							r2 <= regfile_wdata;
 						when "0011" =>
-							r3 <= wdata;
+							r3 <= regfile_wdata;
 						when "0100" =>
-							r4 <= wdata;
+							r4 <= regfile_wdata;
 						when "0101" =>
-							r5 <= wdata;
+							r5 <= regfile_wdata;
 						when "0110" =>
-							r6 <= wdata;
+							r6 <= regfile_wdata;
 						when "0111" =>
-							r7 <= wdata;
+							r7 <= regfile_wdata;
 						when "1000" =>
-							r8 <= wdata;--sp
+							r8 <= regfile_wdata;--sp
 						when "1001" =>
-							r9 <= wdata;--ih
+							r9 <= regfile_wdata;--ih
 						when "1010" =>
-							r10 <= wdata;--t
+							r10 <= regfile_wdata;--t
 						when others =>
 							null;
 					end case;
 				end if;
-			when others => null;
-		end case;
+			end if;
 	end if;
 end process;
 

@@ -3,201 +3,309 @@ use IEEE.STD_LOGIC_1164.ALL;
 use ieee.std_logic_arith.all;
 use ieee.std_logic_unsigned.all;
 entity decoder is
-    Port ( Reg1 : out  STD_LOGIC_VECTOR (3 downto 0);--è¯»å‡ºçš„å¯„å­˜å™¨
-           Reg2 : out  STD_LOGIC_VECTOR (3 downto 0);--è¯»å‡ºçš„å¯„å­˜å™¨
-           reg3 : out  STD_LOGIC_VECTOR (3 downto 0);--å†™å›çš„å¯„å­˜å™¨
-           Imm : out  STD_LOGIC_VECTOR (15 downto 0);--æ‰©å±•åçš„ç«‹å³æ•°
-           Op : out  STD_LOGIC_VECTOR (4 downto 0);--æ“ä½œç 
-			  S : out std_logic_vector(3 downto 0);--å·¦ç§»æˆ–è€…å³ç§»çš„æ•°
-			  AluOp : out std_logic_vector(2 downto 0);--aluæ“ä½œæ•°
-           Instruction : in  STD_LOGIC_VECTOR (15 downto 0)--æŒ‡ä»¤
+    Port ( reg1 : out  STD_LOGIC_VECTOR (3 downto 0);--¶Á³öµÄ¼Ä´æÆ÷
+           reg2 : out  STD_LOGIC_VECTOR (3 downto 0);--¶Á³öµÄ¼Ä´æÆ÷
+           reg3 : out  STD_LOGIC_VECTOR (3 downto 0);--Ğ´»ØµÄ¼Ä´æÆ÷
+           imm : out  STD_LOGIC_VECTOR (15 downto 0);--À©Õ¹ºóµÄÁ¢¼´Êı
+			   imm1 : out  STD_LOGIC_VECTOR (15 downto 0);--À©Õ¹ºóµÄÁ¢¼´Êı
+			  rw : out std_logic;--ÄÚ´æ¶ÁĞ´
+			  we : out std_logic;
+			  muxop1 : out std_logic_vector(1 downto 0);--¶àÂ·Ñ¡ÔñÆ÷1
+			  muxop2 : out std_logic_vector(1 downto 0);--¶àÂ·Ñ¡ÔñÆ÷2
+			  muxop3 : out std_logic_vector(1 downto 0);--¶àÂ·Ñ¡ÔñÆ÷3
+			  muxop4 : out std_logic_vector(1 downto 0);--¶àÂ·Ñ¡ÔñÆ÷4
+			  muxpc : out std_logic_vector(2 downto 0);--¶àÂ·Ñ¡ÔñÆ÷pc
+			  aluop : out std_logic_vector(2 downto 0);--alu²Ù×÷Êı
+           instruction : in  STD_LOGIC_VECTOR (15 downto 0)--Ö¸Áî
 			  );
 end decoder;
 
 architecture Behavioral of decoder is
 begin
-process(Instruction)
+process(instruction)
 begin
-Op<=Instruction(15 downto 11);
-case Instruction(15 downto 11) is
+case instruction(15 downto 11) is
     when "00001"=> null;--NOP
 	 when "11100"=>--ADDU,SUBU
-	   case Instruction(1 downto 0) is
+	      we<='1';
+			muxpc<="000";
+			muxop1<="00";
+			muxop2<="00";
+			muxop3<="00";
+			muxop4<="00";
+	    case instruction(1 downto 0) is
 	     when "01"=>--ADDU
-	       Reg1<='0' & Instruction(10 downto 8);--rx
-	       Reg2<='0' & Instruction(7 downto 5);--ry
-	       Reg3<='0' & Instruction(4 downto 2);--rz
-		    AluOp<="000";--åŠ æ³•è¿ç®—
+	       reg1<='0' & instruction(10 downto 8);--rx
+	       reg2<='0' & instruction(7 downto 5);--ry
+	       reg3<='0' & instruction(4 downto 2);--rz
+		    aluop<="000";--¼Ó·¨ÔËËã
 		  when "11"=>--SUBU
-		    Reg1<='0' & Instruction(10 downto 8);--rx
-	       Reg2<='0' & Instruction(7 downto 5);--ry
-	       Reg3<='0' & Instruction(4 downto 2);--rz
-		    AluOp<="001";--å‡æ³•è¿ç®—
+		    reg1<='0' & instruction(10 downto 8);--rx
+	       reg2<='0' & instruction(7 downto 5);--ry
+	       reg3<='0' & instruction(4 downto 2);--rz
+		    AluOp<="001";--¼õ·¨ÔËËã
 		  when others=>null;
 		  end case;
 	 when "11101"=>--AND,CMP,MFPC,OR,JR
-	    case Instruction(4 downto 0) is
+	          muxop3<="00";
+				 muxop4<="00";
+	    case instruction(4 downto 0) is
 		   when "01100"=>--AND
-			     Reg1<='0' & Instruction(10 downto 8);--rx
-		        Reg2<='0' & Instruction(7 downto 5);--ry
-		        Reg3<='0' & Instruction(10 downto 8);--rz
-  			     AluOp<="010";--é€»è¾‘ä¸
+			     we<='1';
+				  muxpc<="000";
+				  muxop1<="00";
+			     muxop2<="00";
+			     reg1<='0' & instruction(10 downto 8);--rx
+		        reg2<='0' & instruction(7 downto 5);--ry
+		        reg3<='0' & instruction(10 downto 8);--rz
+  			     aluop<="010";--Âß¼­Óë
 			when "01010"=>--CMP
-			     Reg1<='0' & Instruction(10 downto 8);--rx
-		        Reg2<='0' & Instruction(7 downto 5);--ry
-		        Reg3<="1010";--Tå¯„å­˜å™¨
-			     AluOp<="100";--é€»è¾‘å¼‚æˆ–
+			     we<='1';
+				  muxpc<="000";
+				  muxop1<="00";
+			     muxop2<="00";
+			     reg1<='0' & instruction(10 downto 8);--rx
+		        reg2<='0' & instruction(7 downto 5);--ry
+		        reg3<="1010";--T¼Ä´æÆ÷
+			     aluop<="100";--Âß¼­Òì»ò
 			when "01101"=>--OR
-			    Reg1<='0' & Instruction(10 downto 8);--rx
-		       Reg2<='0' &  Instruction(7 downto 5);--ry
-		       Reg3<='0' & Instruction(10 downto 8);--rz
-			    AluOp<="011";--é€»è¾‘æˆ–
+			    we<='1';
+				 muxpc<="000";
+				 muxop1<="00";
+			    muxop2<="00";
+			    reg1<='0' & instruction(10 downto 8);--rx
+		       reg2<='0' &  instruction(7 downto 5);--ry
+		       reg3<='0' & instruction(10 downto 8);--rz
+			    aluop<="011";--Âß¼­»ò
 			when "00000"=>
-			    if(Instruction(6)='0')then--MFPC
-		         Reg3<='0' & Instruction(10 downto 8);
+			    if(instruction(6)='0')then--MFPC
+				   we<='1';
+					muxpc<="000";
+		         reg3<='0' & instruction(10 downto 8);
 				 else --JR
-				   Reg1<='0' & Instruction(10 downto 8);--rx	
+				   muxop1<="00";
+			      muxop2<="00";
+					muxpc<="000";
+				   reg1<='0' & instruction(10 downto 8);--rx	
              end if;					
 			when others=>null;
 			end case;
     when "11110"=>--MFIH,MTIH
-	    case Instruction(7 downto 0) is
+	        we<='1';
+			  muxop1<="00";
+			  muxop2<="00";
+			  muxpc<="000";
+			  muxop3<="00";
+			  muxop4<="00";
+	    case instruction(7 downto 0) is
 	       when "00000000"=>--MFIH
-	        Reg3<='0' & Instruction(10 downto 8);--rx
-		     Reg1<="1001";--IHå¯„å­˜å™¨
+	        reg3<='0' & instruction(10 downto 8);--rx
+		     reg1<="1001";--IH¼Ä´æÆ÷
 	       when "00000001"=>--MTIH
-		     Reg3<="1001";--IHå¯„å­˜å™¨
-		     Reg1<='0' & Instruction(10 downto 8);--rx
+		     reg3<="1001";--IH¼Ä´æÆ÷
+		     reg1<='0' & instruction(10 downto 8);--rx
 		    when others=>null;
 		 end case;
 	 when "01100"=>--MTSP,BTEQZ,ADDSP
-	    case Instruction(10 downto 8) is
+	          muxop3<="00";
+				 muxop4<="00";
+	    case instruction(10 downto 8) is
 	       when "100"=>--MTSP
-	        Reg1<='0' & Instruction(7 downto 5);--rx
-		     Reg3<="1000";--SP
+			  we<='1';
+			  muxpc<="000";
+			  muxop1<="00";
+			   muxop2<="00";
+	        reg1<='0' & instruction(7 downto 5);--rx
+		     reg3<="1000";--SP
+			  
 		    when "000"=>--BTEQZ
-		     Reg1<="1010";--Tå¯„å­˜å™¨
-			  AluOp<="000";--åŠ æ³•è¿ç®—
-		      IF(Instruction(7)='1')then
-		        Imm<="11111111" & Instruction(7 downto 0);
+			 muxpc<="010";
+		     reg1<="1010";--T¼Ä´æÆ÷
+			  aluop<="000";--¼Ó·¨ÔËËã
+			  muxop1<="01";
+			  muxop2<="01";
+		      IF(instruction(7)='1')then
+		        imm<="11111111" & Instruction(7 downto 0);
 		      else
-		        Imm<="00000000" & Instruction(7 downto 0);
+		        imm<="00000000" & Instruction(7 downto 0);
 			   end if;
 		    when "011"=>--ADDSP
-		        Reg1<="1000";--SP
-	           Reg3<="1000";--SP
-			     AluOp<="000";--åŠ æ³•è¿ç®—
-	         IF(Instruction(7)='1')then
-		        Imm<="11111111" & Instruction(7 downto 0);
+			     we<='1';
+				  muxpc<="000";
+				  muxop1<="00";
+			     muxop2<="01";
+		        reg1<="1000";--SP
+	           reg3<="1000";--SP
+			     aluop<="000";--¼Ó·¨ÔËËã
+	         IF(instruction(7)='1')then
+		        imm<="11111111" & instruction(7 downto 0);
 		      else
-		        Imm<="00000000" & Instruction(7 downto 0);
+		        imm<="00000000" & instruction(7 downto 0);
 				end if;
 		    when others=>null;
 	     end case;	  
 	 when "00110"=>--SLL,SRA
-	     case Instruction(1 downto 0) is
+	          we<='1';
+				 muxop4<="00";
+				 muxpc<="000";
+				 muxop1<="00";
+			    muxop2<="01";
+				 muxop3<="00";
+	     case instruction(1 downto 0) is
 	       when "00"=>--SLL
-	          Reg3<='0' & Instruction(10 downto 8);--rx
-		       Reg2<='0' & Instruction(7 downto 5);
-				 AluOp<="101";--é€»è¾‘å·¦ç§»
-		       if(Instruction(4 downto 2)="000")then
-				   S<="1000";--å·¦ç§»8ä½
+	          reg3<='0' & instruction(10 downto 8);--rx
+		       reg1<='0' & instruction(7 downto 5);
+				 aluop<="101";--Âß¼­×óÒÆ
+		       if(instruction(4 downto 2)="000")then
+				   imm<="0000000000001000";--×óÒÆ8Î»
 				 else
-				   S<='0' & Instruction(4 downto 2);
+				   imm<="0000000000000" & instruction(4 downto 2);
 				 end if;
 			 when "11"=>--SRA
-			    Reg3<='0' & Instruction(10 downto 8);--rx
-		       Reg2<='0' & Instruction(7 downto 5);
-	          AluOp<="110";--é€»è¾‘å³ç§»
-		       if(Instruction(4 downto 2)="000")then
-				   S<="1000";--å³ç§»8ä½
+			    reg3<='0' & Instruction(10 downto 8);--rx
+		       reg1<='0' & Instruction(7 downto 5);
+	          aluop<="110";--Âß¼­ÓÒÒÆ
+		       if(instruction(4 downto 2)="000")then
+				   imm<="0000000000001000";--ÓÒÒÆ8Î»
 				 else
-				   S<='0' & Instruction(4 downto 2);
+				   imm<="0000000000000" & instruction(4 downto 2);
 				 end if;
 	       when others=>null;
 			 end case;
 	 when "01001"=>--ADDIU
-	          Reg1<='0' & Instruction(10 downto 8);
-		       Reg3<='0' & Instruction(10 downto 8);
-		       AluOp<="000";--åŠ æ³•è¿ç®—
+	          we<='1';
+				 muxpc<="000";
+				 muxop1<="00";
+			    muxop2<="01";
+				 muxop3<="00";
+				 muxop4<="00";
+	          reg1<='0' & Instruction(10 downto 8);
+		       reg3<='0' & Instruction(10 downto 8);
+		       aluop<="000";--¼Ó·¨ÔËËã
 		     IF(Instruction(7)='1')then
-		       Imm<="11111111" & Instruction(7 downto 0);
+		       imm<="11111111" & instruction(7 downto 0);
 		     else
-		       Imm<="00000000" & Instruction(7 downto 0);
+		       imm<="00000000" & instruction(7 downto 0);
 		   	end if;
 	 when "01000"=>--ADDIU3
-	          Reg1<='0' & Instruction(10 downto 8);
-		       Reg3<='0' & Instruction(7 downto 5);
-		       AluOp<="000";--åŠ æ³•è¿ç®—
+	          we<='1';
+				 muxpc<="000";
+				 muxop1<="00";
+			    muxop2<="01";
+				 muxop3<="00";
+				 muxop4<="00";
+	          reg1<='0' & instruction(10 downto 8);
+		       reg3<='0' & instruction(7 downto 5);
+		       aluop<="000";--¼Ó·¨ÔËËã
 		     IF(Instruction(3)='1')then
-		        Imm<="111111111111" & Instruction(3 downto 0);
+		        imm<="111111111111" & instruction(3 downto 0);
 		     else
-		        Imm<="000000000000" & Instruction(3 downto 0);
+		        imm<="000000000000" & instruction(3 downto 0);
 				end if;
 	 when "01101"=>--LI
-	         Reg3<='0' & Instruction(10 downto 8);
-		      Imm<="00000000" & Instruction(7 downto 0);
+	         we<='1';
+				muxpc<="000";
+			   muxop2<="01";
+				muxop3<="00";
+				muxop4<="01";
+	         reg3<='0' & instruction(10 downto 8);
+		      imm1<="00000000" & instruction(7 downto 0);
 	 when "10011"=>--LW
-	         Reg1<='0' & Instruction(10 downto 8);
-		      Reg3<='0' & Instruction(7 downto 5);
-		      AluOp<="000";--åŠ æ³•è¿ç®—
-		    IF(Instruction(4)='1')then
-		      Imm<="11111111111" & Instruction(4 downto 0);
+	         we<='1';
+				muxpc<="000";
+				muxop1<="00";
+			   muxop2<="01";
+				muxop3<="01";
+				muxop4<="00";
+	         reg1<='0' & instruction(10 downto 8);
+		      reg3<='0' & instruction(7 downto 5);
+		      aluop<="000";--¼Ó·¨ÔËËã
+				rw<='1';
+		    IF(instruction(4)='1')then
+		      imm<="11111111111" & instruction(4 downto 0);
 		    else
 		      Imm<="00000000000" & Instruction(4 downto 0);
 				end if;
 	 when "10010"=>--LW_SP
-	         Reg3<='0' & Instruction(10 downto 8);
-		      Reg1<="1000";--SP
-		      AluOp<="000";--åŠ æ³•è¿ç®—
-		    IF(Instruction(7)='1')then
-		      Imm<="11111111" & Instruction(7 downto 0);
+	         we<='1';
+				muxpc<="000";
+				muxop1<="00";
+			   muxop2<="01";
+				muxop3<="01";
+				muxop4<="00";
+	         reg3<='0' & instruction(10 downto 8);
+		      reg1<="1000";--SP
+				rw<='1';
+		      aluop<="000";--¼Ó·¨ÔËËã
+		    IF(instruction(7)='1')then
+		      imm<="11111111" & instruction(7 downto 0);
 		    else
-		      Imm<="00000000" & Instruction(7 downto 0);
+		      imm<="00000000" & Instruction(7 downto 0);
 		    end if;
 	 when "11011"=>--SW
-	         Reg1<='0' & Instruction(10 downto 8);--ç”¨äºè®¡ç®—åœ°å€
-		      Reg2<='0' & Instruction(7 downto 5);--å†™å…¥å†…å­˜çš„å†…å®¹
-		       AluOp<="000";--åŠ æ³•è¿ç®—
-		    IF(Instruction(4)='1')then
-		       Imm<="11111111111" & Instruction(4 downto 0);
+	         muxop1<="00";
+			   muxop2<="01";
+				muxpc<="000";
+				muxop4<="00";
+	         reg1<='0' & instruction(10 downto 8);--ÓÃÓÚ¼ÆËãµØÖ·
+		      reg2<='0' & instruction(7 downto 5);--Ğ´ÈëÄÚ´æµÄÄÚÈİ
+		       aluop<="000";--¼Ó·¨ÔËËã
+				 rw<='0';
+		    IF(instruction(4)='1')then
+		       imm<="11111111111" & instruction(4 downto 0);
 		    else
-		       Imm<="00000000000" & Instruction(4 downto 0);
+		       imm<="00000000000" & instruction(4 downto 0);
 		 end if;
 	 when "11010"=>--SW_SP
-	         Reg2<='0' & Instruction(10 downto 8);
-		      Reg1<="1000";--SP
-		      AluOp<="000";--åŠ æ³•è¿ç®—
-		    IF(Instruction(7)='1')then
-		       Imm<="11111111" & Instruction(7 downto 0);
+	         muxop1<="00";
+			   muxop2<="01";
+				muxpc<="000";
+				muxop4<="00";
+	         reg2<='0' & instruction(10 downto 8);
+		      reg1<="1000";--SP
+		      aluop<="000";--¼Ó·¨ÔËËã
+				rw<='0';
+		    IF(instruction(7)='1')then
+		       imm<="11111111" & instruction(7 downto 0);
 		    else
-		       Imm<="00000000" & Instruction(7 downto 0);
+		       imm<="00000000" & instruction(7 downto 0);
 		    end if;
 	 when "00010"=>--B
-	           AluOp<="000";--åŠ æ³•è¿ç®—
-	      IF(Instruction(10)='1')then
-		     Imm<="11111" & Instruction(10 downto 0);
+	           muxop1<="01";
+			     muxop2<="01";
+	           aluop<="000";--¼Ó·¨ÔËËã
+				  muxpc<="100";
+	      IF(instruction(10)='1')then
+		     imm<="11111" & instruction(10 downto 0);
 		   else
-		     Imm<="00000" & Instruction(10 downto 0);
+		     imm<="00000" & instruction(10 downto 0);
 	      end if;
 	 when "00100"=>--BEQZ
-	        AluOp<="000";
-	        Reg1<='0' & Instruction(10 downto 8);
-		    IF(Instruction(7)='1')then
-		     Imm<="11111111" & Instruction(7 downto 0);
+	        aluop<="000";
+			  muxop1<="01";
+			  muxop2<="01";
+			  muxpc<="010";
+	        reg1<='0' & instruction(10 downto 8);
+		    IF(instruction(7)='1')then
+		     imm<="11111111" & instruction(7 downto 0);
 		    else
-		     Imm<="00000000" & Instruction(7 downto 0);
+		     imm<="00000000" & instruction(7 downto 0);
 		   end if;
 	 when "00101"=>--BNEZ
-	        AluOp<="000";
-	        Reg1<='0' & Instruction(10 downto 8);
-		     IF(Instruction(7)='1')then
-		       Imm<="11111111" & Instruction(7 downto 0);
+	        aluop<="000";
+			  muxop1<="01";
+			  muxop2<="01";
+			  muxpc<="011";
+			  muxop4<="00";
+	        reg1<='0' & instruction(10 downto 8);
+		     IF(instruction(7)='1')then
+		       imm<="11111111" & instruction(7 downto 0);
 		      else
-		        Imm<="00000000" & Instruction(7 downto 0);
+		        imm<="00000000" & instruction(7 downto 0);
 				end if;
 	 when others=>null; 
 END CASE;
 END PROCESS;
 
 end Behavioral;
+

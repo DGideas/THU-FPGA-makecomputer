@@ -1,14 +1,14 @@
 --------------------------------------------------------------------------------
-Release 14.7 Trace  (lin64)
+Release 14.6 Trace  (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 4 -n
-3 -fastpaths -xml cpu_top.twx cpu_top.ncd -o cpu_top.twr cpu_top.pcf -ucf
+C:\Xilinx\14.6\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 4
+-n 3 -fastpaths -xml cpu_top.twx cpu_top.ncd -o cpu_top.twr cpu_top.pcf -ucf
 cpu_top.ucf
 
 Design file:              cpu_top.ncd
 Physical constraint file: cpu_top.pcf
-Device,package,speed:     xc3s1200e,fg320,-4 (PRODUCTION 1.27 2013-10-13)
+Device,package,speed:     xc3s1200e,fg320,-4 (PRODUCTION 1.27 2013-06-08)
 Report level:             verbose report
 
 Environment Variable      Effect 
@@ -40,49 +40,1608 @@ Data Sheet report:
 -----------------
 All values displayed in nanoseconds (ns)
 
-Clock port_clk_50 to Pad
+Clock port_clk_key to Pad
 ------------------+------------+------------------+--------+
                   | clk (edge) |                  | Clock  |
 Destination       |   to PAD   |Internal Clock(s) | Phase  |
 ------------------+------------+------------------+--------+
-port_led<3>       |    8.717(R)|port_clk_50_BUFGP |   0.000|
-port_led<4>       |    9.235(R)|port_clk_50_BUFGP |   0.000|
-port_mem1_data<0> |    9.220(R)|port_clk_50_BUFGP |   0.000|
-port_mem1_data<1> |    8.912(R)|port_clk_50_BUFGP |   0.000|
-port_mem1_data<2> |    8.923(R)|port_clk_50_BUFGP |   0.000|
-port_mem1_data<3> |    8.961(R)|port_clk_50_BUFGP |   0.000|
-port_mem1_data<4> |    9.182(R)|port_clk_50_BUFGP |   0.000|
-port_mem1_data<5> |    9.177(R)|port_clk_50_BUFGP |   0.000|
-port_mem1_data<6> |    9.302(R)|port_clk_50_BUFGP |   0.000|
-port_mem1_data<7> |    9.325(R)|port_clk_50_BUFGP |   0.000|
-port_mem1_data<8> |    9.300(R)|port_clk_50_BUFGP |   0.000|
-port_mem1_data<9> |    9.437(R)|port_clk_50_BUFGP |   0.000|
-port_mem1_data<10>|    9.605(R)|port_clk_50_BUFGP |   0.000|
-port_mem1_data<11>|    9.648(R)|port_clk_50_BUFGP |   0.000|
-port_mem1_data<12>|    9.599(R)|port_clk_50_BUFGP |   0.000|
-port_mem1_data<13>|    9.906(R)|port_clk_50_BUFGP |   0.000|
-port_mem1_data<14>|   10.640(R)|port_clk_50_BUFGP |   0.000|
-port_mem1_data<15>|   10.621(R)|port_clk_50_BUFGP |   0.000|
-port_mem1_we      |    9.908(R)|port_clk_50_BUFGP |   0.000|
+port_led<0>       |   20.791(R)|port_clk_key_BUFGP|   0.000|
+                  |   22.610(F)|port_clk_key_BUFGP|   0.000|
+port_led<1>       |   21.827(R)|port_clk_key_BUFGP|   0.000|
+                  |   22.926(F)|port_clk_key_BUFGP|   0.000|
+port_led<2>       |   21.242(R)|port_clk_key_BUFGP|   0.000|
+                  |   22.346(F)|port_clk_key_BUFGP|   0.000|
+port_led<3>       |   20.326(R)|port_clk_key_BUFGP|   0.000|
+                  |   21.620(F)|port_clk_key_BUFGP|   0.000|
+port_led<4>       |   21.343(R)|port_clk_key_BUFGP|   0.000|
+                  |   22.137(F)|port_clk_key_BUFGP|   0.000|
+port_led<5>       |   21.006(R)|port_clk_key_BUFGP|   0.000|
+                  |   21.527(F)|port_clk_key_BUFGP|   0.000|
+port_led<6>       |   20.335(R)|port_clk_key_BUFGP|   0.000|
+                  |   20.856(F)|port_clk_key_BUFGP|   0.000|
+port_led<7>       |   19.650(R)|port_clk_key_BUFGP|   0.000|
+                  |   20.944(F)|port_clk_key_BUFGP|   0.000|
+port_led<8>       |   20.904(R)|port_clk_key_BUFGP|   0.000|
+                  |   21.698(F)|port_clk_key_BUFGP|   0.000|
+port_led<9>       |   18.919(R)|port_clk_key_BUFGP|   0.000|
+                  |   20.725(F)|port_clk_key_BUFGP|   0.000|
+port_led<10>      |   19.296(R)|port_clk_key_BUFGP|   0.000|
+                  |   20.388(F)|port_clk_key_BUFGP|   0.000|
+port_led<11>      |   18.941(R)|port_clk_key_BUFGP|   0.000|
+                  |   20.305(F)|port_clk_key_BUFGP|   0.000|
+port_led<12>      |   20.726(R)|port_clk_key_BUFGP|   0.000|
+                  |   21.336(F)|port_clk_key_BUFGP|   0.000|
+port_led<13>      |   19.730(R)|port_clk_key_BUFGP|   0.000|
+                  |   21.149(F)|port_clk_key_BUFGP|   0.000|
+port_led<14>      |   20.115(R)|port_clk_key_BUFGP|   0.000|
+                  |   21.087(F)|port_clk_key_BUFGP|   0.000|
+port_led<15>      |   19.459(R)|port_clk_key_BUFGP|   0.000|
+                  |   20.565(F)|port_clk_key_BUFGP|   0.000|
+port_mem1_data<0> |    9.954(R)|port_clk_key_BUFGP|   0.000|
+port_mem1_data<1> |    9.686(R)|port_clk_key_BUFGP|   0.000|
+port_mem1_data<2> |   10.268(R)|port_clk_key_BUFGP|   0.000|
+port_mem1_data<3> |    9.703(R)|port_clk_key_BUFGP|   0.000|
+port_mem1_data<4> |    9.438(R)|port_clk_key_BUFGP|   0.000|
+port_mem1_data<5> |    9.974(R)|port_clk_key_BUFGP|   0.000|
+port_mem1_data<6> |    8.969(R)|port_clk_key_BUFGP|   0.000|
+port_mem1_data<7> |    8.895(R)|port_clk_key_BUFGP|   0.000|
+port_mem1_data<8> |    9.215(R)|port_clk_key_BUFGP|   0.000|
+port_mem1_data<9> |    9.144(R)|port_clk_key_BUFGP|   0.000|
+port_mem1_data<10>|    9.473(R)|port_clk_key_BUFGP|   0.000|
+port_mem1_data<11>|    8.381(R)|port_clk_key_BUFGP|   0.000|
+port_mem1_data<12>|    9.225(R)|port_clk_key_BUFGP|   0.000|
+port_mem1_data<13>|    8.639(R)|port_clk_key_BUFGP|   0.000|
+port_mem1_data<14>|    8.626(R)|port_clk_key_BUFGP|   0.000|
+port_mem1_data<15>|    9.446(R)|port_clk_key_BUFGP|   0.000|
+port_mem1_we      |    8.418(R)|port_clk_key_BUFGP|   0.000|
 ------------------+------------+------------------+--------+
 
-Clock to Setup on destination clock port_clk_50
+Clock port_rst to Pad
+------------+------------+-------------------------------+--------+
+            | clk (edge) |                               | Clock  |
+Destination |   to PAD   |Internal Clock(s)              | Phase  |
+------------+------------+-------------------------------+--------+
+port_led<0> |   23.722(F)|regfile1/regfile_rdata1_not0001|   0.000|
+port_led<1> |   24.309(F)|regfile1/regfile_rdata1_not0001|   0.000|
+port_led<2> |   21.400(F)|regfile1/regfile_rdata1_not0001|   0.000|
+port_led<3> |   21.777(F)|regfile1/regfile_rdata1_not0001|   0.000|
+port_led<4> |   21.948(F)|regfile1/regfile_rdata1_not0001|   0.000|
+port_led<5> |   21.364(F)|regfile1/regfile_rdata1_not0001|   0.000|
+port_led<6> |   21.121(F)|regfile1/regfile_rdata1_not0001|   0.000|
+port_led<7> |   21.014(F)|regfile1/regfile_rdata1_not0001|   0.000|
+port_led<8> |   21.882(F)|regfile1/regfile_rdata1_not0001|   0.000|
+port_led<9> |   21.110(F)|regfile1/regfile_rdata1_not0001|   0.000|
+port_led<10>|   20.744(F)|regfile1/regfile_rdata1_not0001|   0.000|
+port_led<11>|   22.526(F)|regfile1/regfile_rdata1_not0001|   0.000|
+port_led<12>|   22.817(F)|regfile1/regfile_rdata1_not0001|   0.000|
+port_led<13>|   21.900(F)|regfile1/regfile_rdata1_not0001|   0.000|
+port_led<14>|   21.299(F)|regfile1/regfile_rdata1_not0001|   0.000|
+port_led<15>|   22.596(F)|regfile1/regfile_rdata1_not0001|   0.000|
+------------+------------+-------------------------------+--------+
+
+Clock port_switch<0> to Pad
+------------+------------+-----------------------+--------+
+            | clk (edge) |                       | Clock  |
+Destination |   to PAD   |Internal Clock(s)      | Phase  |
+------------+------------+-----------------------+--------+
+port_led<0> |   25.173(F)|decoder1/aluop_not0001 |   0.000|
+            |   29.750(F)|decoder1/imm_not0001   |   0.000|
+            |   27.268(F)|decoder1/muxop1_not0001|   0.000|
+            |   28.278(F)|decoder1/muxop2_not0001|   0.000|
+            |   28.810(F)|decoder1/reg2_not0001  |   0.000|
+port_led<1> |   25.999(F)|decoder1/aluop_not0001 |   0.000|
+            |   30.410(F)|decoder1/imm_not0001   |   0.000|
+            |   27.855(F)|decoder1/muxop1_not0001|   0.000|
+            |   28.938(F)|decoder1/muxop2_not0001|   0.000|
+            |   29.126(F)|decoder1/reg2_not0001  |   0.000|
+port_led<2> |   24.870(F)|decoder1/aluop_not0001 |   0.000|
+            |   30.164(F)|decoder1/imm_not0001   |   0.000|
+            |   26.958(F)|decoder1/muxop1_not0001|   0.000|
+            |   28.692(F)|decoder1/muxop2_not0001|   0.000|
+            |   28.546(F)|decoder1/reg2_not0001  |   0.000|
+port_led<3> |   24.438(F)|decoder1/aluop_not0001 |   0.000|
+            |   28.385(F)|decoder1/imm_not0001   |   0.000|
+            |   25.848(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.913(F)|decoder1/muxop2_not0001|   0.000|
+            |   27.820(F)|decoder1/reg2_not0001  |   0.000|
+port_led<4> |   24.413(F)|decoder1/aluop_not0001 |   0.000|
+            |   29.981(F)|decoder1/imm_not0001   |   0.000|
+            |   26.799(F)|decoder1/muxop1_not0001|   0.000|
+            |   28.509(F)|decoder1/muxop2_not0001|   0.000|
+            |   28.337(F)|decoder1/reg2_not0001  |   0.000|
+port_led<5> |   24.834(F)|decoder1/aluop_not0001 |   0.000|
+            |   29.506(F)|decoder1/imm_not0001   |   0.000|
+            |   25.569(F)|decoder1/muxop1_not0001|   0.000|
+            |   28.034(F)|decoder1/muxop2_not0001|   0.000|
+            |   27.553(F)|decoder1/reg2_not0001  |   0.000|
+port_led<6> |   24.591(F)|decoder1/aluop_not0001 |   0.000|
+            |   29.136(F)|decoder1/imm_not0001   |   0.000|
+            |   25.659(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.664(F)|decoder1/muxop2_not0001|   0.000|
+            |   27.031(F)|decoder1/reg2_not0001  |   0.000|
+port_led<7> |   24.392(F)|decoder1/aluop_not0001 |   0.000|
+            |   27.648(F)|decoder1/imm_not0001   |   0.000|
+            |   25.127(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.176(F)|decoder1/muxop2_not0001|   0.000|
+            |   27.144(F)|decoder1/reg2_not0001  |   0.000|
+port_led<8> |   24.082(F)|decoder1/aluop_not0001 |   0.000|
+            |   28.566(F)|decoder1/imm_not0001   |   0.000|
+            |   26.360(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.024(F)|decoder1/muxop2_not0001|   0.000|
+            |   27.898(F)|decoder1/reg2_not0001  |   0.000|
+port_led<9> |   24.580(F)|decoder1/aluop_not0001 |   0.000|
+            |   28.799(F)|decoder1/imm_not0001   |   0.000|
+            |   25.315(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.327(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.925(F)|decoder1/reg2_not0001  |   0.000|
+port_led<10>|   24.214(F)|decoder1/aluop_not0001 |   0.000|
+            |   28.602(F)|decoder1/imm_not0001   |   0.000|
+            |   24.949(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.130(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.588(F)|decoder1/reg2_not0001  |   0.000|
+port_led<11>|   24.602(F)|decoder1/aluop_not0001 |   0.000|
+            |   27.720(F)|decoder1/imm_not0001   |   0.000|
+            |   26.196(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.248(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.505(F)|decoder1/reg2_not0001  |   0.000|
+port_led<12>|   24.977(F)|decoder1/aluop_not0001 |   0.000|
+            |   27.736(F)|decoder1/imm_not0001   |   0.000|
+            |   26.434(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.228(F)|decoder1/muxop2_not0001|   0.000|
+            |   27.536(F)|decoder1/reg2_not0001  |   0.000|
+port_led<13>|   25.388(F)|decoder1/aluop_not0001 |   0.000|
+            |   27.599(F)|decoder1/imm_not0001   |   0.000|
+            |   26.015(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.127(F)|decoder1/muxop2_not0001|   0.000|
+            |   27.349(F)|decoder1/reg2_not0001  |   0.000|
+port_led<14>|   24.553(F)|decoder1/aluop_not0001 |   0.000|
+            |   27.820(F)|decoder1/imm_not0001   |   0.000|
+            |   25.627(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.348(F)|decoder1/muxop2_not0001|   0.000|
+            |   27.287(F)|decoder1/reg2_not0001  |   0.000|
+port_led<15>|   25.228(F)|decoder1/aluop_not0001 |   0.000|
+            |   28.475(F)|decoder1/imm_not0001   |   0.000|
+            |   26.266(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.003(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.765(F)|decoder1/reg2_not0001  |   0.000|
+------------+------------+-----------------------+--------+
+
+Clock port_switch<1> to Pad
+------------+------------+-----------------------+--------+
+            | clk (edge) |                       | Clock  |
+Destination |   to PAD   |Internal Clock(s)      | Phase  |
+------------+------------+-----------------------+--------+
+port_led<0> |   24.755(F)|decoder1/aluop_not0001 |   0.000|
+            |   29.388(F)|decoder1/imm_not0001   |   0.000|
+            |   26.562(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.572(F)|decoder1/muxop2_not0001|   0.000|
+            |   28.392(F)|decoder1/reg2_not0001  |   0.000|
+port_led<1> |   25.581(F)|decoder1/aluop_not0001 |   0.000|
+            |   30.048(F)|decoder1/imm_not0001   |   0.000|
+            |   27.149(F)|decoder1/muxop1_not0001|   0.000|
+            |   28.232(F)|decoder1/muxop2_not0001|   0.000|
+            |   28.708(F)|decoder1/reg2_not0001  |   0.000|
+port_led<2> |   24.452(F)|decoder1/aluop_not0001 |   0.000|
+            |   29.802(F)|decoder1/imm_not0001   |   0.000|
+            |   26.252(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.986(F)|decoder1/muxop2_not0001|   0.000|
+            |   28.128(F)|decoder1/reg2_not0001  |   0.000|
+port_led<3> |   24.020(F)|decoder1/aluop_not0001 |   0.000|
+            |   28.023(F)|decoder1/imm_not0001   |   0.000|
+            |   25.142(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.207(F)|decoder1/muxop2_not0001|   0.000|
+            |   27.402(F)|decoder1/reg2_not0001  |   0.000|
+port_led<4> |   23.995(F)|decoder1/aluop_not0001 |   0.000|
+            |   29.619(F)|decoder1/imm_not0001   |   0.000|
+            |   26.093(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.803(F)|decoder1/muxop2_not0001|   0.000|
+            |   27.919(F)|decoder1/reg2_not0001  |   0.000|
+port_led<5> |   24.416(F)|decoder1/aluop_not0001 |   0.000|
+            |   29.144(F)|decoder1/imm_not0001   |   0.000|
+            |   24.863(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.328(F)|decoder1/muxop2_not0001|   0.000|
+            |   27.135(F)|decoder1/reg2_not0001  |   0.000|
+port_led<6> |   24.173(F)|decoder1/aluop_not0001 |   0.000|
+            |   28.774(F)|decoder1/imm_not0001   |   0.000|
+            |   24.953(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.958(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.613(F)|decoder1/reg2_not0001  |   0.000|
+port_led<7> |   23.974(F)|decoder1/aluop_not0001 |   0.000|
+            |   27.286(F)|decoder1/imm_not0001   |   0.000|
+            |   24.421(F)|decoder1/muxop1_not0001|   0.000|
+            |   25.470(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.726(F)|decoder1/reg2_not0001  |   0.000|
+port_led<8> |   23.664(F)|decoder1/aluop_not0001 |   0.000|
+            |   28.204(F)|decoder1/imm_not0001   |   0.000|
+            |   25.654(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.318(F)|decoder1/muxop2_not0001|   0.000|
+            |   27.480(F)|decoder1/reg2_not0001  |   0.000|
+port_led<9> |   24.162(F)|decoder1/aluop_not0001 |   0.000|
+            |   28.437(F)|decoder1/imm_not0001   |   0.000|
+            |   24.609(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.621(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.507(F)|decoder1/reg2_not0001  |   0.000|
+port_led<10>|   23.796(F)|decoder1/aluop_not0001 |   0.000|
+            |   28.240(F)|decoder1/imm_not0001   |   0.000|
+            |   24.243(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.424(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.170(F)|decoder1/reg2_not0001  |   0.000|
+port_led<11>|   24.184(F)|decoder1/aluop_not0001 |   0.000|
+            |   27.358(F)|decoder1/imm_not0001   |   0.000|
+            |   25.490(F)|decoder1/muxop1_not0001|   0.000|
+            |   25.542(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.087(F)|decoder1/reg2_not0001  |   0.000|
+port_led<12>|   24.559(F)|decoder1/aluop_not0001 |   0.000|
+            |   27.374(F)|decoder1/imm_not0001   |   0.000|
+            |   25.728(F)|decoder1/muxop1_not0001|   0.000|
+            |   25.522(F)|decoder1/muxop2_not0001|   0.000|
+            |   27.118(F)|decoder1/reg2_not0001  |   0.000|
+port_led<13>|   24.970(F)|decoder1/aluop_not0001 |   0.000|
+            |   27.237(F)|decoder1/imm_not0001   |   0.000|
+            |   25.309(F)|decoder1/muxop1_not0001|   0.000|
+            |   25.421(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.931(F)|decoder1/reg2_not0001  |   0.000|
+port_led<14>|   24.135(F)|decoder1/aluop_not0001 |   0.000|
+            |   27.458(F)|decoder1/imm_not0001   |   0.000|
+            |   24.921(F)|decoder1/muxop1_not0001|   0.000|
+            |   25.642(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.869(F)|decoder1/reg2_not0001  |   0.000|
+port_led<15>|   24.810(F)|decoder1/aluop_not0001 |   0.000|
+            |   28.113(F)|decoder1/imm_not0001   |   0.000|
+            |   25.560(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.297(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.347(F)|decoder1/reg2_not0001  |   0.000|
+------------+------------+-----------------------+--------+
+
+Clock port_switch<2> to Pad
+------------+------------+-----------------------+--------+
+            | clk (edge) |                       | Clock  |
+Destination |   to PAD   |Internal Clock(s)      | Phase  |
+------------+------------+-----------------------+--------+
+port_led<0> |   24.593(F)|decoder1/aluop_not0001 |   0.000|
+            |   27.173(F)|decoder1/muxop1_not0001|   0.000|
+            |   28.183(F)|decoder1/muxop2_not0001|   0.000|
+            |   28.230(F)|decoder1/reg2_not0001  |   0.000|
+port_led<1> |   25.419(F)|decoder1/aluop_not0001 |   0.000|
+            |   27.760(F)|decoder1/muxop1_not0001|   0.000|
+            |   28.843(F)|decoder1/muxop2_not0001|   0.000|
+            |   28.546(F)|decoder1/reg2_not0001  |   0.000|
+port_led<2> |   24.290(F)|decoder1/aluop_not0001 |   0.000|
+            |   26.863(F)|decoder1/muxop1_not0001|   0.000|
+            |   28.597(F)|decoder1/muxop2_not0001|   0.000|
+            |   27.966(F)|decoder1/reg2_not0001  |   0.000|
+port_led<3> |   23.858(F)|decoder1/aluop_not0001 |   0.000|
+            |   25.753(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.818(F)|decoder1/muxop2_not0001|   0.000|
+            |   27.240(F)|decoder1/reg2_not0001  |   0.000|
+port_led<4> |   23.833(F)|decoder1/aluop_not0001 |   0.000|
+            |   26.704(F)|decoder1/muxop1_not0001|   0.000|
+            |   28.414(F)|decoder1/muxop2_not0001|   0.000|
+            |   27.757(F)|decoder1/reg2_not0001  |   0.000|
+port_led<5> |   24.254(F)|decoder1/aluop_not0001 |   0.000|
+            |   25.474(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.939(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.973(F)|decoder1/reg2_not0001  |   0.000|
+port_led<6> |   24.011(F)|decoder1/aluop_not0001 |   0.000|
+            |   25.564(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.569(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.451(F)|decoder1/reg2_not0001  |   0.000|
+port_led<7> |   23.812(F)|decoder1/aluop_not0001 |   0.000|
+            |   25.032(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.081(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.564(F)|decoder1/reg2_not0001  |   0.000|
+port_led<8> |   23.502(F)|decoder1/aluop_not0001 |   0.000|
+            |   26.265(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.929(F)|decoder1/muxop2_not0001|   0.000|
+            |   27.318(F)|decoder1/reg2_not0001  |   0.000|
+port_led<9> |   24.000(F)|decoder1/aluop_not0001 |   0.000|
+            |   25.220(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.232(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.345(F)|decoder1/reg2_not0001  |   0.000|
+port_led<10>|   23.634(F)|decoder1/aluop_not0001 |   0.000|
+            |   24.854(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.035(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.008(F)|decoder1/reg2_not0001  |   0.000|
+port_led<11>|   24.022(F)|decoder1/aluop_not0001 |   0.000|
+            |   26.101(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.153(F)|decoder1/muxop2_not0001|   0.000|
+            |   25.925(F)|decoder1/reg2_not0001  |   0.000|
+port_led<12>|   24.397(F)|decoder1/aluop_not0001 |   0.000|
+            |   26.339(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.133(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.956(F)|decoder1/reg2_not0001  |   0.000|
+port_led<13>|   24.808(F)|decoder1/aluop_not0001 |   0.000|
+            |   25.920(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.032(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.769(F)|decoder1/reg2_not0001  |   0.000|
+port_led<14>|   23.973(F)|decoder1/aluop_not0001 |   0.000|
+            |   25.532(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.253(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.707(F)|decoder1/reg2_not0001  |   0.000|
+port_led<15>|   24.648(F)|decoder1/aluop_not0001 |   0.000|
+            |   26.171(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.908(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.185(F)|decoder1/reg2_not0001  |   0.000|
+------------+------------+-----------------------+--------+
+
+Clock port_switch<3> to Pad
+------------+------------+-----------------------+--------+
+            | clk (edge) |                       | Clock  |
+Destination |   to PAD   |Internal Clock(s)      | Phase  |
+------------+------------+-----------------------+--------+
+port_led<0> |   24.901(F)|decoder1/aluop_not0001 |   0.000|
+            |   27.571(F)|decoder1/muxop1_not0001|   0.000|
+            |   28.581(F)|decoder1/muxop2_not0001|   0.000|
+            |   28.538(F)|decoder1/reg2_not0001  |   0.000|
+port_led<1> |   25.727(F)|decoder1/aluop_not0001 |   0.000|
+            |   28.158(F)|decoder1/muxop1_not0001|   0.000|
+            |   29.241(F)|decoder1/muxop2_not0001|   0.000|
+            |   28.854(F)|decoder1/reg2_not0001  |   0.000|
+port_led<2> |   24.598(F)|decoder1/aluop_not0001 |   0.000|
+            |   27.261(F)|decoder1/muxop1_not0001|   0.000|
+            |   28.995(F)|decoder1/muxop2_not0001|   0.000|
+            |   28.274(F)|decoder1/reg2_not0001  |   0.000|
+port_led<3> |   24.166(F)|decoder1/aluop_not0001 |   0.000|
+            |   26.151(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.216(F)|decoder1/muxop2_not0001|   0.000|
+            |   27.548(F)|decoder1/reg2_not0001  |   0.000|
+port_led<4> |   24.141(F)|decoder1/aluop_not0001 |   0.000|
+            |   27.102(F)|decoder1/muxop1_not0001|   0.000|
+            |   28.812(F)|decoder1/muxop2_not0001|   0.000|
+            |   28.065(F)|decoder1/reg2_not0001  |   0.000|
+port_led<5> |   24.562(F)|decoder1/aluop_not0001 |   0.000|
+            |   25.872(F)|decoder1/muxop1_not0001|   0.000|
+            |   28.337(F)|decoder1/muxop2_not0001|   0.000|
+            |   27.281(F)|decoder1/reg2_not0001  |   0.000|
+port_led<6> |   24.319(F)|decoder1/aluop_not0001 |   0.000|
+            |   25.962(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.967(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.759(F)|decoder1/reg2_not0001  |   0.000|
+port_led<7> |   24.120(F)|decoder1/aluop_not0001 |   0.000|
+            |   25.430(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.479(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.872(F)|decoder1/reg2_not0001  |   0.000|
+port_led<8> |   23.810(F)|decoder1/aluop_not0001 |   0.000|
+            |   26.663(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.327(F)|decoder1/muxop2_not0001|   0.000|
+            |   27.626(F)|decoder1/reg2_not0001  |   0.000|
+port_led<9> |   24.308(F)|decoder1/aluop_not0001 |   0.000|
+            |   25.618(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.630(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.653(F)|decoder1/reg2_not0001  |   0.000|
+port_led<10>|   23.942(F)|decoder1/aluop_not0001 |   0.000|
+            |   25.252(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.433(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.316(F)|decoder1/reg2_not0001  |   0.000|
+port_led<11>|   24.330(F)|decoder1/aluop_not0001 |   0.000|
+            |   26.499(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.551(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.233(F)|decoder1/reg2_not0001  |   0.000|
+port_led<12>|   24.705(F)|decoder1/aluop_not0001 |   0.000|
+            |   26.737(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.531(F)|decoder1/muxop2_not0001|   0.000|
+            |   27.264(F)|decoder1/reg2_not0001  |   0.000|
+port_led<13>|   25.116(F)|decoder1/aluop_not0001 |   0.000|
+            |   26.318(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.430(F)|decoder1/muxop2_not0001|   0.000|
+            |   27.077(F)|decoder1/reg2_not0001  |   0.000|
+port_led<14>|   24.281(F)|decoder1/aluop_not0001 |   0.000|
+            |   25.930(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.651(F)|decoder1/muxop2_not0001|   0.000|
+            |   27.015(F)|decoder1/reg2_not0001  |   0.000|
+port_led<15>|   24.956(F)|decoder1/aluop_not0001 |   0.000|
+            |   26.569(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.306(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.493(F)|decoder1/reg2_not0001  |   0.000|
+------------+------------+-----------------------+--------+
+
+Clock port_switch<4> to Pad
+------------+------------+-----------------------+--------+
+            | clk (edge) |                       | Clock  |
+Destination |   to PAD   |Internal Clock(s)      | Phase  |
+------------+------------+-----------------------+--------+
+port_led<0> |   23.681(F)|decoder1/aluop_not0001 |   0.000|
+            |   25.547(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.557(F)|decoder1/muxop2_not0001|   0.000|
+            |   27.318(F)|decoder1/reg2_not0001  |   0.000|
+port_led<1> |   24.507(F)|decoder1/aluop_not0001 |   0.000|
+            |   26.134(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.217(F)|decoder1/muxop2_not0001|   0.000|
+            |   27.634(F)|decoder1/reg2_not0001  |   0.000|
+port_led<2> |   23.378(F)|decoder1/aluop_not0001 |   0.000|
+            |   25.237(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.971(F)|decoder1/muxop2_not0001|   0.000|
+            |   27.054(F)|decoder1/reg2_not0001  |   0.000|
+port_led<3> |   22.946(F)|decoder1/aluop_not0001 |   0.000|
+            |   24.127(F)|decoder1/muxop1_not0001|   0.000|
+            |   25.192(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.328(F)|decoder1/reg2_not0001  |   0.000|
+port_led<4> |   22.921(F)|decoder1/aluop_not0001 |   0.000|
+            |   25.078(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.788(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.845(F)|decoder1/reg2_not0001  |   0.000|
+port_led<5> |   23.342(F)|decoder1/aluop_not0001 |   0.000|
+            |   23.848(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.313(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.061(F)|decoder1/reg2_not0001  |   0.000|
+port_led<6> |   23.099(F)|decoder1/aluop_not0001 |   0.000|
+            |   23.938(F)|decoder1/muxop1_not0001|   0.000|
+            |   25.943(F)|decoder1/muxop2_not0001|   0.000|
+            |   25.539(F)|decoder1/reg2_not0001  |   0.000|
+port_led<7> |   22.900(F)|decoder1/aluop_not0001 |   0.000|
+            |   23.406(F)|decoder1/muxop1_not0001|   0.000|
+            |   24.455(F)|decoder1/muxop2_not0001|   0.000|
+            |   25.652(F)|decoder1/reg2_not0001  |   0.000|
+port_led<8> |   22.590(F)|decoder1/aluop_not0001 |   0.000|
+            |   24.639(F)|decoder1/muxop1_not0001|   0.000|
+            |   25.303(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.406(F)|decoder1/reg2_not0001  |   0.000|
+port_led<9> |   23.088(F)|decoder1/aluop_not0001 |   0.000|
+            |   23.594(F)|decoder1/muxop1_not0001|   0.000|
+            |   25.606(F)|decoder1/muxop2_not0001|   0.000|
+            |   25.433(F)|decoder1/reg2_not0001  |   0.000|
+port_led<10>|   22.722(F)|decoder1/aluop_not0001 |   0.000|
+            |   23.228(F)|decoder1/muxop1_not0001|   0.000|
+            |   25.409(F)|decoder1/muxop2_not0001|   0.000|
+            |   25.096(F)|decoder1/reg2_not0001  |   0.000|
+port_led<11>|   23.110(F)|decoder1/aluop_not0001 |   0.000|
+            |   24.475(F)|decoder1/muxop1_not0001|   0.000|
+            |   24.527(F)|decoder1/muxop2_not0001|   0.000|
+            |   25.013(F)|decoder1/reg2_not0001  |   0.000|
+port_led<12>|   23.485(F)|decoder1/aluop_not0001 |   0.000|
+            |   24.713(F)|decoder1/muxop1_not0001|   0.000|
+            |   24.507(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.044(F)|decoder1/reg2_not0001  |   0.000|
+port_led<13>|   23.896(F)|decoder1/aluop_not0001 |   0.000|
+            |   24.294(F)|decoder1/muxop1_not0001|   0.000|
+            |   24.406(F)|decoder1/muxop2_not0001|   0.000|
+            |   25.857(F)|decoder1/reg2_not0001  |   0.000|
+port_led<14>|   23.061(F)|decoder1/aluop_not0001 |   0.000|
+            |   23.906(F)|decoder1/muxop1_not0001|   0.000|
+            |   24.627(F)|decoder1/muxop2_not0001|   0.000|
+            |   25.795(F)|decoder1/reg2_not0001  |   0.000|
+port_led<15>|   23.736(F)|decoder1/aluop_not0001 |   0.000|
+            |   24.545(F)|decoder1/muxop1_not0001|   0.000|
+            |   25.282(F)|decoder1/muxop2_not0001|   0.000|
+            |   25.273(F)|decoder1/reg2_not0001  |   0.000|
+------------+------------+-----------------------+--------+
+
+Clock port_switch<6> to Pad
+------------+------------+-----------------------+--------+
+            | clk (edge) |                       | Clock  |
+Destination |   to PAD   |Internal Clock(s)      | Phase  |
+------------+------------+-----------------------+--------+
+port_led<0> |   27.010(F)|decoder1/muxop1_not0001|   0.000|
+            |   28.020(F)|decoder1/muxop2_not0001|   0.000|
+port_led<1> |   27.597(F)|decoder1/muxop1_not0001|   0.000|
+            |   28.680(F)|decoder1/muxop2_not0001|   0.000|
+port_led<2> |   26.700(F)|decoder1/muxop1_not0001|   0.000|
+            |   28.434(F)|decoder1/muxop2_not0001|   0.000|
+port_led<3> |   25.590(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.655(F)|decoder1/muxop2_not0001|   0.000|
+port_led<4> |   26.541(F)|decoder1/muxop1_not0001|   0.000|
+            |   28.251(F)|decoder1/muxop2_not0001|   0.000|
+port_led<5> |   25.311(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.776(F)|decoder1/muxop2_not0001|   0.000|
+port_led<6> |   25.401(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.406(F)|decoder1/muxop2_not0001|   0.000|
+port_led<7> |   24.869(F)|decoder1/muxop1_not0001|   0.000|
+            |   25.918(F)|decoder1/muxop2_not0001|   0.000|
+port_led<8> |   26.102(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.766(F)|decoder1/muxop2_not0001|   0.000|
+port_led<9> |   25.057(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.069(F)|decoder1/muxop2_not0001|   0.000|
+port_led<10>|   24.691(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.872(F)|decoder1/muxop2_not0001|   0.000|
+port_led<11>|   25.938(F)|decoder1/muxop1_not0001|   0.000|
+            |   25.990(F)|decoder1/muxop2_not0001|   0.000|
+port_led<12>|   26.176(F)|decoder1/muxop1_not0001|   0.000|
+            |   25.970(F)|decoder1/muxop2_not0001|   0.000|
+port_led<13>|   25.757(F)|decoder1/muxop1_not0001|   0.000|
+            |   25.869(F)|decoder1/muxop2_not0001|   0.000|
+port_led<14>|   25.369(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.090(F)|decoder1/muxop2_not0001|   0.000|
+port_led<15>|   26.008(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.745(F)|decoder1/muxop2_not0001|   0.000|
+------------+------------+-----------------------+--------+
+
+Clock port_switch<8> to Pad
+------------+------------+-----------------------+--------+
+            | clk (edge) |                       | Clock  |
+Destination |   to PAD   |Internal Clock(s)      | Phase  |
+------------+------------+-----------------------+--------+
+port_led<0> |   24.612(F)|decoder1/aluop_not0001 |   0.000|
+            |   28.388(F)|decoder1/imm_not0001   |   0.000|
+            |   26.984(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.994(F)|decoder1/muxop2_not0001|   0.000|
+port_led<1> |   25.438(F)|decoder1/aluop_not0001 |   0.000|
+            |   29.048(F)|decoder1/imm_not0001   |   0.000|
+            |   27.571(F)|decoder1/muxop1_not0001|   0.000|
+            |   28.654(F)|decoder1/muxop2_not0001|   0.000|
+port_led<2> |   24.309(F)|decoder1/aluop_not0001 |   0.000|
+            |   28.802(F)|decoder1/imm_not0001   |   0.000|
+            |   26.674(F)|decoder1/muxop1_not0001|   0.000|
+            |   28.408(F)|decoder1/muxop2_not0001|   0.000|
+port_led<3> |   23.877(F)|decoder1/aluop_not0001 |   0.000|
+            |   27.023(F)|decoder1/imm_not0001   |   0.000|
+            |   25.564(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.629(F)|decoder1/muxop2_not0001|   0.000|
+port_led<4> |   23.852(F)|decoder1/aluop_not0001 |   0.000|
+            |   28.619(F)|decoder1/imm_not0001   |   0.000|
+            |   26.515(F)|decoder1/muxop1_not0001|   0.000|
+            |   28.225(F)|decoder1/muxop2_not0001|   0.000|
+port_led<5> |   24.273(F)|decoder1/aluop_not0001 |   0.000|
+            |   28.144(F)|decoder1/imm_not0001   |   0.000|
+            |   25.285(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.750(F)|decoder1/muxop2_not0001|   0.000|
+port_led<6> |   24.030(F)|decoder1/aluop_not0001 |   0.000|
+            |   27.774(F)|decoder1/imm_not0001   |   0.000|
+            |   25.375(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.380(F)|decoder1/muxop2_not0001|   0.000|
+port_led<7> |   23.831(F)|decoder1/aluop_not0001 |   0.000|
+            |   26.286(F)|decoder1/imm_not0001   |   0.000|
+            |   24.843(F)|decoder1/muxop1_not0001|   0.000|
+            |   25.892(F)|decoder1/muxop2_not0001|   0.000|
+port_led<8> |   23.521(F)|decoder1/aluop_not0001 |   0.000|
+            |   27.204(F)|decoder1/imm_not0001   |   0.000|
+            |   26.076(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.740(F)|decoder1/muxop2_not0001|   0.000|
+port_led<9> |   24.019(F)|decoder1/aluop_not0001 |   0.000|
+            |   27.437(F)|decoder1/imm_not0001   |   0.000|
+            |   25.031(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.043(F)|decoder1/muxop2_not0001|   0.000|
+port_led<10>|   23.653(F)|decoder1/aluop_not0001 |   0.000|
+            |   27.240(F)|decoder1/imm_not0001   |   0.000|
+            |   24.665(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.846(F)|decoder1/muxop2_not0001|   0.000|
+port_led<11>|   24.041(F)|decoder1/aluop_not0001 |   0.000|
+            |   26.358(F)|decoder1/imm_not0001   |   0.000|
+            |   25.912(F)|decoder1/muxop1_not0001|   0.000|
+            |   25.964(F)|decoder1/muxop2_not0001|   0.000|
+port_led<12>|   24.416(F)|decoder1/aluop_not0001 |   0.000|
+            |   26.374(F)|decoder1/imm_not0001   |   0.000|
+            |   26.150(F)|decoder1/muxop1_not0001|   0.000|
+            |   25.944(F)|decoder1/muxop2_not0001|   0.000|
+port_led<13>|   24.827(F)|decoder1/aluop_not0001 |   0.000|
+            |   26.237(F)|decoder1/imm_not0001   |   0.000|
+            |   25.731(F)|decoder1/muxop1_not0001|   0.000|
+            |   25.843(F)|decoder1/muxop2_not0001|   0.000|
+port_led<14>|   23.992(F)|decoder1/aluop_not0001 |   0.000|
+            |   26.458(F)|decoder1/imm_not0001   |   0.000|
+            |   25.343(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.064(F)|decoder1/muxop2_not0001|   0.000|
+port_led<15>|   24.667(F)|decoder1/aluop_not0001 |   0.000|
+            |   27.113(F)|decoder1/imm_not0001   |   0.000|
+            |   25.982(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.719(F)|decoder1/muxop2_not0001|   0.000|
+------------+------------+-----------------------+--------+
+
+Clock port_switch<9> to Pad
+------------+------------+-----------------------+--------+
+            | clk (edge) |                       | Clock  |
+Destination |   to PAD   |Internal Clock(s)      | Phase  |
+------------+------------+-----------------------+--------+
+port_led<0> |   23.700(F)|decoder1/aluop_not0001 |   0.000|
+            |   27.441(F)|decoder1/imm_not0001   |   0.000|
+            |   26.091(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.101(F)|decoder1/muxop2_not0001|   0.000|
+port_led<1> |   24.526(F)|decoder1/aluop_not0001 |   0.000|
+            |   28.101(F)|decoder1/imm_not0001   |   0.000|
+            |   26.678(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.761(F)|decoder1/muxop2_not0001|   0.000|
+port_led<2> |   23.397(F)|decoder1/aluop_not0001 |   0.000|
+            |   27.855(F)|decoder1/imm_not0001   |   0.000|
+            |   25.781(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.515(F)|decoder1/muxop2_not0001|   0.000|
+port_led<3> |   22.965(F)|decoder1/aluop_not0001 |   0.000|
+            |   26.076(F)|decoder1/imm_not0001   |   0.000|
+            |   24.671(F)|decoder1/muxop1_not0001|   0.000|
+            |   25.736(F)|decoder1/muxop2_not0001|   0.000|
+port_led<4> |   22.940(F)|decoder1/aluop_not0001 |   0.000|
+            |   27.672(F)|decoder1/imm_not0001   |   0.000|
+            |   25.622(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.332(F)|decoder1/muxop2_not0001|   0.000|
+port_led<5> |   23.361(F)|decoder1/aluop_not0001 |   0.000|
+            |   27.197(F)|decoder1/imm_not0001   |   0.000|
+            |   24.392(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.857(F)|decoder1/muxop2_not0001|   0.000|
+port_led<6> |   23.118(F)|decoder1/aluop_not0001 |   0.000|
+            |   26.827(F)|decoder1/imm_not0001   |   0.000|
+            |   24.482(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.487(F)|decoder1/muxop2_not0001|   0.000|
+port_led<7> |   22.919(F)|decoder1/aluop_not0001 |   0.000|
+            |   25.339(F)|decoder1/imm_not0001   |   0.000|
+            |   23.950(F)|decoder1/muxop1_not0001|   0.000|
+            |   24.999(F)|decoder1/muxop2_not0001|   0.000|
+port_led<8> |   22.609(F)|decoder1/aluop_not0001 |   0.000|
+            |   26.257(F)|decoder1/imm_not0001   |   0.000|
+            |   25.183(F)|decoder1/muxop1_not0001|   0.000|
+            |   25.847(F)|decoder1/muxop2_not0001|   0.000|
+port_led<9> |   23.107(F)|decoder1/aluop_not0001 |   0.000|
+            |   26.490(F)|decoder1/imm_not0001   |   0.000|
+            |   24.138(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.150(F)|decoder1/muxop2_not0001|   0.000|
+port_led<10>|   22.741(F)|decoder1/aluop_not0001 |   0.000|
+            |   26.293(F)|decoder1/imm_not0001   |   0.000|
+            |   23.772(F)|decoder1/muxop1_not0001|   0.000|
+            |   25.953(F)|decoder1/muxop2_not0001|   0.000|
+port_led<11>|   23.129(F)|decoder1/aluop_not0001 |   0.000|
+            |   25.411(F)|decoder1/imm_not0001   |   0.000|
+            |   25.019(F)|decoder1/muxop1_not0001|   0.000|
+            |   25.071(F)|decoder1/muxop2_not0001|   0.000|
+port_led<12>|   23.504(F)|decoder1/aluop_not0001 |   0.000|
+            |   25.427(F)|decoder1/imm_not0001   |   0.000|
+            |   25.257(F)|decoder1/muxop1_not0001|   0.000|
+            |   25.051(F)|decoder1/muxop2_not0001|   0.000|
+port_led<13>|   23.915(F)|decoder1/aluop_not0001 |   0.000|
+            |   25.290(F)|decoder1/imm_not0001   |   0.000|
+            |   24.838(F)|decoder1/muxop1_not0001|   0.000|
+            |   24.950(F)|decoder1/muxop2_not0001|   0.000|
+port_led<14>|   23.080(F)|decoder1/aluop_not0001 |   0.000|
+            |   25.511(F)|decoder1/imm_not0001   |   0.000|
+            |   24.450(F)|decoder1/muxop1_not0001|   0.000|
+            |   25.171(F)|decoder1/muxop2_not0001|   0.000|
+port_led<15>|   23.755(F)|decoder1/aluop_not0001 |   0.000|
+            |   26.166(F)|decoder1/imm_not0001   |   0.000|
+            |   25.089(F)|decoder1/muxop1_not0001|   0.000|
+            |   25.826(F)|decoder1/muxop2_not0001|   0.000|
+------------+------------+-----------------------+--------+
+
+Clock port_switch<10> to Pad
+------------+------------+-----------------------+--------+
+            | clk (edge) |                       | Clock  |
+Destination |   to PAD   |Internal Clock(s)      | Phase  |
+------------+------------+-----------------------+--------+
+port_led<0> |   25.192(F)|decoder1/aluop_not0001 |   0.000|
+            |   27.117(F)|decoder1/imm_not0001   |   0.000|
+            |   25.971(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.981(F)|decoder1/muxop2_not0001|   0.000|
+port_led<1> |   26.018(F)|decoder1/aluop_not0001 |   0.000|
+            |   27.777(F)|decoder1/imm_not0001   |   0.000|
+            |   26.558(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.641(F)|decoder1/muxop2_not0001|   0.000|
+port_led<2> |   24.889(F)|decoder1/aluop_not0001 |   0.000|
+            |   27.531(F)|decoder1/imm_not0001   |   0.000|
+            |   25.661(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.395(F)|decoder1/muxop2_not0001|   0.000|
+port_led<3> |   24.457(F)|decoder1/aluop_not0001 |   0.000|
+            |   25.752(F)|decoder1/imm_not0001   |   0.000|
+            |   24.551(F)|decoder1/muxop1_not0001|   0.000|
+            |   25.616(F)|decoder1/muxop2_not0001|   0.000|
+port_led<4> |   24.432(F)|decoder1/aluop_not0001 |   0.000|
+            |   27.348(F)|decoder1/imm_not0001   |   0.000|
+            |   25.502(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.212(F)|decoder1/muxop2_not0001|   0.000|
+port_led<5> |   24.853(F)|decoder1/aluop_not0001 |   0.000|
+            |   26.873(F)|decoder1/imm_not0001   |   0.000|
+            |   24.272(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.737(F)|decoder1/muxop2_not0001|   0.000|
+port_led<6> |   24.610(F)|decoder1/aluop_not0001 |   0.000|
+            |   26.503(F)|decoder1/imm_not0001   |   0.000|
+            |   24.362(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.367(F)|decoder1/muxop2_not0001|   0.000|
+port_led<7> |   24.411(F)|decoder1/aluop_not0001 |   0.000|
+            |   25.015(F)|decoder1/imm_not0001   |   0.000|
+            |   23.830(F)|decoder1/muxop1_not0001|   0.000|
+            |   24.879(F)|decoder1/muxop2_not0001|   0.000|
+port_led<8> |   24.101(F)|decoder1/aluop_not0001 |   0.000|
+            |   25.933(F)|decoder1/imm_not0001   |   0.000|
+            |   25.063(F)|decoder1/muxop1_not0001|   0.000|
+            |   25.727(F)|decoder1/muxop2_not0001|   0.000|
+port_led<9> |   24.599(F)|decoder1/aluop_not0001 |   0.000|
+            |   26.166(F)|decoder1/imm_not0001   |   0.000|
+            |   24.018(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.030(F)|decoder1/muxop2_not0001|   0.000|
+port_led<10>|   24.233(F)|decoder1/aluop_not0001 |   0.000|
+            |   25.969(F)|decoder1/imm_not0001   |   0.000|
+            |   23.652(F)|decoder1/muxop1_not0001|   0.000|
+            |   25.833(F)|decoder1/muxop2_not0001|   0.000|
+port_led<11>|   24.621(F)|decoder1/aluop_not0001 |   0.000|
+            |   25.087(F)|decoder1/imm_not0001   |   0.000|
+            |   24.899(F)|decoder1/muxop1_not0001|   0.000|
+            |   24.951(F)|decoder1/muxop2_not0001|   0.000|
+port_led<12>|   24.996(F)|decoder1/aluop_not0001 |   0.000|
+            |   25.103(F)|decoder1/imm_not0001   |   0.000|
+            |   25.137(F)|decoder1/muxop1_not0001|   0.000|
+            |   24.931(F)|decoder1/muxop2_not0001|   0.000|
+port_led<13>|   25.407(F)|decoder1/aluop_not0001 |   0.000|
+            |   24.966(F)|decoder1/imm_not0001   |   0.000|
+            |   24.718(F)|decoder1/muxop1_not0001|   0.000|
+            |   24.830(F)|decoder1/muxop2_not0001|   0.000|
+port_led<14>|   24.572(F)|decoder1/aluop_not0001 |   0.000|
+            |   25.187(F)|decoder1/imm_not0001   |   0.000|
+            |   24.330(F)|decoder1/muxop1_not0001|   0.000|
+            |   25.051(F)|decoder1/muxop2_not0001|   0.000|
+port_led<15>|   25.247(F)|decoder1/aluop_not0001 |   0.000|
+            |   25.842(F)|decoder1/imm_not0001   |   0.000|
+            |   24.969(F)|decoder1/muxop1_not0001|   0.000|
+            |   25.706(F)|decoder1/muxop2_not0001|   0.000|
+------------+------------+-----------------------+--------+
+
+Clock port_switch<11> to Pad
+------------+------------+-----------------------+--------+
+            | clk (edge) |                       | Clock  |
+Destination |   to PAD   |Internal Clock(s)      | Phase  |
+------------+------------+-----------------------+--------+
+port_led<0> |   25.587(F)|decoder1/aluop_not0001 |   0.000|
+            |   26.186(F)|decoder1/imm_not0001   |   0.000|
+            |   25.861(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.115(F)|decoder1/muxop2_not0001|   0.000|
+            |   29.224(F)|decoder1/reg2_not0001  |   0.000|
+port_led<1> |   26.413(F)|decoder1/aluop_not0001 |   0.000|
+            |   26.846(F)|decoder1/imm_not0001   |   0.000|
+            |   26.448(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.775(F)|decoder1/muxop2_not0001|   0.000|
+            |   29.540(F)|decoder1/reg2_not0001  |   0.000|
+port_led<2> |   25.284(F)|decoder1/aluop_not0001 |   0.000|
+            |   26.600(F)|decoder1/imm_not0001   |   0.000|
+            |   25.551(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.529(F)|decoder1/muxop2_not0001|   0.000|
+            |   28.960(F)|decoder1/reg2_not0001  |   0.000|
+port_led<3> |   24.852(F)|decoder1/aluop_not0001 |   0.000|
+            |   24.821(F)|decoder1/imm_not0001   |   0.000|
+            |   24.441(F)|decoder1/muxop1_not0001|   0.000|
+            |   25.750(F)|decoder1/muxop2_not0001|   0.000|
+            |   28.234(F)|decoder1/reg2_not0001  |   0.000|
+port_led<4> |   24.827(F)|decoder1/aluop_not0001 |   0.000|
+            |   26.417(F)|decoder1/imm_not0001   |   0.000|
+            |   25.392(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.346(F)|decoder1/muxop2_not0001|   0.000|
+            |   28.751(F)|decoder1/reg2_not0001  |   0.000|
+port_led<5> |   25.248(F)|decoder1/aluop_not0001 |   0.000|
+            |   25.942(F)|decoder1/imm_not0001   |   0.000|
+            |   24.162(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.871(F)|decoder1/muxop2_not0001|   0.000|
+            |   27.967(F)|decoder1/reg2_not0001  |   0.000|
+port_led<6> |   25.005(F)|decoder1/aluop_not0001 |   0.000|
+            |   25.572(F)|decoder1/imm_not0001   |   0.000|
+            |   24.252(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.501(F)|decoder1/muxop2_not0001|   0.000|
+            |   27.445(F)|decoder1/reg2_not0001  |   0.000|
+port_led<7> |   24.806(F)|decoder1/aluop_not0001 |   0.000|
+            |   24.084(F)|decoder1/imm_not0001   |   0.000|
+            |   23.720(F)|decoder1/muxop1_not0001|   0.000|
+            |   25.013(F)|decoder1/muxop2_not0001|   0.000|
+            |   27.558(F)|decoder1/reg2_not0001  |   0.000|
+port_led<8> |   24.496(F)|decoder1/aluop_not0001 |   0.000|
+            |   25.002(F)|decoder1/imm_not0001   |   0.000|
+            |   24.953(F)|decoder1/muxop1_not0001|   0.000|
+            |   25.861(F)|decoder1/muxop2_not0001|   0.000|
+            |   28.312(F)|decoder1/reg2_not0001  |   0.000|
+port_led<9> |   24.994(F)|decoder1/aluop_not0001 |   0.000|
+            |   25.235(F)|decoder1/imm_not0001   |   0.000|
+            |   23.908(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.164(F)|decoder1/muxop2_not0001|   0.000|
+            |   27.339(F)|decoder1/reg2_not0001  |   0.000|
+port_led<10>|   24.628(F)|decoder1/aluop_not0001 |   0.000|
+            |   25.038(F)|decoder1/imm_not0001   |   0.000|
+            |   23.542(F)|decoder1/muxop1_not0001|   0.000|
+            |   25.967(F)|decoder1/muxop2_not0001|   0.000|
+            |   27.002(F)|decoder1/reg2_not0001  |   0.000|
+port_led<11>|   25.016(F)|decoder1/aluop_not0001 |   0.000|
+            |   24.156(F)|decoder1/imm_not0001   |   0.000|
+            |   24.789(F)|decoder1/muxop1_not0001|   0.000|
+            |   25.085(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.919(F)|decoder1/reg2_not0001  |   0.000|
+port_led<12>|   25.391(F)|decoder1/aluop_not0001 |   0.000|
+            |   24.172(F)|decoder1/imm_not0001   |   0.000|
+            |   25.027(F)|decoder1/muxop1_not0001|   0.000|
+            |   25.065(F)|decoder1/muxop2_not0001|   0.000|
+            |   27.950(F)|decoder1/reg2_not0001  |   0.000|
+port_led<13>|   25.802(F)|decoder1/aluop_not0001 |   0.000|
+            |   24.035(F)|decoder1/imm_not0001   |   0.000|
+            |   24.608(F)|decoder1/muxop1_not0001|   0.000|
+            |   24.964(F)|decoder1/muxop2_not0001|   0.000|
+            |   27.763(F)|decoder1/reg2_not0001  |   0.000|
+port_led<14>|   24.967(F)|decoder1/aluop_not0001 |   0.000|
+            |   24.256(F)|decoder1/imm_not0001   |   0.000|
+            |   24.220(F)|decoder1/muxop1_not0001|   0.000|
+            |   25.185(F)|decoder1/muxop2_not0001|   0.000|
+            |   27.701(F)|decoder1/reg2_not0001  |   0.000|
+port_led<15>|   25.642(F)|decoder1/aluop_not0001 |   0.000|
+            |   24.911(F)|decoder1/imm_not0001   |   0.000|
+            |   24.859(F)|decoder1/muxop1_not0001|   0.000|
+            |   25.840(F)|decoder1/muxop2_not0001|   0.000|
+            |   27.179(F)|decoder1/reg2_not0001  |   0.000|
+------------+------------+-----------------------+--------+
+
+Clock port_switch<12> to Pad
+------------+------------+-----------------------+--------+
+            | clk (edge) |                       | Clock  |
+Destination |   to PAD   |Internal Clock(s)      | Phase  |
+------------+------------+-----------------------+--------+
+port_led<0> |   23.360(F)|decoder1/aluop_not0001 |   0.000|
+            |   29.275(F)|decoder1/imm_not0001   |   0.000|
+            |   27.387(F)|decoder1/muxop1_not0001|   0.000|
+            |   28.397(F)|decoder1/muxop2_not0001|   0.000|
+            |   28.371(F)|decoder1/reg2_not0001  |   0.000|
+port_led<1> |   24.186(F)|decoder1/aluop_not0001 |   0.000|
+            |   29.935(F)|decoder1/imm_not0001   |   0.000|
+            |   27.974(F)|decoder1/muxop1_not0001|   0.000|
+            |   29.057(F)|decoder1/muxop2_not0001|   0.000|
+            |   28.687(F)|decoder1/reg2_not0001  |   0.000|
+port_led<2> |   23.057(F)|decoder1/aluop_not0001 |   0.000|
+            |   29.689(F)|decoder1/imm_not0001   |   0.000|
+            |   27.077(F)|decoder1/muxop1_not0001|   0.000|
+            |   28.811(F)|decoder1/muxop2_not0001|   0.000|
+            |   28.107(F)|decoder1/reg2_not0001  |   0.000|
+port_led<3> |   22.625(F)|decoder1/aluop_not0001 |   0.000|
+            |   27.910(F)|decoder1/imm_not0001   |   0.000|
+            |   25.967(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.032(F)|decoder1/muxop2_not0001|   0.000|
+            |   27.381(F)|decoder1/reg2_not0001  |   0.000|
+port_led<4> |   22.600(F)|decoder1/aluop_not0001 |   0.000|
+            |   29.506(F)|decoder1/imm_not0001   |   0.000|
+            |   26.918(F)|decoder1/muxop1_not0001|   0.000|
+            |   28.628(F)|decoder1/muxop2_not0001|   0.000|
+            |   27.898(F)|decoder1/reg2_not0001  |   0.000|
+port_led<5> |   23.021(F)|decoder1/aluop_not0001 |   0.000|
+            |   29.031(F)|decoder1/imm_not0001   |   0.000|
+            |   25.688(F)|decoder1/muxop1_not0001|   0.000|
+            |   28.153(F)|decoder1/muxop2_not0001|   0.000|
+            |   27.114(F)|decoder1/reg2_not0001  |   0.000|
+port_led<6> |   22.778(F)|decoder1/aluop_not0001 |   0.000|
+            |   28.661(F)|decoder1/imm_not0001   |   0.000|
+            |   25.778(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.783(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.592(F)|decoder1/reg2_not0001  |   0.000|
+port_led<7> |   22.579(F)|decoder1/aluop_not0001 |   0.000|
+            |   27.173(F)|decoder1/imm_not0001   |   0.000|
+            |   25.246(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.295(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.705(F)|decoder1/reg2_not0001  |   0.000|
+port_led<8> |   22.269(F)|decoder1/aluop_not0001 |   0.000|
+            |   28.091(F)|decoder1/imm_not0001   |   0.000|
+            |   26.479(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.143(F)|decoder1/muxop2_not0001|   0.000|
+            |   27.459(F)|decoder1/reg2_not0001  |   0.000|
+port_led<9> |   22.767(F)|decoder1/aluop_not0001 |   0.000|
+            |   28.324(F)|decoder1/imm_not0001   |   0.000|
+            |   25.434(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.446(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.486(F)|decoder1/reg2_not0001  |   0.000|
+port_led<10>|   22.401(F)|decoder1/aluop_not0001 |   0.000|
+            |   28.127(F)|decoder1/imm_not0001   |   0.000|
+            |   25.068(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.249(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.149(F)|decoder1/reg2_not0001  |   0.000|
+port_led<11>|   22.789(F)|decoder1/aluop_not0001 |   0.000|
+            |   27.245(F)|decoder1/imm_not0001   |   0.000|
+            |   26.315(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.367(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.066(F)|decoder1/reg2_not0001  |   0.000|
+port_led<12>|   23.164(F)|decoder1/aluop_not0001 |   0.000|
+            |   27.261(F)|decoder1/imm_not0001   |   0.000|
+            |   26.553(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.347(F)|decoder1/muxop2_not0001|   0.000|
+            |   27.097(F)|decoder1/reg2_not0001  |   0.000|
+port_led<13>|   23.575(F)|decoder1/aluop_not0001 |   0.000|
+            |   27.124(F)|decoder1/imm_not0001   |   0.000|
+            |   26.134(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.246(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.910(F)|decoder1/reg2_not0001  |   0.000|
+port_led<14>|   22.740(F)|decoder1/aluop_not0001 |   0.000|
+            |   27.345(F)|decoder1/imm_not0001   |   0.000|
+            |   25.746(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.467(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.848(F)|decoder1/reg2_not0001  |   0.000|
+port_led<15>|   23.415(F)|decoder1/aluop_not0001 |   0.000|
+            |   28.000(F)|decoder1/imm_not0001   |   0.000|
+            |   26.385(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.122(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.326(F)|decoder1/reg2_not0001  |   0.000|
+------------+------------+-----------------------+--------+
+
+Clock port_switch<13> to Pad
+------------+------------+-----------------------+--------+
+            | clk (edge) |                       | Clock  |
+Destination |   to PAD   |Internal Clock(s)      | Phase  |
+------------+------------+-----------------------+--------+
+port_led<0> |   22.299(F)|decoder1/aluop_not0001 |   0.000|
+            |   28.564(F)|decoder1/imm_not0001   |   0.000|
+            |   26.734(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.797(F)|decoder1/muxop2_not0001|   0.000|
+            |   27.584(F)|decoder1/reg2_not0001  |   0.000|
+port_led<1> |   23.125(F)|decoder1/aluop_not0001 |   0.000|
+            |   29.224(F)|decoder1/imm_not0001   |   0.000|
+            |   27.321(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.457(F)|decoder1/muxop2_not0001|   0.000|
+            |   27.900(F)|decoder1/reg2_not0001  |   0.000|
+port_led<2> |   21.996(F)|decoder1/aluop_not0001 |   0.000|
+            |   28.978(F)|decoder1/imm_not0001   |   0.000|
+            |   26.424(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.211(F)|decoder1/muxop2_not0001|   0.000|
+            |   27.320(F)|decoder1/reg2_not0001  |   0.000|
+port_led<3> |   21.564(F)|decoder1/aluop_not0001 |   0.000|
+            |   27.199(F)|decoder1/imm_not0001   |   0.000|
+            |   25.314(F)|decoder1/muxop1_not0001|   0.000|
+            |   25.432(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.594(F)|decoder1/reg2_not0001  |   0.000|
+port_led<4> |   21.539(F)|decoder1/aluop_not0001 |   0.000|
+            |   28.795(F)|decoder1/imm_not0001   |   0.000|
+            |   26.265(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.028(F)|decoder1/muxop2_not0001|   0.000|
+            |   27.111(F)|decoder1/reg2_not0001  |   0.000|
+port_led<5> |   21.960(F)|decoder1/aluop_not0001 |   0.000|
+            |   28.320(F)|decoder1/imm_not0001   |   0.000|
+            |   25.035(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.553(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.327(F)|decoder1/reg2_not0001  |   0.000|
+port_led<6> |   21.717(F)|decoder1/aluop_not0001 |   0.000|
+            |   27.950(F)|decoder1/imm_not0001   |   0.000|
+            |   25.125(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.183(F)|decoder1/muxop2_not0001|   0.000|
+            |   25.805(F)|decoder1/reg2_not0001  |   0.000|
+port_led<7> |   21.518(F)|decoder1/aluop_not0001 |   0.000|
+            |   26.462(F)|decoder1/imm_not0001   |   0.000|
+            |   24.593(F)|decoder1/muxop1_not0001|   0.000|
+            |   24.695(F)|decoder1/muxop2_not0001|   0.000|
+            |   25.918(F)|decoder1/reg2_not0001  |   0.000|
+port_led<8> |   21.208(F)|decoder1/aluop_not0001 |   0.000|
+            |   27.380(F)|decoder1/imm_not0001   |   0.000|
+            |   25.826(F)|decoder1/muxop1_not0001|   0.000|
+            |   25.543(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.672(F)|decoder1/reg2_not0001  |   0.000|
+port_led<9> |   21.706(F)|decoder1/aluop_not0001 |   0.000|
+            |   27.613(F)|decoder1/imm_not0001   |   0.000|
+            |   24.781(F)|decoder1/muxop1_not0001|   0.000|
+            |   25.846(F)|decoder1/muxop2_not0001|   0.000|
+            |   25.699(F)|decoder1/reg2_not0001  |   0.000|
+port_led<10>|   21.340(F)|decoder1/aluop_not0001 |   0.000|
+            |   27.416(F)|decoder1/imm_not0001   |   0.000|
+            |   24.415(F)|decoder1/muxop1_not0001|   0.000|
+            |   25.649(F)|decoder1/muxop2_not0001|   0.000|
+            |   25.362(F)|decoder1/reg2_not0001  |   0.000|
+port_led<11>|   21.728(F)|decoder1/aluop_not0001 |   0.000|
+            |   26.534(F)|decoder1/imm_not0001   |   0.000|
+            |   25.662(F)|decoder1/muxop1_not0001|   0.000|
+            |   24.767(F)|decoder1/muxop2_not0001|   0.000|
+            |   25.279(F)|decoder1/reg2_not0001  |   0.000|
+port_led<12>|   22.103(F)|decoder1/aluop_not0001 |   0.000|
+            |   26.550(F)|decoder1/imm_not0001   |   0.000|
+            |   25.900(F)|decoder1/muxop1_not0001|   0.000|
+            |   24.747(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.310(F)|decoder1/reg2_not0001  |   0.000|
+port_led<13>|   22.514(F)|decoder1/aluop_not0001 |   0.000|
+            |   26.413(F)|decoder1/imm_not0001   |   0.000|
+            |   25.481(F)|decoder1/muxop1_not0001|   0.000|
+            |   24.646(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.123(F)|decoder1/reg2_not0001  |   0.000|
+port_led<14>|   21.679(F)|decoder1/aluop_not0001 |   0.000|
+            |   26.634(F)|decoder1/imm_not0001   |   0.000|
+            |   25.093(F)|decoder1/muxop1_not0001|   0.000|
+            |   24.867(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.061(F)|decoder1/reg2_not0001  |   0.000|
+port_led<15>|   22.354(F)|decoder1/aluop_not0001 |   0.000|
+            |   27.289(F)|decoder1/imm_not0001   |   0.000|
+            |   25.732(F)|decoder1/muxop1_not0001|   0.000|
+            |   25.522(F)|decoder1/muxop2_not0001|   0.000|
+            |   25.539(F)|decoder1/reg2_not0001  |   0.000|
+------------+------------+-----------------------+--------+
+
+Clock port_switch<14> to Pad
+------------+------------+-----------------------+--------+
+            | clk (edge) |                       | Clock  |
+Destination |   to PAD   |Internal Clock(s)      | Phase  |
+------------+------------+-----------------------+--------+
+port_led<0> |   22.278(F)|decoder1/aluop_not0001 |   0.000|
+            |   29.872(F)|decoder1/imm_not0001   |   0.000|
+            |   27.287(F)|decoder1/muxop1_not0001|   0.000|
+            |   28.216(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.803(F)|decoder1/reg2_not0001  |   0.000|
+port_led<1> |   23.104(F)|decoder1/aluop_not0001 |   0.000|
+            |   30.532(F)|decoder1/imm_not0001   |   0.000|
+            |   27.874(F)|decoder1/muxop1_not0001|   0.000|
+            |   28.876(F)|decoder1/muxop2_not0001|   0.000|
+            |   27.119(F)|decoder1/reg2_not0001  |   0.000|
+port_led<2> |   21.975(F)|decoder1/aluop_not0001 |   0.000|
+            |   30.286(F)|decoder1/imm_not0001   |   0.000|
+            |   26.977(F)|decoder1/muxop1_not0001|   0.000|
+            |   28.630(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.539(F)|decoder1/reg2_not0001  |   0.000|
+port_led<3> |   21.543(F)|decoder1/aluop_not0001 |   0.000|
+            |   28.507(F)|decoder1/imm_not0001   |   0.000|
+            |   25.867(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.851(F)|decoder1/muxop2_not0001|   0.000|
+            |   25.813(F)|decoder1/reg2_not0001  |   0.000|
+port_led<4> |   21.518(F)|decoder1/aluop_not0001 |   0.000|
+            |   30.103(F)|decoder1/imm_not0001   |   0.000|
+            |   26.818(F)|decoder1/muxop1_not0001|   0.000|
+            |   28.447(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.330(F)|decoder1/reg2_not0001  |   0.000|
+port_led<5> |   21.939(F)|decoder1/aluop_not0001 |   0.000|
+            |   29.628(F)|decoder1/imm_not0001   |   0.000|
+            |   25.588(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.972(F)|decoder1/muxop2_not0001|   0.000|
+            |   25.546(F)|decoder1/reg2_not0001  |   0.000|
+port_led<6> |   21.696(F)|decoder1/aluop_not0001 |   0.000|
+            |   29.258(F)|decoder1/imm_not0001   |   0.000|
+            |   25.678(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.602(F)|decoder1/muxop2_not0001|   0.000|
+            |   25.024(F)|decoder1/reg2_not0001  |   0.000|
+port_led<7> |   21.497(F)|decoder1/aluop_not0001 |   0.000|
+            |   27.770(F)|decoder1/imm_not0001   |   0.000|
+            |   25.146(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.114(F)|decoder1/muxop2_not0001|   0.000|
+            |   25.137(F)|decoder1/reg2_not0001  |   0.000|
+port_led<8> |   21.187(F)|decoder1/aluop_not0001 |   0.000|
+            |   28.688(F)|decoder1/imm_not0001   |   0.000|
+            |   26.379(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.962(F)|decoder1/muxop2_not0001|   0.000|
+            |   25.891(F)|decoder1/reg2_not0001  |   0.000|
+port_led<9> |   21.685(F)|decoder1/aluop_not0001 |   0.000|
+            |   28.921(F)|decoder1/imm_not0001   |   0.000|
+            |   25.334(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.265(F)|decoder1/muxop2_not0001|   0.000|
+            |   24.918(F)|decoder1/reg2_not0001  |   0.000|
+port_led<10>|   21.319(F)|decoder1/aluop_not0001 |   0.000|
+            |   28.724(F)|decoder1/imm_not0001   |   0.000|
+            |   24.968(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.068(F)|decoder1/muxop2_not0001|   0.000|
+            |   24.581(F)|decoder1/reg2_not0001  |   0.000|
+port_led<11>|   21.707(F)|decoder1/aluop_not0001 |   0.000|
+            |   27.842(F)|decoder1/imm_not0001   |   0.000|
+            |   26.215(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.186(F)|decoder1/muxop2_not0001|   0.000|
+            |   24.498(F)|decoder1/reg2_not0001  |   0.000|
+port_led<12>|   22.082(F)|decoder1/aluop_not0001 |   0.000|
+            |   27.858(F)|decoder1/imm_not0001   |   0.000|
+            |   26.453(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.166(F)|decoder1/muxop2_not0001|   0.000|
+            |   25.529(F)|decoder1/reg2_not0001  |   0.000|
+port_led<13>|   22.493(F)|decoder1/aluop_not0001 |   0.000|
+            |   27.721(F)|decoder1/imm_not0001   |   0.000|
+            |   26.034(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.065(F)|decoder1/muxop2_not0001|   0.000|
+            |   25.342(F)|decoder1/reg2_not0001  |   0.000|
+port_led<14>|   21.658(F)|decoder1/aluop_not0001 |   0.000|
+            |   27.942(F)|decoder1/imm_not0001   |   0.000|
+            |   25.646(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.286(F)|decoder1/muxop2_not0001|   0.000|
+            |   25.280(F)|decoder1/reg2_not0001  |   0.000|
+port_led<15>|   22.333(F)|decoder1/aluop_not0001 |   0.000|
+            |   28.597(F)|decoder1/imm_not0001   |   0.000|
+            |   26.285(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.941(F)|decoder1/muxop2_not0001|   0.000|
+            |   24.758(F)|decoder1/reg2_not0001  |   0.000|
+------------+------------+-----------------------+--------+
+
+Clock port_switch<15> to Pad
+------------+------------+-----------------------+--------+
+            | clk (edge) |                       | Clock  |
+Destination |   to PAD   |Internal Clock(s)      | Phase  |
+------------+------------+-----------------------+--------+
+port_led<0> |   21.878(F)|decoder1/aluop_not0001 |   0.000|
+            |   26.217(F)|decoder1/imm_not0001   |   0.000|
+            |   27.401(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.204(F)|decoder1/muxop2_not0001|   0.000|
+            |   28.251(F)|decoder1/reg2_not0001  |   0.000|
+port_led<1> |   22.704(F)|decoder1/aluop_not0001 |   0.000|
+            |   26.877(F)|decoder1/imm_not0001   |   0.000|
+            |   27.988(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.864(F)|decoder1/muxop2_not0001|   0.000|
+            |   28.567(F)|decoder1/reg2_not0001  |   0.000|
+port_led<2> |   21.575(F)|decoder1/aluop_not0001 |   0.000|
+            |   26.631(F)|decoder1/imm_not0001   |   0.000|
+            |   27.091(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.618(F)|decoder1/muxop2_not0001|   0.000|
+            |   27.987(F)|decoder1/reg2_not0001  |   0.000|
+port_led<3> |   21.143(F)|decoder1/aluop_not0001 |   0.000|
+            |   24.852(F)|decoder1/imm_not0001   |   0.000|
+            |   25.981(F)|decoder1/muxop1_not0001|   0.000|
+            |   25.839(F)|decoder1/muxop2_not0001|   0.000|
+            |   27.261(F)|decoder1/reg2_not0001  |   0.000|
+port_led<4> |   21.118(F)|decoder1/aluop_not0001 |   0.000|
+            |   26.448(F)|decoder1/imm_not0001   |   0.000|
+            |   26.932(F)|decoder1/muxop1_not0001|   0.000|
+            |   27.435(F)|decoder1/muxop2_not0001|   0.000|
+            |   27.778(F)|decoder1/reg2_not0001  |   0.000|
+port_led<5> |   21.539(F)|decoder1/aluop_not0001 |   0.000|
+            |   25.973(F)|decoder1/imm_not0001   |   0.000|
+            |   25.702(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.960(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.994(F)|decoder1/reg2_not0001  |   0.000|
+port_led<6> |   21.296(F)|decoder1/aluop_not0001 |   0.000|
+            |   25.603(F)|decoder1/imm_not0001   |   0.000|
+            |   25.792(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.590(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.472(F)|decoder1/reg2_not0001  |   0.000|
+port_led<7> |   21.097(F)|decoder1/aluop_not0001 |   0.000|
+            |   24.115(F)|decoder1/imm_not0001   |   0.000|
+            |   25.260(F)|decoder1/muxop1_not0001|   0.000|
+            |   25.102(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.585(F)|decoder1/reg2_not0001  |   0.000|
+port_led<8> |   20.787(F)|decoder1/aluop_not0001 |   0.000|
+            |   25.033(F)|decoder1/imm_not0001   |   0.000|
+            |   26.493(F)|decoder1/muxop1_not0001|   0.000|
+            |   25.950(F)|decoder1/muxop2_not0001|   0.000|
+            |   27.339(F)|decoder1/reg2_not0001  |   0.000|
+port_led<9> |   21.285(F)|decoder1/aluop_not0001 |   0.000|
+            |   25.266(F)|decoder1/imm_not0001   |   0.000|
+            |   25.448(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.253(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.366(F)|decoder1/reg2_not0001  |   0.000|
+port_led<10>|   20.919(F)|decoder1/aluop_not0001 |   0.000|
+            |   25.069(F)|decoder1/imm_not0001   |   0.000|
+            |   25.082(F)|decoder1/muxop1_not0001|   0.000|
+            |   26.056(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.029(F)|decoder1/reg2_not0001  |   0.000|
+port_led<11>|   21.307(F)|decoder1/aluop_not0001 |   0.000|
+            |   24.187(F)|decoder1/imm_not0001   |   0.000|
+            |   26.329(F)|decoder1/muxop1_not0001|   0.000|
+            |   25.174(F)|decoder1/muxop2_not0001|   0.000|
+            |   25.946(F)|decoder1/reg2_not0001  |   0.000|
+port_led<12>|   21.682(F)|decoder1/aluop_not0001 |   0.000|
+            |   24.203(F)|decoder1/imm_not0001   |   0.000|
+            |   26.567(F)|decoder1/muxop1_not0001|   0.000|
+            |   25.154(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.977(F)|decoder1/reg2_not0001  |   0.000|
+port_led<13>|   22.093(F)|decoder1/aluop_not0001 |   0.000|
+            |   24.066(F)|decoder1/imm_not0001   |   0.000|
+            |   26.148(F)|decoder1/muxop1_not0001|   0.000|
+            |   25.053(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.790(F)|decoder1/reg2_not0001  |   0.000|
+port_led<14>|   21.258(F)|decoder1/aluop_not0001 |   0.000|
+            |   24.287(F)|decoder1/imm_not0001   |   0.000|
+            |   25.760(F)|decoder1/muxop1_not0001|   0.000|
+            |   25.274(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.728(F)|decoder1/reg2_not0001  |   0.000|
+port_led<15>|   21.933(F)|decoder1/aluop_not0001 |   0.000|
+            |   24.942(F)|decoder1/imm_not0001   |   0.000|
+            |   26.399(F)|decoder1/muxop1_not0001|   0.000|
+            |   25.929(F)|decoder1/muxop2_not0001|   0.000|
+            |   26.206(F)|decoder1/reg2_not0001  |   0.000|
+------------+------------+-----------------------+--------+
+
+Clock to Setup on destination clock port_clk_key
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-port_clk_50    |    3.021|         |         |         |
+port_clk_key   |    2.928|         |         |         |
+port_rst       |         |         |    4.848|    4.848|
+port_switch<0> |         |         |         |   14.550|
+port_switch<1> |         |         |         |   14.550|
+port_switch<2> |         |         |         |   14.550|
+port_switch<3> |         |         |         |   14.550|
+port_switch<4> |         |         |         |   14.550|
+port_switch<5> |         |         |         |   14.550|
+port_switch<6> |         |         |         |   14.550|
+port_switch<7> |         |         |         |   14.550|
+port_switch<8> |         |         |         |   14.550|
+port_switch<9> |         |         |         |   14.550|
+port_switch<10>|         |         |         |   14.550|
+port_switch<11>|         |         |         |   14.550|
+port_switch<12>|         |         |         |   14.550|
+port_switch<13>|         |         |         |   14.550|
+port_switch<14>|         |         |         |   14.550|
+port_switch<15>|         |         |         |   14.550|
 ---------------+---------+---------+---------+---------+
 
+Clock to Setup on destination clock port_rst
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+port_clk_key   |         |         |         |    4.914|
+port_rst       |         |         |   -0.064|   -0.064|
+port_switch<0> |         |         |         |   12.995|
+port_switch<1> |         |         |         |   12.995|
+port_switch<2> |         |         |         |   12.995|
+port_switch<3> |         |         |         |   12.995|
+port_switch<4> |         |         |         |   12.995|
+port_switch<5> |         |         |         |   12.995|
+port_switch<6> |         |         |         |   12.995|
+port_switch<7> |         |         |         |   12.995|
+port_switch<8> |         |         |         |   12.995|
+port_switch<9> |         |         |         |   12.995|
+port_switch<10>|         |         |         |   12.995|
+port_switch<11>|         |         |         |   12.995|
+port_switch<12>|         |         |         |   12.995|
+port_switch<13>|         |         |         |   12.995|
+port_switch<14>|         |         |         |   12.995|
+port_switch<15>|         |         |         |   12.995|
+---------------+---------+---------+---------+---------+
 
-Analysis completed Sun May 21 07:54:42 2017 
+Clock to Setup on destination clock port_switch<0>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+port_switch<0> |         |         |    3.833|    3.833|
+port_switch<1> |         |         |    3.415|    3.415|
+port_switch<2> |         |         |    3.253|    3.253|
+port_switch<3> |         |         |    3.561|    3.561|
+port_switch<4> |         |         |    2.341|    2.341|
+port_switch<5> |         |         |    2.901|    2.901|
+port_switch<6> |         |         |    1.157|    1.157|
+port_switch<7> |         |         |    0.010|    0.010|
+port_switch<8> |         |         |    3.503|    3.503|
+port_switch<9> |         |         |    4.264|    4.264|
+port_switch<10>|         |         |    3.074|    3.074|
+port_switch<11>|         |         |    5.252|    5.252|
+port_switch<12>|         |         |    6.047|    6.047|
+port_switch<13>|         |         |    1.714|    1.714|
+port_switch<14>|         |         |    4.155|    4.155|
+port_switch<15>|         |         |    3.908|    3.908|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock port_switch<1>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+port_switch<0> |         |         |    2.636|    2.636|
+port_switch<1> |         |         |    2.218|    2.218|
+port_switch<2> |         |         |    2.056|    2.056|
+port_switch<3> |         |         |    2.364|    2.364|
+port_switch<4> |         |         |    1.144|    1.144|
+port_switch<5> |         |         |    1.484|    1.484|
+port_switch<6> |         |         |   -0.260|   -0.260|
+port_switch<7> |         |         |   -1.267|   -1.267|
+port_switch<8> |         |         |    2.086|    2.086|
+port_switch<9> |         |         |    2.847|    2.847|
+port_switch<10>|         |         |    2.343|    2.343|
+port_switch<11>|         |         |    3.835|    3.835|
+port_switch<12>|         |         |    4.630|    4.630|
+port_switch<13>|         |         |    1.065|    1.065|
+port_switch<14>|         |         |    2.738|    2.738|
+port_switch<15>|         |         |    2.491|    2.491|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock port_switch<2>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+port_switch<0> |         |         |    2.766|    2.766|
+port_switch<1> |         |         |    2.348|    2.348|
+port_switch<2> |         |         |    2.186|    2.186|
+port_switch<3> |         |         |    2.494|    2.494|
+port_switch<4> |         |         |    1.274|    1.274|
+port_switch<5> |         |         |    1.580|    1.580|
+port_switch<6> |         |         |   -0.164|   -0.164|
+port_switch<7> |         |         |   -1.311|   -1.311|
+port_switch<8> |         |         |    2.182|    2.182|
+port_switch<9> |         |         |    2.943|    2.943|
+port_switch<10>|         |         |    1.753|    1.753|
+port_switch<11>|         |         |    3.931|    3.931|
+port_switch<12>|         |         |    4.726|    4.726|
+port_switch<13>|         |         |    1.037|    1.037|
+port_switch<14>|         |         |    2.834|    2.834|
+port_switch<15>|         |         |    2.587|    2.587|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock port_switch<3>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+port_switch<0> |         |         |    2.520|    2.520|
+port_switch<1> |         |         |    2.102|    2.102|
+port_switch<2> |         |         |    1.940|    1.940|
+port_switch<3> |         |         |    2.248|    2.248|
+port_switch<4> |         |         |    1.028|    1.028|
+port_switch<5> |         |         |    1.972|    1.972|
+port_switch<6> |         |         |    0.228|    0.228|
+port_switch<7> |         |         |   -0.919|   -0.919|
+port_switch<8> |         |         |    2.574|    2.574|
+port_switch<9> |         |         |    3.335|    3.335|
+port_switch<10>|         |         |    2.145|    2.145|
+port_switch<11>|         |         |    4.323|    4.323|
+port_switch<12>|         |         |    5.118|    5.118|
+port_switch<13>|         |         |    1.429|    1.429|
+port_switch<14>|         |         |    3.226|    3.226|
+port_switch<15>|         |         |    2.979|    2.979|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock port_switch<4>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+port_switch<0> |         |         |    3.495|    3.495|
+port_switch<1> |         |         |    3.077|    3.077|
+port_switch<2> |         |         |    2.915|    2.915|
+port_switch<3> |         |         |    3.223|    3.223|
+port_switch<4> |         |         |    2.003|    2.003|
+port_switch<5> |         |         |    1.448|    1.448|
+port_switch<6> |         |         |   -0.296|   -0.296|
+port_switch<7> |         |         |   -1.362|   -1.362|
+port_switch<8> |         |         |    2.050|    2.050|
+port_switch<9> |         |         |    2.811|    2.811|
+port_switch<10>|         |         |    2.499|    2.499|
+port_switch<11>|         |         |    3.909|    3.909|
+port_switch<12>|         |         |    4.594|    4.594|
+port_switch<13>|         |         |    1.154|    1.154|
+port_switch<14>|         |         |    2.702|    2.702|
+port_switch<15>|         |         |    2.455|    2.455|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock port_switch<5>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+port_switch<0> |         |         |    1.009|    1.009|
+port_switch<1> |         |         |    1.200|    1.200|
+port_switch<2> |         |         |    1.080|    1.080|
+port_switch<3> |         |         |    0.590|    0.590|
+port_switch<4> |         |         |    0.465|    0.465|
+port_switch<5> |         |         |    1.721|    1.721|
+port_switch<6> |         |         |   -0.023|   -0.023|
+port_switch<7> |         |         |   -1.170|   -1.170|
+port_switch<8> |         |         |    2.323|    2.323|
+port_switch<9> |         |         |    3.084|    3.084|
+port_switch<10>|         |         |    1.894|    1.894|
+port_switch<11>|         |         |    4.072|    4.072|
+port_switch<12>|         |         |    4.867|    4.867|
+port_switch<13>|         |         |    1.178|    1.178|
+port_switch<14>|         |         |    2.975|    2.975|
+port_switch<15>|         |         |    2.728|    2.728|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock port_switch<6>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+port_switch<0> |         |         |    0.447|    0.447|
+port_switch<1> |         |         |    0.638|    0.638|
+port_switch<2> |         |         |    0.518|    0.518|
+port_switch<3> |         |         |    0.028|    0.028|
+port_switch<4> |         |         |   -0.097|   -0.097|
+port_switch<5> |         |         |    1.159|    1.159|
+port_switch<6> |         |         |   -0.585|   -0.585|
+port_switch<7> |         |         |   -1.732|   -1.732|
+port_switch<8> |         |         |    1.761|    1.761|
+port_switch<9> |         |         |    2.522|    2.522|
+port_switch<10>|         |         |    1.332|    1.332|
+port_switch<11>|         |         |    3.510|    3.510|
+port_switch<12>|         |         |    4.305|    4.305|
+port_switch<13>|         |         |    0.616|    0.616|
+port_switch<14>|         |         |    2.413|    2.413|
+port_switch<15>|         |         |    2.166|    2.166|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock port_switch<7>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+port_switch<0> |         |         |    1.455|    1.455|
+port_switch<1> |         |         |    1.646|    1.646|
+port_switch<2> |         |         |    1.526|    1.526|
+port_switch<3> |         |         |    1.036|    1.036|
+port_switch<4> |         |         |    0.911|    0.911|
+port_switch<5> |         |         |    2.167|    2.167|
+port_switch<6> |         |         |    0.423|    0.423|
+port_switch<7> |         |         |   -0.724|   -0.724|
+port_switch<8> |         |         |    2.769|    2.769|
+port_switch<9> |         |         |    3.530|    3.530|
+port_switch<10>|         |         |    2.340|    2.340|
+port_switch<11>|         |         |    4.518|    4.518|
+port_switch<12>|         |         |    5.313|    5.313|
+port_switch<13>|         |         |    1.624|    1.624|
+port_switch<14>|         |         |    3.421|    3.421|
+port_switch<15>|         |         |    3.174|    3.174|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock port_switch<8>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+port_switch<0> |         |         |    0.160|    0.160|
+port_switch<1> |         |         |    0.834|    0.834|
+port_switch<2> |         |         |    0.714|    0.714|
+port_switch<3> |         |         |    1.027|    1.027|
+port_switch<4> |         |         |    0.954|    0.954|
+port_switch<5> |         |         |   -0.279|   -0.279|
+port_switch<6> |         |         |   -2.023|   -2.023|
+port_switch<7> |         |         |   -0.467|   -0.467|
+port_switch<8> |         |         |    0.771|    0.771|
+port_switch<9> |         |         |    1.084|    1.084|
+port_switch<10>|         |         |    1.351|    1.351|
+port_switch<11>|         |         |    2.072|    2.072|
+port_switch<12>|         |         |    2.867|    2.867|
+port_switch<13>|         |         |    1.053|    1.053|
+port_switch<14>|         |         |    2.924|    2.924|
+port_switch<15>|         |         |    1.720|    1.720|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock port_switch<9>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+port_switch<0> |         |         |    1.615|    1.615|
+port_switch<1> |         |         |    2.289|    2.289|
+port_switch<2> |         |         |    2.169|    2.169|
+port_switch<3> |         |         |    1.784|    1.784|
+port_switch<4> |         |         |    1.711|    1.711|
+port_switch<5> |         |         |    0.436|    0.436|
+port_switch<6> |         |         |   -1.308|   -1.308|
+port_switch<7> |         |         |    0.290|    0.290|
+port_switch<8> |         |         |    1.486|    1.486|
+port_switch<9> |         |         |    1.799|    1.799|
+port_switch<10>|         |         |    2.066|    2.066|
+port_switch<11>|         |         |    2.787|    2.787|
+port_switch<12>|         |         |    3.582|    3.582|
+port_switch<13>|         |         |    2.267|    2.267|
+port_switch<14>|         |         |    3.681|    3.681|
+port_switch<15>|         |         |    2.934|    2.934|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock port_switch<10>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+port_switch<0> |         |         |    1.383|    1.383|
+port_switch<1> |         |         |    2.057|    2.057|
+port_switch<2> |         |         |    1.937|    1.937|
+port_switch<3> |         |         |    2.043|    2.043|
+port_switch<4> |         |         |    1.970|    1.970|
+port_switch<5> |         |         |    0.532|    0.532|
+port_switch<6> |         |         |   -1.212|   -1.212|
+port_switch<7> |         |         |    0.549|    0.549|
+port_switch<8> |         |         |    1.582|    1.582|
+port_switch<9> |         |         |    1.895|    1.895|
+port_switch<10>|         |         |    2.162|    2.162|
+port_switch<11>|         |         |    2.883|    2.883|
+port_switch<12>|         |         |    3.678|    3.678|
+port_switch<13>|         |         |    2.069|    2.069|
+port_switch<14>|         |         |    3.940|    3.940|
+port_switch<15>|         |         |    2.736|    2.736|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock port_switch<11>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+port_switch<0> |         |         |    3.459|    3.459|
+port_switch<1> |         |         |    3.110|    3.110|
+port_switch<2> |         |         |    2.990|    2.990|
+port_switch<3> |         |         |    3.911|    3.911|
+port_switch<4> |         |         |    3.838|    3.838|
+port_switch<5> |         |         |    2.961|    2.961|
+port_switch<6> |         |         |    1.217|    1.217|
+port_switch<7> |         |         |    2.417|    2.417|
+port_switch<8> |         |         |    3.563|    3.563|
+port_switch<9> |         |         |    4.324|    4.324|
+port_switch<10>|         |         |    3.134|    3.134|
+port_switch<11>|         |         |    5.312|    5.312|
+port_switch<12>|         |         |    6.107|    6.107|
+port_switch<13>|         |         |    3.937|    3.937|
+port_switch<14>|         |         |    5.808|    5.808|
+port_switch<15>|         |         |    4.604|    4.604|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock port_switch<12>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+port_switch<0> |         |         |    2.908|    2.908|
+port_switch<1> |         |         |    2.490|    2.490|
+port_switch<2> |         |         |    2.353|    2.353|
+port_switch<3> |         |         |    3.464|    3.464|
+port_switch<4> |         |         |    3.391|    3.391|
+port_switch<5> |         |         |    1.625|    1.625|
+port_switch<6> |         |         |    0.003|    0.003|
+port_switch<7> |         |         |    1.970|    1.970|
+port_switch<8> |         |         |    2.918|    2.918|
+port_switch<9> |         |         |    2.988|    2.988|
+port_switch<10>|         |         |    3.498|    3.498|
+port_switch<11>|         |         |    4.282|    4.282|
+port_switch<12>|         |         |    5.077|    5.077|
+port_switch<13>|         |         |    3.490|    3.490|
+port_switch<14>|         |         |    5.361|    5.361|
+port_switch<15>|         |         |    4.157|    4.157|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock port_switch<13>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+port_switch<0> |         |         |    4.126|    4.126|
+port_switch<1> |         |         |    3.708|    3.708|
+port_switch<2> |         |         |    3.546|    3.546|
+port_switch<3> |         |         |    4.320|    4.320|
+port_switch<4> |         |         |    4.247|    4.247|
+port_switch<5> |         |         |    2.125|    2.125|
+port_switch<6> |         |         |    0.859|    0.859|
+port_switch<7> |         |         |    2.826|    2.826|
+port_switch<8> |         |         |    3.798|    3.798|
+port_switch<9> |         |         |    3.488|    3.488|
+port_switch<10>|         |         |    4.378|    4.378|
+port_switch<11>|         |         |    5.186|    5.186|
+port_switch<12>|         |         |    5.981|    5.981|
+port_switch<13>|         |         |    4.346|    4.346|
+port_switch<14>|         |         |    6.217|    6.217|
+port_switch<15>|         |         |    5.013|    5.013|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock port_switch<14>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+port_switch<0> |         |         |    4.124|    4.124|
+port_switch<1> |         |         |    3.706|    3.706|
+port_switch<2> |         |         |    3.544|    3.544|
+port_switch<3> |         |         |    3.852|    3.852|
+port_switch<4> |         |         |    3.217|    3.217|
+port_switch<5> |         |         |    1.068|    1.068|
+port_switch<6> |         |         |   -0.171|   -0.171|
+port_switch<7> |         |         |    1.796|    1.796|
+port_switch<8> |         |         |    2.114|    2.114|
+port_switch<9> |         |         |    2.431|    2.431|
+port_switch<10>|         |         |    2.692|    2.692|
+port_switch<11>|         |         |    4.538|    4.538|
+port_switch<12>|         |         |    5.128|    5.128|
+port_switch<13>|         |         |    3.316|    3.316|
+port_switch<14>|         |         |    5.187|    5.187|
+port_switch<15>|         |         |    3.983|    3.983|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock port_switch<15>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+port_switch<0> |         |         |    3.840|    3.840|
+port_switch<1> |         |         |    3.422|    3.422|
+port_switch<2> |         |         |    3.260|    3.260|
+port_switch<3> |         |         |    3.719|    3.719|
+port_switch<4> |         |         |    3.646|    3.646|
+port_switch<5> |         |         |    2.781|    2.781|
+port_switch<6> |         |         |    1.037|    1.037|
+port_switch<7> |         |         |    2.225|    2.225|
+port_switch<8> |         |         |    3.383|    3.383|
+port_switch<9> |         |         |    4.144|    4.144|
+port_switch<10>|         |         |    3.823|    3.823|
+port_switch<11>|         |         |    5.132|    5.132|
+port_switch<12>|         |         |    5.927|    5.927|
+port_switch<13>|         |         |    3.745|    3.745|
+port_switch<14>|         |         |    5.616|    5.616|
+port_switch<15>|         |         |    4.412|    4.412|
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+port_rst       |port_led<0>    |   21.863|
+port_rst       |port_led<1>    |   22.063|
+port_rst       |port_led<2>    |   21.209|
+port_rst       |port_led<3>    |   20.366|
+port_rst       |port_led<4>    |   21.834|
+port_rst       |port_led<5>    |   21.242|
+port_rst       |port_led<6>    |   20.571|
+port_rst       |port_led<7>    |   19.690|
+port_rst       |port_led<8>    |   21.395|
+port_rst       |port_led<9>    |   19.790|
+port_rst       |port_led<10>   |   19.248|
+port_rst       |port_led<11>   |   19.803|
+port_rst       |port_led<12>   |   20.565|
+port_rst       |port_led<13>   |   19.761|
+port_rst       |port_led<14>   |   19.473|
+port_rst       |port_led<15>   |   20.086|
+---------------+---------------+---------+
+
+
+Analysis completed Mon May 22 16:38:53 2017 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 363 MB
+Peak Memory Usage: 185 MB
 
 
 

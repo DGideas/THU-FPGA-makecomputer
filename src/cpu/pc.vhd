@@ -21,7 +21,7 @@ process(pc_clk, pc_rst)
 	begin
 		if (pc_rst = '0') then
 			pc_out <= "0000000000000000";
-		elsif (clk'event and clk='1') then
+		elsif (pc_clk'event and pc_clk='1') then
 			pc_out <= pc_in ;
 		end if;
 end process;

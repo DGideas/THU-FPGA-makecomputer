@@ -18,6 +18,7 @@ architecture Behavioral of alu is
 begin
 
 process(alu_operator, alu_input1, alu_input2)
+variable a :std_logic_vector(15 downto 0);
 begin
 	case alu_operator is
 		when "000" =>
@@ -29,7 +30,12 @@ begin
 		when "011" =>
 			alu_output <= alu_input1 or alu_input2;
 		when "100" =>
-			alu_output <= alu_input1 xor alu_input2;
+			a := alu_input1 xor alu_input2;
+			if(a="0000000000000000")then
+			alu_output<="0000000000000000";
+			else
+			alu_output<="0000000000000001";
+         end if;			
 		when "101" =>
 			alu_output <= to_stdlogicvector(to_bitvector(alu_input1) sll conv_integer(alu_input2));
 		when "110" =>
